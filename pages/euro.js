@@ -45,7 +45,7 @@ export async function getStaticProps() {
   };
 }
 
-export default function Home(props) {
+export default function Euro(props) {
   
   return (
       <>
