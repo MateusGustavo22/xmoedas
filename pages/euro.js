@@ -52,7 +52,7 @@ return (
 <title>Teste titulo</title>
 </Head>
 <Header />
-<H1>Pagina do euro</h1>
+<h1>Pagina do euro 1</h1>
 </>
 )
 }
