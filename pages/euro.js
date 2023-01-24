@@ -6,7 +6,7 @@ import Conversor from 'components/Conversor/Conversor';
 //import axios from 'axios';
 
 //Pegar a cotação da moeda e passa como props
-/*export async function getStaticProps() {
+export async function getStaticProps() {
  
     const code = 'EUR'
     
@@ -43,7 +43,7 @@ import Conversor from 'components/Conversor/Conversor';
     },
     revalidate: 3600,
   };
-}*/
+}
 
 export default function Euro(props) {
 return (
@@ -54,6 +54,7 @@ return (
 <Header />
 <h1>Pagina do euro 1</h1>
 <Conversor cotacao={5.60} currency={'EUR'} br={'BRL'} flag={'/flags/us.svg'} />
+<Footer />
 </>
 )
 }
