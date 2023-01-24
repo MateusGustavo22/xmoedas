@@ -1,7 +1,7 @@
 import Head  from 'next/head';
 import Footer from 'components/Footer/Footer';
 import Header from 'components/Header/Header';
-//import Conversor from 'components/Conversor/Conversor';
+import Conversor from 'components/Conversor/Conversor';
 //import Chart30days from 'components/Chart/Chart';
 //import axios from 'axios';
 
@@ -53,6 +53,7 @@ return (
 </Head>
 <Header />
 <h1>Pagina do euro 1</h1>
+<Conversor cotacao={5.60} currency={'EUR} br={'BRL'} flag={'/flags/us.svg'} />
 </>
 )
 }
