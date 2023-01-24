@@ -41,7 +41,7 @@ export async function getStaticProps() {
       code,
       bid30days,
     },
-    revalidate: 1,
+    revalidate: 3600,
   };
 }
 
@@ -49,7 +49,7 @@ export default function Home(props) {
   
   return (
       <>
-         <Head>
+        <Head>
           <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
           <meta name="description" content="Cotação atualizada do euro hoje em relação ao real. Conversor de moedas e gráfico do euro nos últimos dias."/>
           <meta name="keywords" content="Euro, Conversor, Cotação, Real, Câmbio, Hoje, Preço" />
