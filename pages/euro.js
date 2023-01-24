@@ -65,8 +65,8 @@ export default function Euro(props) {
         </Head>
         <Header />
         <div className='container_principal'>
-         
-          <Chart30days currency={props.code} last30days={props.bid30days} />
+          <Conversor cotacao={props.cotacao} currency={props.code} br={'BRL'} flag={'/flags/eu.svg'} />
+          
         </div>
         <main>
           <h2>Cotação do euro hoje</h2>
