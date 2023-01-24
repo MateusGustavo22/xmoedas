@@ -2,7 +2,7 @@ import Head  from 'next/head';
 import Footer from 'components/Footer/Footer';
 import Header from 'components/Header/Header';
 import Conversor from 'components/Conversor/Conversor';
-import Chart30days from 'components/Chart/Chart';
+//import Chart30days from 'components/Chart/Chart';
 import axios from 'axios';
 
 //Pegar a cotação da moeda e passa como props
@@ -65,7 +65,7 @@ export default function Euro(props) {
         </Head>
         <Header />
         <div className='container_principal'>
-          <Conversor cotacao={props.cotacao} currency={props.code} br={'BRL'} flag={'/flags/eu.svg'} />
+         
           <Chart30days currency={props.code} last30days={props.bid30days} />
         </div>
         <main>
