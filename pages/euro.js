@@ -6,7 +6,7 @@ import Footer from 'components/Footer/Footer';
 //import axios from 'axios';
 
 //Pegar a cotação da moeda e passa como props
-export async function getStaticProps() {
+/*export async function getStaticProps() {
  
     const code = 'EUR'
     
@@ -43,7 +43,7 @@ export async function getStaticProps() {
     },
     revalidate: 3600,
   };
-}
+}*/
 
 export default function Euro(props) {
   
