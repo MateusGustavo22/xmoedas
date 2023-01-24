@@ -49,7 +49,19 @@ export default function Home(props) {
   
   return (
       <>
-        
+         <Head>
+          <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
+          <meta name="description" content="Cotação atualizada do euro hoje em relação ao real. Conversor de moedas e gráfico do euro nos últimos dias."/>
+          <meta name="keywords" content="Euro, Conversor, Cotação, Real, Câmbio, Hoje, Preço" />
+          <title>Euro Hoje: Converter Euro para Real, Cotação Atualizada e Gráfico.</title>
+          
+          <meta property="og:title" content="X-MOEDAS" />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="http://dolaragora.com/" />
+          <meta property="og:image" content="http://ia.media-imdb.com/rock.jpg" />
+          <meta property="og:description" content="A group of U.S. Marines, under command of a renegade general, take over Alcatraz and threaten San Francisco Bay with biological weapons." />
+          
+        </Head>
         <Header />
         <div className='container_principal'>
           <Conversor cotacao={props.cotacao} currency={props.code} br={'BRL'} flag={'/flags/eu.svg'} />
