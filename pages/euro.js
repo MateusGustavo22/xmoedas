@@ -52,7 +52,7 @@ return (
 <title>Teste titulo</title>
 </Head>
 <Header />
-<h1>Pagina do euro 1</h1>
+<h1>Pagina do euro 3</h1>
 <Conversor cotacao={props.cotacao} currency={props.code} br={'BRL'} flag={'/flags/eu.svg'} />
 <Chart30days currency={props.code} last30days={props.bid30days} />
 <Footer />
