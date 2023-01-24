@@ -46,5 +46,12 @@ import Footer from 'components/Footer/Footer';
 }*/
 
 export default function Euro(props) {
-return <h1>Pagina do euro</h1>
+return (
+<>
+<head>
+<title>Teste titulo</title>
+</head>
+<H1>Pagina do euro</h1>
+</>
+
 }
