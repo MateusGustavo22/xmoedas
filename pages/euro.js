@@ -3,7 +3,7 @@ import Footer from 'components/Footer/Footer';
 //import Header from 'components/Header/Header';
 //import Conversor from 'components/Conversor/Conversor';
 //import Chart30days from 'components/Chart/Chart';
-import axios from 'axios';
+//import axios from 'axios';
 
 //Pegar a cotação da moeda e passa como props
 export async function getStaticProps() {
