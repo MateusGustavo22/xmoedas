@@ -1,7 +1,7 @@
 import Head  from 'next/head';
 import Footer from 'components/Footer/Footer';
 import Header from 'components/Header/Header';
-import Conversor from 'components/Conversor/Conversor';
+//import Conversor from 'components/Conversor/Conversor';
 //import Chart30days from 'components/Chart/Chart';
 import axios from 'axios';
 
@@ -65,7 +65,7 @@ export default function Euro(props) {
         </Head>
         <Header />
         <div className='container_principal'>
-          <Conversor cotacao={props.cotacao} currency={props.code} br={'BRL'} flag={'/flags/eu.svg'} />
+         
           
         </div>
         <main>
