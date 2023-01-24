@@ -50,7 +50,7 @@ return (
 <>
 <Head>
 <title>Teste titulo</title>
-</head>
+</Head>
 <Header />
 <H1>Pagina do euro</h1>
 </>
