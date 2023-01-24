@@ -1,6 +1,6 @@
 import Head  from 'next/head';
 import Footer from 'components/Footer/Footer';
-import Header from 'components/Header/Header';
+//import Header from 'components/Header/Header';
 //import Conversor from 'components/Conversor/Conversor';
 //import Chart30days from 'components/Chart/Chart';
 import axios from 'axios';
@@ -63,7 +63,7 @@ export default function Euro(props) {
           <meta property="og:description" content="A group of U.S. Marines, under command of a renegade general, take over Alcatraz and threaten San Francisco Bay with biological weapons." />
           
         </Head>
-        <Header />
+        
         <div className='container_principal'>
          
           
