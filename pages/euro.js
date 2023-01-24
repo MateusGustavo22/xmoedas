@@ -53,7 +53,7 @@ return (
 </Head>
 <Header />
 <h1>Pagina do euro 1</h1>
-<Conversor cotacao={5.60} currency={'EUR'} br={'BRL'} flag={'/flags/us.svg'} />
+<Conversor cotacao={props.cotacao} currency={props.code} br={'BRL'} flag={'/flags/eu.svg'} />
 <Footer />
 </>
 )
