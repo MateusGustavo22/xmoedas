@@ -9,13 +9,14 @@ const  Footer = () => {
   },[])
   
   return (
+    
     <footer className="footer">
       <a href="mailto:contatodolaragora@gmail.com?subject=DólarAgora" rel="noopener">Contato</a>
       <a href="/politicas">Política de privacidade</a>
       <a href="/termos">Termos de uso</a>
       <div id="copyright" align="center">&copy;{copyright}</div>
        <style jsx>{`
-          .footer {
+        .footer {
           max-width: 1366px;
           display: flex;
           flex-direction: column;
