@@ -17,7 +17,7 @@ const  Footer = () => {
       <div id="copyright" align="center">&copy;{copyright}</div>
        <style jsx>{`
         .footer {
-          max-width: 1366px;
+          width: 100%;
           display: flex;
           flex-direction: column;
           justify-content: center;
