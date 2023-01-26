@@ -44,7 +44,7 @@ const options = {
   return (
     <section className="chart_area">
       <div className="chart">
-        <h3>Gráfico {props.currency} nos últimos 30 dias</h3>
+        <h3>Gráfico ({props.currency}) nos últimos 30 dias</h3>
         <Line data={data} options={options} height="160" />
       </div>
       <style jsx>{`

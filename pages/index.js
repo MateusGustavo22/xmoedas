@@ -41,7 +41,7 @@ export async function getStaticProps() {
       code,
       bid30days,
     },
-    revalidate: 1,
+    revalidate: 3600,
   };
 }
 
