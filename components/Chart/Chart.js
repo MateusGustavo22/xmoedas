@@ -44,7 +44,7 @@ const options = {
   return (
     <section className="chart_area">
       <div className="chart">
-        <h3>Gráfico ({props.currency}) nos últimos 30 dias</h3>
+        <h2>Gráfico ({props.currency}) nos últimos 30 dias</h2>
         <Line data={data} options={options} height="160" />
       </div>
       <style jsx>{`
@@ -65,7 +65,7 @@ const options = {
           padding-bottom: 8px;
         }
         
-        section h3 {
+        section h2 {
           text-align: center;
           font-family: 'Inter', sans-serif;
           font-weight: normal;
