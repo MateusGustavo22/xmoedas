@@ -69,14 +69,22 @@ export default function Home(props) {
         </div>
         <main>
           <h2>Cotação do dólar hoje</h2>
-          <p>A cotação do dólar hoje é de R$ {props.cotacao} Isso significa que cada dólar americano está sendo negociado por R$ {props.cotacao} no mercado financeiro. Este valor pode variar diariamente devido a vários fatores, como a economia dos EUA e do Brasil, as notícias políticas e internacionais, entre outros. É importante ficar atento às variações da cotação do dólar, especialmente se você tem investimentos em dólar ou se planeja viajar para o exterior. Acompanhar a cotação diariamente pode ajudá-lo a tomar decisões financeiras mais informadas.</p>
-          <h2>Sobre o dólar</h2>
-          <p>O dólar americano é a moeda oficial dos Estados Unidos e é amplamente utilizado em todo o mundo como uma moeda de reserva e de troca. É emitido pelo Federal Reserve (Fed), o banco central dos Estados Unidos, e é composto por cédulas de papel e moedas de metal. O valor do dólar americano é determinado pelas leis da oferta e da procura no mercado cambial global.</p>
+          <p>A cotação do dólar hoje é de R$ 5,10. Isso significa que o preço de compra e venda do dólar americano está em R$ {props.cotacao} no mercado. A cotação do dólar é importante para diversas transações comerciais e a variação pode afetar a economia do país.</p>
+          <h2>Sobre o dólar americano</h2>
+          <p>O dólar americano é a moeda oficial dos Estados Unidos e é amplamente utilizado em transações comerciais e financeiras internacionais. É considerada uma das principais moedas do mundo e é utilizada como referência em muitas transações cambiais. O dólar americano é emitido pelo Federal Reserve, o banco central dos Estados Unidos.</p>
           <h2>Qual a diferença entre dólar comercial e dólar turismo?</h2>
-          <p>A diferença entre o dólar comercial e o dólar turismo é que o dólar comercial é usado para transações comerciais, como importação e exportação de mercadorias, enquanto o dólar turismo é usado para transações relacionadas ao turismo, como compra de passagens aéreas e reserva de hotéis. O dólar turismo geralmente é cotado a um preço mais alto do que o dólar comercial devido às taxas de câmbio mais elevadas.</p>
-          <h2>Converter dólar para real</h2>
+          <p>O dólar comercial é utilizado para transações comerciais enquanto o dólar turismo é utilizado para transações pessoais como viagens e compras no exterior. A cotação do dólar comercial é determinada pelo mercado, enquanto a cotação do dólar turismo é determinada pelo mercado e pela margem de lucro dos bancos.</p>
+          <h2>Como o preço do dólar é influenciado hoje?</h2>
+          <p>Política monetária: A política monetária do banco central americano (Federal Reserve) pode afetar a oferta de dólares e, consequentemente, a cotação do dólar. Por exemplo, se o Federal Reserve aumenta as taxas de juros, isso pode tornar o dólar mais atraente para os investidores, o que pode aumentar a cotação do dólar.</p><br/>
+          <p>Situação econômica: A situação econômica dos Estados Unidos também pode afetar a cotação do dólar. Se a economia americana estiver se expandindo, isso pode aumentar a demanda por dólares e, consequentemente, aumentar a cotação do dólar.</p><br/>
+          <p>Inflação: A inflação também pode afetar a cotação do dólar. Se a inflação estiver alta, isso pode diminuir o valor do dólar em relação às outras moedas.</p><br/>
+          <p>Risco geopolítico: Eventos geopolíticos e riscos políticos globais, como guerras, crises políticas e mudanças na liderança de países importantes, podem afetar a cotação do dólar.</p><br/>
+          <p>Investimentos estrangeiros: A entrada e saída de investimentos estrangeiros também podem afetar a cotação do dólar, pois quanto maior a oferta de dólares no mercado, menor será a cotação.</p><br/>
+          <p>Dados econômicos: dados econômicos importantes, como o PIB, o desemprego, o índice de preços ao consumidor e o índice de preços ao produtor, também podem influenciar a cotação do dólar.</p><br/>
+          <p>Expectativas de mercado: as expectativas do mercado, especialmente no que diz respeito a decisões políticas e econômicas futuras, também podem influenciar a cotação do dólar.</p>
+          <h2>Como posso converter dólar para real?</h2>
           <p>O site X-MOEDAS é uma ferramenta prática e fácil de usar para converter valores em dólar para real. Basta inserir o valor em dólar que deseja converter e o nosso conversor fará o cálculo em tempo real, exibindo o valor em real equivalente. O site também permite que você compare as taxas de câmbio atuais do dólar com o real para que você possa tomar decisões informadas sobre suas transações financeiras. Aproveite a nossa ferramenta confiável e fácil de usar hoje mesmo no X-MOEDAS!</p>
-          
+
           <style jsx>{`
             main {
               max-width: 700px;
