@@ -149,6 +149,11 @@ const Conversor = (props) => {
             align-items: center;
             margin-bottom: 8px;
           }
+          
+          .input_1 {
+            background-color: white;
+          }
+          
           #currency_options {
             outline: none;
             border: none;

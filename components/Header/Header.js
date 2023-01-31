@@ -9,7 +9,7 @@ const Header = () => {
       <header className="header">
            <div className="menu-area">
               <a href="/" className="icone">
-              <img src="/icone.svg" alt="Icone do site"/>
+              <img src="/icone.svg" width="180" height="50" alt="Icone do site"/>
               </a>
            </div>
            <div className="sobre-area">
@@ -61,8 +61,6 @@ const Header = () => {
         }
         
         .icone {
-          width: 120px;
-          height: 50px;
           display: flex;
           align-self: center;
           margin-top: -5px;
