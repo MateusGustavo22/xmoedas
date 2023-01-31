@@ -66,22 +66,22 @@ const Conversor = (props) => {
               <div id="input_1" style={{border: '2px solid #a4a4a4', borderRight: 'none'}}>
                  <div className="input_1">
                     <div className="moeda_icon">
-                       <img src={props.flag} width={30} alt="Bandeira"/>
+                       <img src={props.flag} width="52" height="45" alt="Bandeira"/>
                     </div>
                     <select id="currency_options" onChange={selectChange} value={props.currency}>
-                       <option value="USD">Dólar americano</option>
-                       <option value="CAD">Dólar canadense</option>
-                       <option value="AUD">Dólar australiano</option>
-                       <option value="HKD">Dólar de Hong Kong</option>
-                       <option value="TWD">Dólar taiwanês</option>
+                       <option value="USD">Dólar Americano</option>
+                       <option value="CAD">Dólar Canadense</option>
+                       <option value="AUD">Dólar Australiano</option>
+                       <option value="HKD">Dólar De Hong Kong</option>
+                       <option value="TWD">Dólar Taiwanês</option>
                        <option value="EUR">Euro</option>
                        <option value="GBP">Libra</option>
-                       <option value="ARS">Peso argentino</option>
-                       <option value="MXN">Peso mexicano</option>
-                       <option value="CNY">Yuan chinês</option>
-                       <option value="JPY">Iene japonês</option>
-                       <option value="RUB">Rublo russo</option>
-                       <option value="CHF">Franco suíço</option>
+                       <option value="ARS">Peso Argentino</option>
+                       <option value="MXN">Peso Mexicano</option>
+                       <option value="CNY">Yuan Chinês</option>
+                       <option value="JPY">Iene Japonês</option>
+                       <option value="RUB">Rublo Russo</option>
+                       <option value="CHF">Franco Suíço</option>
                     </select>
                  </div>
                  <div className="input_div">
@@ -90,7 +90,7 @@ const Conversor = (props) => {
               </div>
               <div id="input_2" style={{border: '2px solid #a4a4a4', borderRight: 'none'}}>
                  <div className="moeda_icon">
-                    <img src='/flags/br.svg'  alt="Bandeira do Brasil"/>
+                    <img src='/flags/br.svg'  width="52" height="45" alt="Bandeira do Brasil"/>
                  </div>
                  <div className="input_div">
                     <input id="entrada_2" name={props.br} type="number" value={input2Value} onChange={handleInput2Change} style={{border: '2px solid #a4a4a4', borderLeft: 'none'}}/>
@@ -152,6 +152,7 @@ const Conversor = (props) => {
           #currency_options {
             outline: none;
             border: none;
+            font-size: 14px;
             font-family: font-family: 'Inter', sans-serif;
             font-weight: bold;
             color: #5c5c61;
@@ -160,7 +161,7 @@ const Conversor = (props) => {
           .moeda_icon {
             width: 52px;
             height: 40px;
-            margin: 3px;
+            margin-top: 3px;
             display: flex;
             align-items: center;
           }
@@ -183,10 +184,7 @@ const Conversor = (props) => {
             font-family: 'Inter', sans-serif;
             font-weight: bold;
           }
-          .moeda_icon img {
-            width: 52px;
-            heigth: 45px;
-          }
+          
           .data {
             margin: auto;
             padding: 3px;
