@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const Conversor = (props) => {
   
-  const [input1Value, setInput1Value] = useState(1);
+  const [input1Value, setInput1Value] = useState("1");
   const [input2Value, setInput2Value] = useState(props.cotacao);
   
   const [cotacao, setCotacao] = useState(props.cotacao)
@@ -63,35 +63,37 @@ const Conversor = (props) => {
          </div>
          <div className="input_area">
            <div className="moedas_input">
+             <select id="currency_options" onChange={selectChange} value={props.currency}>
+                 <option value="USD">Dólar Americano</option>
+                 <option value="CAD">Dólar Canadense</option>
+                 <option value="AUD">Dólar Australiano</option>
+                 <option value="HKD">Dólar De Hong Kong</option>
+                 <option value="TWD">Dólar Taiwanês</option>
+                 <option value="EUR">Euro</option>
+                 <option value="GBP">Libra</option>
+                 <option value="ARS">Peso Argentino</option>
+                 <option value="MXN">Peso Mexicano</option>
+                 <option value="CNY">Yuan Chinês</option>
+                 <option value="JPY">Iene Japonês</option>
+                 <option value="RUB">Rublo Russo</option>
+                 <option value="CHF">Franco Suíço</option>
+              </select>
               <div id="input_1" style={{border: '2px solid #a4a4a4', borderRight: 'none'}}>
                  <div className="input_1">
                     <div className="moeda_icon">
                        <img src={props.flag} width="52" height="45" alt="Bandeira"/>
                     </div>
-                    <select id="currency_options" onChange={selectChange} value={props.currency}>
-                       <option value="USD">Dólar Americano</option>
-                       <option value="CAD">Dólar Canadense</option>
-                       <option value="AUD">Dólar Australiano</option>
-                       <option value="HKD">Dólar De Hong Kong</option>
-                       <option value="TWD">Dólar Taiwanês</option>
-                       <option value="EUR">Euro</option>
-                       <option value="GBP">Libra</option>
-                       <option value="ARS">Peso Argentino</option>
-                       <option value="MXN">Peso Mexicano</option>
-                       <option value="CNY">Yuan Chinês</option>
-                       <option value="JPY">Iene Japonês</option>
-                       <option value="RUB">Rublo Russo</option>
-                       <option value="CHF">Franco Suíço</option>
-                    </select>
+                    <span>{props.currency}</span>
                  </div>
                  <div className="input_div">
                     <input id="entrada_1" name={props.currency} type="number" value={input1Value} onChange={handleInput1Change} style={{border: '2px solid #A4A4A4', borderLeft: 'none'}}/>
                  </div>
               </div>
-              <div id="input_2" style={{border: '2px solid #a4a4a4', borderRight: 'none'}}>
+              <div className="input_2" style={{border: '2px solid #a4a4a4', borderRight: 'none'}}>
                  <div className="moeda_icon">
                     <img src='/flags/br.svg'  width="52" height="45" alt="Bandeira do Brasil"/>
                  </div>
+                 <span>BRL</span>
                  <div className="input_div">
                     <input id="entrada_2" name={props.br} type="number" value={input2Value} onChange={handleInput2Change} style={{border: '2px solid #a4a4a4', borderLeft: 'none'}}/>
                  </div>
@@ -133,8 +135,9 @@ const Conversor = (props) => {
             display: flex;
             flex-direction: column;
             justify-content: right;
+            background-color: white;
           }
-          #input_1, #input_2 {
+          #input_1, .input_2 {
             max-width: 100%;
             height: 68px;
             margin-bottom: 18px;
@@ -145,20 +148,35 @@ const Conversor = (props) => {
             padding-left: 5px;
             cursor: pointer;
           }
+          
           #input_2 {
             align-items: center;
             margin-bottom: 8px;
           }
           
-          .input_1 {
+          .input_1, .input_2 {
+            display: flex;
+            flex-direction: inline;
+            align-items: center;
             background-color: white;
           }
           
+          .input_1 span, .input_2 span {
+            margin-left: 5px;
+            margin-right: 5px;
+            color: #5c5c61;
+            font-weight: bold;
+            font-family: 'Inter', sans-serif;
+            font-size: 30px;
+          }
+          
           #currency_options {
+            max-width: 180px;
             outline: none;
             border: none;
-            font-size: 14px;
-            font-family: font-family: 'Inter', sans-serif;
+            margin-bottom: 5px;
+            font-size: 16px;
+            font-family: 'Inter', sans-serif;
             font-weight: bold;
             color: #5c5c61;
             background-color: transparent;
@@ -181,7 +199,7 @@ const Conversor = (props) => {
             height: 68px;
             text-align: right;
             padding-right: 8px;
-            font-size: 40px;
+            font-size: 35px;
             color: #5c5c61;
             outline: none;
             border-top-right-radius: 8px;
