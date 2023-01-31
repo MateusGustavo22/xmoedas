@@ -25,11 +25,19 @@ export async function getStaticProps() {
     
     //Pega as ultimas cotações da moeda e passa para o componente Chart
     const last30day = `https://economia.awesomeapi.com.br/json/daily/${code}-BRL/30`
-    let bid30days = {};
+     
+    let bid30days = {
+      bid: [],
+      timestamp: []
+    };
+    
     await axios.get(last30day)
     .then(response => {
       const res30days = response.data
-      bid30days = res30days
+      for (let i = 0; i < 30; i++) {
+        bid30days.bid.push(res30days[i].bid)
+        bid30days.timestamp.push(res30days[i].timestamp)
+      }
     })
     .catch(err => {
       console.log(err)

@@ -25,11 +25,18 @@ export async function getStaticProps() {
     
     //Pega as ultimas cotações da moeda e passa para o componente Chart
     const last30day = `https://economia.awesomeapi.com.br/json/daily/${code}-BRL/30`
-    let bid30days = {};
+    
+    let bid30days = {
+      bid: [],
+      timestamp: []
+    };
+    
     await axios.get(last30day)
     .then(response => {
       const res30days = response.data
-      bid30days = res30days
+      for (let i = 0; i < 30; i++) {
+        bid30days.bid.push(res30days[i].bid)
+      }
     })
     .catch(err => {
       console.log(err)
@@ -46,7 +53,7 @@ export async function getStaticProps() {
 }
 
 export default function Home(props) {
-  
+ 
   return (
       <>
         <Head>
@@ -68,7 +75,7 @@ export default function Home(props) {
           <Chart30days currency={props.code} last30days={props.bid30days} />
         </div>
         <main>
-          <h2>Cotação do dólar hoje</h2>
+          <h2>Cotação do dólar hojge</h2>
           <p>A cotação do dólar hoje é de R$ 5,10. Isso significa que o preço de compra e venda do dólar americano está em R$ {props.cotacao} no mercado. A cotação do dólar é importante para diversas transações comerciais e a variação pode afetar a economia do país.</p>
           <h2>Sobre o dólar americano</h2>
           <p>O dólar americano é a moeda oficial dos Estados Unidos e é amplamente utilizado em transações comerciais e financeiras internacionais. É considerada uma das principais moedas do mundo e é utilizada como referência em muitas transações cambiais. O dólar americano é emitido pelo Federal Reserve, o banco central dos Estados Unidos.</p>

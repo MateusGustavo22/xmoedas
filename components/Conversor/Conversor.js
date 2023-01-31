@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const Conversor = (props) => {
   
-  const [input1Value, setInput1Value] = useState("1");
+  const [input1Value, setInput1Value] = useState(1);
   const [input2Value, setInput2Value] = useState(props.cotacao);
   
   const [cotacao, setCotacao] = useState(props.cotacao)
