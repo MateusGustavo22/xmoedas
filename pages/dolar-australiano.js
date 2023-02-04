@@ -60,7 +60,8 @@ export default function Home(props) {
           <meta name="description" content="Cotação atualizada do dólar australiano hoje em relação ao real. Conversor de moedas e gráfico do dólar australiano nos últimos dias."/>
           <meta name="keywords" content="Dólar australiano, Conversor, Cotação, Real, Câmbio, Hoje, Preço" />
           <title>Dólar Australiano Hoje: Cotação Comercial Atual. Converter para Real e Gráfico - XMOEDAS </title>
-    
+          <meta property="og:title" content="Dólar Australiano Hoje" />
+          
         </Head>
         <Header />
         <div className='container_principal'>
