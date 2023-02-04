@@ -57,16 +57,9 @@ export default function Home(props) {
   return (
       <>
         <Head>
-          <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
           <meta name="description" content="Cotação atualizada da Libra esterlina hoje em relação ao real. Conversor de moedas e gráfico da libra nos últimos dias."/>
           <meta name="keywords" content="Libra, Conversor, Cotação, Real, Câmbio, Hoje, Preço" />
-          <title>Libra Esterlina Hoje: Converter Libra para Real, Cotação Atualizada e Gráfico.</title>
-          
-          <meta property="og:title" content="moedashoje.com" />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="http://dolaragora.com/" />
-          <meta property="og:image" content="http://ia.media-imdb.com/rock.jpg" />
-          <meta property="og:description" content="A group of U.S. Marines, under command of a renegade general, take over Alcatraz and threaten San Francisco Bay with biological weapons." />
+          <title>Libra Esterlina Hoje: Cotação Comercial Atual. Converter para Real e Gráfico - XMOEDAS</title>
           
         </Head>
         <Header />
@@ -75,10 +68,12 @@ export default function Home(props) {
           <Chart30days currency={props.code} last30days={props.bid30days} />
         </div>
         <main>
-          <h2>Cotação da libr hoje</h2>
+          <h2>Cotação da libra hoje</h2>
           <p>A cotação da libra esterlina hoje é de R$ {props.cotacao}. Isso significa que por cada libra esterlina, você pode obter R$ {props.cotacao} reais. É importante notar que as cotações podem mudar diariamente, então é importante verificar regularmente para obter as cotações atuais.</p>
           <h2>Sobre a libra esterlina</h2>
           <p>A libra esterlina é a moeda oficial do Reino Unido e é comumente conhecida como "libra" ou "sterling". Ela é emitida e regulada pelo Banco da Inglaterra e é aceita em todo o território do Reino Unido. A libra é vista como uma moeda estável e confiável e é usada para facilitar o comércio e os investimentos internacionais. A libra é a quarta moeda mais negociada no mercado cambial mundial e é usada como uma moeda de reserva internacional.</p>
+          <h2>Qual a diferença entre libra comercial e libra turismo</h2>
+          <p>A libra comercial é o valor oficial da libra esterlina utilizado para transações comerciais e financeiras. Já a libra turismo é a taxa de câmbio aplicada pelos estabelecimentos financeiros para a compra de libras por outra moeda, geralmente utilizada pelos turistas que viajam para o Reino Unido. Em geral, a taxa de câmbio da libra turismo é ligeiramente diferente da taxa comercial, refletindo as flutuações do mercado de câmbio.</p>
           <h2>Converter libra para real</h2>
           <p>Se você deseja converter libras esterlinas para reais, pode usar a ferramenta online do site X-MOEDAS. Basta inserir a quantidade de libras esterlinas que deseja converter e a ferramenta calculará automaticamente a quantidade correspondente em reais. Essa ferramenta é útil para quem viaja para o Reino Unido, faz negócios comerciais ou investimentos no país, ou simplesmente gosta de acompanhar as cotações das moedas. É importante lembrar que a taxa de câmbio pode variar de acordo com o banco ou casa de câmbio que você utiliza, por isso é importante sempre verificar as cotações antes de realizar qualquer transação.</p>
           

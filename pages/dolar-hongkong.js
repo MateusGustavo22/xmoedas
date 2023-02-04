@@ -57,16 +57,9 @@ export default function Home(props) {
   return (
       <>
         <Head>
-          <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
           <meta name="description" content="Cotação atualizada do dólar de hong kong hoje em relação ao real. Conversor de moedas e gráfico do dólar de hong kong nos últimos dias."/>
           <meta name="keywords" content="Dólar de Hong Kong, Conversor, Cotação, Real, Câmbio, Hoje, Preço" />
-          <title>Dólar de Hong Kong Hoje: Converter para Real, Cotação Atualizada e Gráfico.</title>
-          
-          <meta property="og:title" content="moedashoje.com" />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="http://dolaragora.com/" />
-          <meta property="og:image" content="http://ia.media-imdb.com/rock.jpg" />
-          <meta property="og:description" content="A group of U.S. Marines, under command of a renegade general, take over Alcatraz and threaten San Francisco Bay with biological weapons." />
+          <title>Dólar de Hong Kong Hoje: Cotação Comercial Atual. Converter para Real e Gráfico - XMOEDAS</title>
           
         </Head>
         <Header />
@@ -79,6 +72,8 @@ export default function Home(props) {
           <p>A cotação do dólar de Hong Kong hoje é de R$ {props.cotacao}. Isso significa que por cada dólar de Hong Kong, você pode obter R$ {props.cotacao} reais. É importante notar que as cotações podem mudar diariamente, então é importante verificar regularmente para obter as cotações atuais.</p>
           <h2>Sobre o dólar de hong kong</h2>
           <p>O dólar de Hong Kong é a moeda oficial de Hong Kong, um território da China. Ele é emitido pelo Banco da China de Hong Kong e é aceito em todo o território de Hong Kong. Ele é frequentemente usado para negociações comerciais e investimentos, e é visto como uma moeda estável e confiável. O dólar de Hong Kong também é usado como uma moeda de reserva internacional, com muitos investidores e bancos mantendo grandes quantidades de dólares de Hong Kon</p>
+          <h2>Qual a diferença entre dólar de Hong kong comercial e dólar de hong kong turismo?</h2>
+          <p>O dólar de Hong Kong comercial é a moeda oficial utilizada para fins comerciais e financeiros na região administrativa especial de Hong Kong. Já o dólar de Hong Kong turismo é utilizado apenas para fins turísticos, com taxas de câmbio geralmente mais elevadas que o dólar comercial. Em resumo, o dólar de Hong Kong comercial é utilizado para negociações e transações financeiras, enquanto o dólar de Hong Kong turismo é utilizado apenas para fins turísticos.</p>
           <h2>Converter dólar de hong kong para real</h2>
           <p>Se você deseja converter dólares de Hong Kong para reais, pode usar a ferramenta online do site X-MOEDAS. Basta inserir a quantidade de dólares de Hong Kong que deseja converter e a ferramenta calculará automaticamente a quantidade correspondente em reais. Essa ferramenta é útil para quem viaja para Hong Kong, faz negócios comerciais ou investimentos no território, ou simplesmente gosta de acompanhar as cotações das moedas.</p>
           

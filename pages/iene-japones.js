@@ -57,16 +57,9 @@ export default function Home(props) {
   return (
       <>
         <Head>
-          <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
           <meta name="description" content="Cotação atualizada do iene japonês hoje em relação ao real. Conversor de moedas e gráfico do iene nos últimos dias."/>
           <meta name="keywords" content="Iene, Conversor, Cotação, Real, Câmbio, Hoje, Preço" />
-          <title>Iene Japonês Hoje: Converter para Real, Cotação Atualizada e Gráfico.</title>
-          
-          <meta property="og:title" content="moedashoje.com" />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="http://dolaragora.com/" />
-          <meta property="og:image" content="http://ia.media-imdb.com/rock.jpg" />
-          <meta property="og:description" content="A group of U.S. Marines, under command of a renegade general, take over Alcatraz and threaten San Francisco Bay with biological weapons." />
+          <title>Iene Japonês Hoje: Cotação Comercial Atual. Converter para Real e Gráfico - XMOEDAS</title>
           
         </Head>
         <Header />
@@ -79,7 +72,9 @@ export default function Home(props) {
           <p>A cotação atual do iene japonês hoje é de R$ {props.cotacao} reais por unidade. Esta cotação pode variar diariamente e é importante ficar atento às flutuações do mercado para tomar decisões financeiras.</p>
           <h2>Sobre o iene japonês</h2>
           <p>O iene japonês é a moeda oficial do Japão e é utilizado em todo o país. Ele é uma das moedas mais fortes e estáveis do mundo, sendo amplamente utilizada em transações internacionais. Sua sigla é JPY e é dividido em 100 sen ou 1000 rin.</p>
-          <h2>Converter iene para real</h2>
+          <h2>Qual a diferença entre iene comercial e iene turismo?</h2>
+          <p>O iene comercial é a moeda oficial do Japão e é usado para transações comerciais e financeiras no país. Já o iene turismo é uma taxa de câmbio alternativa que é oferecida aos turistas estrangeiros em alguns estabelecimentos turísticos e destinos de viagem. Em geral, a taxa de câmbio do iene turismo é ligeiramente desfavorável em relação ao iene comercial, o que significa que os turistas pagam mais do que os preços reais quando usam esta moeda.</p>
+          <h2>Converter iene japonês para real</h2>
           <p>O nosso site X-MOEDAS oferece uma ferramenta online para converter iene japonês em reais. Para usar essa ferramenta, você precisará inserir a quantidade de iene desejada e a cotação atual será exibida. Isso pode ser útil para quem viaja para o Japão ou precisa realizar transações comerciais com o país.</p>
           
           <style jsx>{`

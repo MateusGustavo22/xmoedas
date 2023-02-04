@@ -57,16 +57,9 @@ export default function Home(props) {
   return (
       <>
         <Head>
-          <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
           <meta name="description" content="Cotação atualizada do dólar canadense hoje em relação ao real. Conversor de moedas e gráfico do dólar canadense nos últimos dias."/>
           <meta name="keywords" content="Dólar canadense, Conversor, Cotação, Real, Câmbio, Hoje, Preço" />
-          <title>Dólar Canadense Hoje: Converter para Real, Cotação Atualizada e Gráfico.</title>
-          
-          <meta property="og:title" content="moedashoje.com" />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="http://dolaragora.com/" />
-          <meta property="og:image" content="http://ia.media-imdb.com/rock.jpg" />
-          <meta property="og:description" content="A group of U.S. Marines, under command of a renegade general, take over Alcatraz and threaten San Francisco Bay with biological weapons." />
+          <title>Dólar Canadense Hoje: Cotação Comercial Atual. Converter para Real e Gráfico - XMOEDAS</title>
           
         </Head>
         <Header />
@@ -79,8 +72,13 @@ export default function Home(props) {
           <p>A cotação do dólar canadense (CAD) hoje é de R$ {props.cotacao} reais. Isso significa que cada dólar canadense está sendo negociado ao preço de R$ {props.cotacao} reais. A cotação do dólar canadense pode ser influenciada por uma variedade de fatores, incluindo a economia dos Estados Unidos e do Canadá, as taxas de juros, as expectativas de inflação e a demanda por recursos naturais do Canadá. Como investidor ou viajante, é importante estar ciente da cotação do dólar canadense e como ela pode afetar suas decisões.</p>
           <h2>Sobre o dólar canadense</h2>
           <p>O dólar canadense (CAD) é a moeda oficial do Canadá. Ele é emitido pelo Banco do Canadá e é utilizado em todo o país, incluindo as províncias e territórios. O símbolo usado para representar o dólar canadense é "C$" ou "CAD".<br/><br/> O dólar canadense é uma moeda flutuante, ou seja, seu valor é determinado pelo mercado e pode ser influenciado por diversos fatores, como a taxa de juros, a balança comercial, a política monetária e a situação econômica global.</p>
+          <h2>Qual a diferença entre dólar canadense comercial e dólar canadense turismo</h2>
+          <p>O dólar canadense é a moeda oficial do Canado e pode ser encontrado em duas taxas diferentes: a taxa comercial e a taxa turística. A diferença entre as duas é a seguinte:</p>
+          <p>Taxa comercial: É a taxa utilizada para transações comerciais e financeiras, como a compra e venda de bens e serviços. Ela reflete a força econômica do Canado e é determinada pelo mercado financeiro.</p>
+          <p>Taxa turística: É a taxa utilizada para viagens e turismo. Ela é mais alta do que a taxa comercial e inclui uma margem adicional para cobrir os custos dos intermediários financeiros, como bancos e casas de câmbio.</p>
+          <p>Em resumo, a taxa comercial é mais adequada para transações comerciais, enquanto a taxa turística é mais adequada para viagens e transações turísticas. É importante lembrar que as taxas de câmbio são flutuantes e mudam diariamente.</p>
           <h2>Converter dólar canadense para real</h2>
-          <p>X-MOEDAS é um conversor de moedas fácil de usar que permite que você converta dólar canadense (CAD) para real (BRL) em questão de segundos. Com taxas de câmbio atualizadas diariamente, você pode ter certeza de que está sempre obtendo o melhor preço possível.</p>
+          <p>O site X-MOEDAS é uma ferramenta prática e fácil de usar para converter valores em dólar para real. Basta inserir o valor em dólar que deseja converter e o nosso conversor fará o cálculo em tempo real, exibindo o valor em real equivalente. O site também permite que você compare as taxas de câmbio atuais do dólar com o real para que você possa tomar decisões informadas sobre suas transações financeiras. Aproveite a nossa ferramenta confiável e fácil de usar hoje mesmo no X-MOEDAS!</p>
           
           <style jsx>{`
             main {

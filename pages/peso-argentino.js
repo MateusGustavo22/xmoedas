@@ -57,17 +57,10 @@ export default function Home(props) {
   return (
       <>
         <Head>
-          <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
           <meta name="description" content="Cotação atualizada do peso argentino hoje em relação ao real. Conversor de moedas e gráfico do peso argentino nos últimos dias."/>
           <meta name="keywords" content="Peso, Argentino, Conversor, Cotação, Real, Câmbio, Hoje, Preço" />
-          <title>Peso Argentino Hoje: Converter para Real, Cotação Atualizada e Gráfico.</title>
-          
-          <meta property="og:title" content="moedashoje.com" />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="http://dolaragora.com/" />
-          <meta property="og:image" content="http://ia.media-imdb.com/rock.jpg" />
-          <meta property="og:description" content="A group of U.S. Marines, under command of a renegade general, take over Alcatraz and threaten San Francisco Bay with biological weapons." />
-          
+          <title>Peso Argentino Hoje: Cotação Comercial Atual. Converter para Real e Gráfico - XMOEDAS</title>
+         
         </Head>
         <Header />
         <div className='container_principal'>
@@ -79,6 +72,8 @@ export default function Home(props) {
           <p>A cotação do peso argentino hoje é de R$ {props.cotacao} para cada real. Isso significa que, para comprar um peso argentino, é necessário gastar R$ {props.cotacao}.</p>
           <h2>Sobre o peso argentino</h2>
           <p>O peso argentino é a moeda oficial da Argentina e foi adotado como tal em 1992, substituindo o austral. Ele é dividido em 100 centavos e é emitido pelo Banco Central da Argentina. O peso argentino é frequentemente afetado pela economia do país, que tem enfrentado problemas econômicos e políticos nos últimos anos.</p>
+          <h2>Qual a diferença entre peso argentino comercial e peso argentino turismo?</h2>
+          <p>A diferença entre o peso argentino comercial e o peso argentino turismo é que a primeira é usada para transações comerciais e financeiras, enquanto a segunda é aplicada para trocas de moeda por turistas que visitam a Argentina. A taxa comercial é determinada pelo mercado de câmbio e a taxa turismo é ligeiramente diferente, refletindo as flutuações do mercado.</p>
           <h2>Converter peso argentino para real</h2>
           <p>Se você deseja converter peso argentino para real, você pode usar a ferramenta online X-MOEDAS. Basta inserir a quantidade de pesos argentinos que você deseja converter e a ferramenta dará o valor equivalente em reais. É importante lembrar de verificar a cotação atual antes de fazer qualquer conversão, pois elas podem variar ao longo do tempo.</p>
           

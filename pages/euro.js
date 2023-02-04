@@ -57,17 +57,10 @@ export default function Home(props) {
   return (
       <>
         <Head>
-          <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
           <meta name="description" content="Cotação atualizada do euro hoje em relação ao real. Conversor de moedas e gráfico do euro nos últimos dias."/>
           <meta name="keywords" content="Euro, Conversor, Cotação, Real, Câmbio, Hoje, Preço" />
-          <title>Euro Hoje: Converter Euro para Real, Cotação Atualizada e Gráfico.</title>
-          
-          <meta property="og:title" content="X-MOEDAS" />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="http://dolaragora.com/" />
-          <meta property="og:image" content="http://ia.media-imdb.com/rock.jpg" />
-          <meta property="og:description" content="A group of U.S. Marines, under command of a renegade general, take over Alcatraz and threaten San Francisco Bay with biological weapons." />
-          
+          <title>Euro Hoje: Cotação Comercial Atual. Converter para Real e Gráfico - XMOEDAS</title>
+         
         </Head>
         <Header />
         <div className='container_principal'>
@@ -79,6 +72,8 @@ export default function Home(props) {
           <p>A cotação do euro hoje é de R$ {props.cotacao}. Isso significa que por cada euro, você pode obter R$ {props.cotacao} reais. É importante notar que as cotações podem mudar diariamente, então é importante verificar regularmente para obter as cotações atuais.</p>
           <h2>Sobre o euro</h2>
           <p>O euro é a moeda oficial da União Europeia e é usada por 19 dos 27 países membros da UE. Ele foi introduzido em 1999 como uma moeda eletrônica e em 2002 começou a ser usado como moeda física. O euro é a segunda moeda de reserva mais utilizada e a segunda moeda mais negociada no mercado cambial mundial. Ele é visto como uma moeda estável e confiável e é usado para facilitar o comércio e os investimentos entre os países membros da UE.</p>
+          <h2>Qual a diferença entre euro comercial e euro turismo</h2>
+          <p>O euro comercial é o valor oficial do euro utilizado para transações comerciais e financeiras. Já o euro turismo é a taxa de câmbio aplicada pelos estabelecimentos financeiros para a compra de euros por outra moeda, geralmente utilizada pelos turistas que viajam para países da União Europeia. Em geral, a taxa de câmbio do euro turismo é ligeiramente diferente da taxa comercial, refletindo as flutuações do mercado de câmbio.</p>
           <h2>Converter euro para real</h2>
           <p>Se você deseja converter euros para reais, pode usar a ferramenta online do site X-MOEDAS. Basta inserir a quantidade de euros que deseja converter e a ferramenta calculará automaticamente a quantidade correspondente em reais. Essa ferramenta é útil para quem viaja para a Europa, faz negócios comerciais ou investimentos na região, ou simplesmente gosta de acompanhar as cotações das moedas. É importante lembrar que a taxa de câmbio pode variar de acordo com o banco ou casa de câmbio que você utiliza, por isso é importante sempre verificar as cotações antes de realizar qualquer transação.</p>
           

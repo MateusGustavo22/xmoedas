@@ -109,8 +109,6 @@ const Conversor = (props) => {
             display: flex;
             justify-content: center;
             margin: auto;
-            margin-top: 20px;
-            padding: 10px;
             flex-direction: column;
           } 
           
@@ -135,11 +133,10 @@ const Conversor = (props) => {
             display: flex;
             flex-direction: column;
             justify-content: right;
-            background-color: white;
           }
           #input_1, .input_2 {
             max-width: 100%;
-            height: 68px;
+            height: 70px;
             margin-bottom: 18px;
             display: flex;
             border-radius: 8px;

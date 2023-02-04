@@ -57,16 +57,9 @@ export default function Home(props) {
   return (
       <>
         <Head>
-          <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
           <meta name="description" content="Cotação atualizada do peso mexicano hoje em relação ao real. Conversor de moedas e gráfico do peso mexicano nos últimos dias."/>
           <meta name="keywords" content="Peso, Mexicano, Conversor, Cotação, Real, Câmbio, Hoje, Preço" />
-          <title>Peso Mexicano Hoje: Converter para Real, Cotação Atualizada e Gráfico.</title>
-          
-          <meta property="og:title" content="moedashoje.com" />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="http://dolaragora.com/" />
-          <meta property="og:image" content="http://ia.media-imdb.com/rock.jpg" />
-          <meta property="og:description" content="A group of U.S. Marines, under command of a renegade general, take over Alcatraz and threaten San Francisco Bay with biological weapons." />
+          <title>Peso Mexicano Hoje: Cotação Comercial Atual. Converter para Real e Gráfico - XMOEDAS</title>
           
         </Head>
         <Header />
@@ -79,6 +72,8 @@ export default function Home(props) {
           <p>A cotação do peso mexicano hoje é de R$ {props.cotacao} para cada real brasileiro. Isso significa que, para comprar 1 peso mexicano, é necessário pagar R$ {props.cotacao} reais. É importante lembrar que as cotações podem variar ao longo do dia e que é sempre recomendado verificar a cotação atual antes de realizar qualquer operação com moedas estrangeiras.</p>
           <h2>Sobre o peso mexicano</h2>
           <p>O peso mexicano é a moeda oficial do México e é usado em todo o país. Ele é dividido em 100 centavos e é emitido pelo Banco Central do México. O símbolo para o peso mexicano é "$" e a abreviaturão é "MXN". O peso mexicano é uma das moedas emergentes mais negociadas no mundo e é considerado uma moeda de risco devido à volatilidade do país.</p>
+          <h2>Qual a diferença entre peso mexicano comercial e peso mexicano turismo?</h2>
+          <p>O peso mexicano comercial é a moeda oficial utilizada para transações comerciais e financeiras no México. Já o peso mexicano turismo é uma taxa de câmbio alternativa que é oferecida em alguns estabelecimentos turísticos e destinos de viagem, com o objetivo de oferecer preços mais competitivos aos turistas estrangeiros. Em geral, a taxa de câmbio do peso mexicano turismo é ligeiramente desfavorável em relação ao peso comercial, o que significa que os turistas pagam mais do que os preços reais quando usam esta moeda.</p>
           <h2>Converter peso mexicano para real</h2>
           <p>A ferramenta online X-MOEDAS oferece a possibilidade de converter peso mexicano em real. Para usar essa ferramenta, basta digitar o valor em pesos mexicanos e clicar em "converter". O site irá exibir o valor correspondente em reais. É uma ótima opção para quem precisa saber quanto dinheiro brasileiro corresponde a uma determinada quantidade de pesos mexicanos. O resultado pode variar de acordo com a cotação do dia.</p>
           

@@ -57,17 +57,10 @@ export default function Home(props) {
   return (
       <>
         <Head>
-          <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
           <meta name="description" content="Cotação atualizada do dólar australiano hoje em relação ao real. Conversor de moedas e gráfico do dólar australiano nos últimos dias."/>
           <meta name="keywords" content="Dólar australiano, Conversor, Cotação, Real, Câmbio, Hoje, Preço" />
-          <title>Dólar Australiano Hoje: Converter para Real, Cotação Atualizada e Gráfico.</title>
-          
-          <meta property="og:title" content="moedashoje.com" />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="http://dolaragora.com/" />
-          <meta property="og:image" content="http://ia.media-imdb.com/rock.jpg" />
-          <meta property="og:description" content="A group of U.S. Marines, under command of a renegade general, take over Alcatraz and threaten San Francisco Bay with biological weapons." />
-          
+          <title>Dólar Australiano Hoje: Cotação Comercial Atual. Converter para Real e Gráfico - XMOEDAS </title>
+    
         </Head>
         <Header />
         <div className='container_principal'>
@@ -79,6 +72,8 @@ export default function Home(props) {
           <p>A cotação do dólar australiano hoje é de R$ {props.cotacao} reais. Isso significa que para comprar 1 dólar australiano, é necessário pagar R$ {props.cotacao} reais. A cotação do dólar australiano pode variar diariamente devido a diversos fatores econômicos e políticos.</p>
           <h2>Sobre o dólar australiano</h2>
           <p>O dólar australiano é a moeda oficial da Austrália e é utilizado em todo o território australiano. Ele é emitido e controlado pelo Banco da Austrália e é considerado uma das moedas mais estáveis e fortes do mundo. A economia australiana é altamente dependente das exportações de recursos naturais, o que pode afetar o valor do dólar australiano em relação às outras moedas.</p>
+          <h2>Qual a diferença entre dólar australiano comercial e dólar australiano turismo?</h2>
+          <p>O Dólar Australiano Comercial é usado para transações comerciais, como importação e exportação de bens e serviços. Já o Dólar Australiano de Turismo é usado para fins turísticos, como compras de produtos e pagamentos de hospedagem e alimentação. Embora ambos sejam denominados em dólares australianos, as taxas de câmbio podem variar devido a fatores como a demanda do mercado e as condições econômicas locais. Por isso, é importante verificar as taxas de câmbio antes de realizar transações em moeda estrangeira.</p>
           <h2>Converter dólar australiano para real</h2>
           <p>A ferramenta online X-MOEDAS oferece a possibilidade de converter dólar australiano para real. Para fazer a conversão, basta inserir a quantidade desejada de dólares australianos e a ferramenta calculará automaticamente o valor equivalente em reais, de acordo com a cotação atual. Essa ferramenta é útil para quem viaja para a Austrália ou precisa realizar transações comerciais com o país, pois permite saber quanto dinheiro será necessário e ajuda a planejar as finanças.</p>
           

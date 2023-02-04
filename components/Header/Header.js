@@ -9,7 +9,7 @@ const Header = () => {
       <header className="header">
            <div className="menu-area">
               <a href="/" className="icone">
-              <img src="/icone.svg" width="180" height="50" alt="Icone do site"/>
+              <img src="/icone.svg" width="120" height="50" alt="Icone do site"/>
               </a>
            </div>
            <div className="sobre-area">
@@ -51,7 +51,7 @@ const Header = () => {
         
         .sobre-area a {
           font-family: 'Inter', sans-serif;
-          font-weight: normal;
+          font-weight: bold;
           text-decoration: none;
           color: #3c3c3c;
         }

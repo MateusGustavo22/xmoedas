@@ -57,16 +57,9 @@ export default function Home(props) {
   return (
       <>
         <Head>
-          <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
           <meta name="description" content="Cotação atualizada do franco suíço hoje em relação ao real. Conversor de moedas e gráfico do franco suíço nos últimos dias."/>
           <meta name="keywords" content="Franco suíço, Conversor, Cotação, Real, Câmbio, Hoje, Preço" />
-          <title>Franco Suico Hoje: Converter para Real, Cotação Atualizada e Gráfico.</title>
-          
-          <meta property="og:title" content="moedashoje.com" />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="http://dolaragora.com/" />
-          <meta property="og:image" content="http://ia.media-imdb.com/rock.jpg" />
-          <meta property="og:description" content="A group of U.S. Marines, under command of a renegade general, take over Alcatraz and threaten San Francisco Bay with biological weapons." />
+          <title>Franco Suíço Hoje: Cotação Comercial Atual. Converter para Real e Gráfico - XMOEDAS</title>
           
         </Head>
         <Header />
@@ -79,6 +72,8 @@ export default function Home(props) {
           <p>A cotação do franco suíço hoje no site X-MOEDAS é de R$ {props.cotacao} reais por 1 franco suíço. Isso significa que, para comprar 1 franco suíço, é necessário pagar R$ {props.cotacao} reais.</p>
           <h2>Sobre o franco suíço</h2>
           <p>O franco suíço é a moeda oficial da Suíça e é considerada uma das moedas mais fortes e estáveis do mundo. Ela é emitida pelo Banco Nacional Suíço e é amplamente utilizada em transações internacionais. O franco suíço é dividido em 100 centavos.</p>
+          <h2>Qual a diferença entre franco suíço comercial e franco suíço turismo?</h2>
+          <p>O franco suíço comercial é a moeda oficial da Suíça e é usado para transações comerciais e financeiras no país. Já o franco suíço turismo é uma taxa de câmbio alternativa que é oferecida aos turistas estrangeiros em alguns estabelecimentos turísticos e destinos de viagem. Em geral, a taxa de câmbio do franco suíço turismo é ligeiramente desfavorável em relação ao franco suíço comercial, o que significa que os turistas pagam mais do que os preços reais quando usam esta moeda.</p>
           <h2>Converter franco suíço para real</h2>
           <p>Para converter franco suíço para real, você pode usar a ferramenta online disponível no site X-MOEDAS. Basta inserir a quantidade de francos suíços que deseja converter e a ferramenta calculará automaticamente o valor equivalente em reais. Isso é útil para quem viaja para a Suíça ou precisa fazer transações comerciais com o país.</p>
           

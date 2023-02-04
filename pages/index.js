@@ -58,16 +58,9 @@ export default function Home(props) {
   return (
       <>
         <Head>
-          <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
           <meta name="description" content="Cotação atualizada do dólar americano hoje em relação ao real. Conversor de moedas e gráfico do dólar nos últimos dias."/>
           <meta name="keywords" content="Dólar, Americano, Conversor, Cotação, Real, Câmbio, Hoje, Preço" />
-          <title>Dólar Hoje: Converter Dólar para Real, Cotação Atualizada e Gráfico.</title>
-          
-          <meta property="og:title" content="moedashoje.com" />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="http://dolaragora.com/" />
-          <meta property="og:image" content="http://ia.media-imdb.com/rock.jpg" />
-          <meta property="og:description" content="A group of U.S. Marines, under command of a renegade general, take over Alcatraz and threaten San Francisco Bay with biological weapons." />
+          <title>Dólar Hoje: Cotação Comercial Atual. Converter para Real e Gráfico - XMOEDAS</title>
           
         </Head>
         <Header />
@@ -83,15 +76,15 @@ export default function Home(props) {
           <h2>Qual a diferença entre dólar comercial e dólar turismo?</h2>
           <p>O dólar comercial é utilizado para transações comerciais enquanto o dólar turismo é utilizado para transações pessoais como viagens e compras no exterior. A cotação do dólar comercial é determinada pelo mercado, enquanto a cotação do dólar turismo é determinada pelo mercado e pela margem de lucro dos bancos.</p>
           <h2>Como o preço do dólar é influenciado hoje?</h2>
-          <p>Política monetária: A política monetária do banco central americano (Federal Reserve) pode afetar a oferta de dólares e, consequentemente, a cotação do dólar. Por exemplo, se o Federal Reserve aumenta as taxas de juros, isso pode tornar o dólar mais atraente para os investidores, o que pode aumentar a cotação do dólar.</p><br/>
-          <p>Situação econômica: A situação econômica dos Estados Unidos também pode afetar a cotação do dólar. Se a economia americana estiver se expandindo, isso pode aumentar a demanda por dólares e, consequentemente, aumentar a cotação do dólar.</p><br/>
-          <p>Inflação: A inflação também pode afetar a cotação do dólar. Se a inflação estiver alta, isso pode diminuir o valor do dólar em relação às outras moedas.</p><br/>
-          <p>Risco geopolítico: Eventos geopolíticos e riscos políticos globais, como guerras, crises políticas e mudanças na liderança de países importantes, podem afetar a cotação do dólar.</p><br/>
-          <p>Investimentos estrangeiros: A entrada e saída de investimentos estrangeiros também podem afetar a cotação do dólar, pois quanto maior a oferta de dólares no mercado, menor será a cotação.</p><br/>
-          <p>Dados econômicos: dados econômicos importantes, como o PIB, o desemprego, o índice de preços ao consumidor e o índice de preços ao produtor, também podem influenciar a cotação do dólar.</p><br/>
-          <p>Expectativas de mercado: as expectativas do mercado, especialmente no que diz respeito a decisões políticas e econômicas futuras, também podem influenciar a cotação do dólar.</p>
+          <p><strong>Política monetária:</strong> A política monetária do banco central americano (Federal Reserve) pode afetar a oferta de dólares e, consequentemente, a cotação do dólar. Por exemplo, se o Federal Reserve aumenta as taxas de juros, isso pode tornar o dólar mais atraente para os investidores, o que pode aumentar a cotação do dólar.</p>
+          <p><strong>Situação econômica:</strong> A situação econômica dos Estados Unidos também pode afetar a cotação do dólar. Se a economia americana estiver se expandindo, isso pode aumentar a demanda por dólares e, consequentemente, aumentar a cotação do dólar.</p>
+          <p><strong>Inflação:</strong> A inflação também pode afetar a cotação do dólar. Se a inflação estiver alta, isso pode diminuir o valor do dólar em relação às outras moedas.</p>
+          <p><strong>Risco geopolítico:</strong> Eventos geopolíticos e riscos políticos globais, como guerras, crises políticas e mudanças na liderança de países importantes, podem afetar a cotação do dólar.</p>
+          <p><strong>Investimentos estrangeiros:</strong> A entrada e saída de investimentos estrangeiros também podem afetar a cotação do dólar, pois quanto maior a oferta de dólares no mercado, menor será a cotação.</p>
+          <p><strong>Dados econômicos:</strong> dados econômicos importantes, como o PIB, o desemprego, o índice de preços ao consumidor e o índice de preços ao produtor, também podem influenciar a cotação do dólar.</p>
+          <p><strong>Expectativas de mercado:</strong> as expectativas do mercado, especialmente no que diz respeito a decisões políticas e econômicas futuras, também podem influenciar a cotação do dólar.</p>
           <h2>Como posso converter dólar para real?</h2>
-          <p>O site X-MOEDAS é uma ferramenta prática e fácil de usar para converter valores em dólar para real. Basta inserir o valor em dólar que deseja converter e o nosso conversor fará o cálculo em tempo real, exibindo o valor em real equivalente. O site também permite que você compare as taxas de câmbio atuais do dólar com o real para que você possa tomar decisões informadas sobre suas transações financeiras. Aproveite a nossa ferramenta confiável e fácil de usar hoje mesmo no X-MOEDAS!</p>
+          <p>O site XMOEDAS é uma ferramenta prática e fácil de usar para converter valores em dólar para real. Basta inserir o valor em dólar que deseja converter e o nosso conversor fará o cálculo em tempo real, exibindo o valor em real equivalente. O site também permite que você compare as taxas de câmbio atuais do dólar com o real para que você possa tomar decisões informadas sobre suas transações financeiras. Aproveite a nossa ferramenta confiável e fácil de usar hoje mesmo no XMOEDAS!</p>
 
           <style jsx>{`
             main {

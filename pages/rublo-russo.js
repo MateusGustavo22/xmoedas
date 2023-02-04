@@ -57,17 +57,10 @@ export default function Home(props) {
   return (
       <>
         <Head>
-          <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
           <meta name="description" content="Cotação atualizada do rublo hoje em relação ao real. Conversor de moedas e gráfico do rublo nos últimos dias."/>
           <meta name="keywords" content="Rublo, Russo, Conversor, Cotação, Real, Câmbio, Hoje, Preço" />
-          <title>Rublo Russo Hoje: Converter para Real, Cotação Atualizada e Gráfico.</title>
-          
-          <meta property="og:title" content="moedashoje.com" />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="http://dolaragora.com/" />
-          <meta property="og:image" content="http://ia.media-imdb.com/rock.jpg" />
-          <meta property="og:description" content="A group of U.S. Marines, under command of a renegade general, take over Alcatraz and threaten San Francisco Bay with biological weapons." />
-          
+          <title>Rublo Russo Hoje: Cotação Comercial Atual. Converter para Real e Gráfico - XMOEDAS</title>
+        
         </Head>
         <Header />
         <div className='container_principal'>

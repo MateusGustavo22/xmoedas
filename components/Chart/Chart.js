@@ -10,7 +10,12 @@ export default function Chart30days(props) {
   //Prenche os arrays com as cotações e datas
   for (let i = 0; i < 29; i++) {
     //Preenche os arrays das cotações e das data
-    lastCots.push(parseFloat(resObj.bid[i]).toFixed(2));
+    if (parseFloat(resObj.bid[i]) < 1) {
+      lastCots.push(parseFloat(resObj.bid[i]).toFixed(3));
+    } else {
+      lastCots.push(parseFloat(resObj.bid[i]).toFixed(2));
+    }
+    //lastCots.push(parseFloat(resObj.bid[i]).toFixed(2));
     let timeStamp = resObj.timestamp[i];
     let date = new Date(timeStamp * 1000);
     var optionsDate = { month: '2-digit', day: '2-digit'};
