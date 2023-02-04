@@ -68,7 +68,7 @@ export default function Home(props) {
           <Chart30days currency={props.code} last30days={props.bid30days} />
         </div>
         <main>
-          <h2>Cotação da libra hoje</h2>
+          <h1>Cotação da libra hoje</h1>
           <p>A cotação da libra esterlina hoje é de R$ {props.cotacao}. Isso significa que por cada libra esterlina, você pode obter R$ {props.cotacao} reais. É importante notar que as cotações podem mudar diariamente, então é importante verificar regularmente para obter as cotações atuais.</p>
           <h2>Sobre a libra esterlina</h2>
           <p>A libra esterlina é a moeda oficial do Reino Unido e é comumente conhecida como "libra" ou "sterling". Ela é emitida e regulada pelo Banco da Inglaterra e é aceita em todo o território do Reino Unido. A libra é vista como uma moeda estável e confiável e é usada para facilitar o comércio e os investimentos internacionais. A libra é a quarta moeda mais negociada no mercado cambial mundial e é usada como uma moeda de reserva internacional.</p>
@@ -85,7 +85,7 @@ export default function Home(props) {
               margin-bottom: 100px;
             }
             
-            main h2, h3 {
+            main h1, h2, h3 {
               font-family: 'Inter', sans-serif;
               font-size: 22px;
               margin-bottom: 30px;

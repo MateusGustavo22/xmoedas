@@ -68,7 +68,7 @@ export default function Home(props) {
           <Chart30days currency={props.code} last30days={props.bid30days} />
         </div>
         <main>
-          <h2>Cotação do dólar de hong kong hoje</h2>
+          <h1>Cotação do dólar de hong kong hoje</h1>
           <p>A cotação do dólar de Hong Kong hoje é de R$ {props.cotacao}. Isso significa que por cada dólar de Hong Kong, você pode obter R$ {props.cotacao} reais. É importante notar que as cotações podem mudar diariamente, então é importante verificar regularmente para obter as cotações atuais.</p>
           <h2>Sobre o dólar de hong kong</h2>
           <p>O dólar de Hong Kong é a moeda oficial de Hong Kong, um território da China. Ele é emitido pelo Banco da China de Hong Kong e é aceito em todo o território de Hong Kong. Ele é frequentemente usado para negociações comerciais e investimentos, e é visto como uma moeda estável e confiável. O dólar de Hong Kong também é usado como uma moeda de reserva internacional, com muitos investidores e bancos mantendo grandes quantidades de dólares de Hong Kon</p>
@@ -85,7 +85,7 @@ export default function Home(props) {
               margin-bottom: 100px;
             }
             
-            main h2, h3 {
+            main h1, h2, h3 {
               font-family: 'Inter', sans-serif;
               font-size: 22px;
               margin-bottom: 30px;

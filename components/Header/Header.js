@@ -22,6 +22,7 @@ const Header = () => {
           background-color: white;
           width: 100%;
           height: 55px;
+          margin-bottom: 10px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           position: sticky;
           top: 0;

@@ -60,7 +60,8 @@ export default function Home(props) {
           <meta name="description" content="Cotação atualizada do dólar canadense hoje em relação ao real. Conversor de moedas e gráfico do dólar canadense nos últimos dias."/>
           <meta name="keywords" content="Dólar canadense, Conversor, Cotação, Real, Câmbio, Hoje, Preço" />
           <title>Dólar Canadense Hoje: Cotação Comercial Atual. Converter para Real e Gráfico - XMOEDAS</title>
-          
+          <meta property="og:title" content="Dólar Canadense Hoje" />
+
         </Head>
         <Header />
         <div className='container_principal'>
@@ -68,11 +69,11 @@ export default function Home(props) {
           <Chart30days currency={props.code} last30days={props.bid30days} />
         </div>
         <main>
-          <h2>Cotação do dólar canadense hoje</h2>
+          <h1>Cotação do dólar canadense hoje</h1>
           <p>A cotação do dólar canadense (CAD) hoje é de R$ {props.cotacao} reais. Isso significa que cada dólar canadense está sendo negociado ao preço de R$ {props.cotacao} reais. A cotação do dólar canadense pode ser influenciada por uma variedade de fatores, incluindo a economia dos Estados Unidos e do Canadá, as taxas de juros, as expectativas de inflação e a demanda por recursos naturais do Canadá. Como investidor ou viajante, é importante estar ciente da cotação do dólar canadense e como ela pode afetar suas decisões.</p>
           <h2>Sobre o dólar canadense</h2>
           <p>O dólar canadense (CAD) é a moeda oficial do Canadá. Ele é emitido pelo Banco do Canadá e é utilizado em todo o país, incluindo as províncias e territórios. O símbolo usado para representar o dólar canadense é "C$" ou "CAD".<br/><br/> O dólar canadense é uma moeda flutuante, ou seja, seu valor é determinado pelo mercado e pode ser influenciado por diversos fatores, como a taxa de juros, a balança comercial, a política monetária e a situação econômica global.</p>
-          <h2>Qual a diferença entre dólar canadense comercial e dólar canadense turismo</h2>
+          <h2>Qual a diferença entre dólar canadense comercial e dólar canadense turismo?</h2>
           <p>O dólar canadense é a moeda oficial do Canado e pode ser encontrado em duas taxas diferentes: a taxa comercial e a taxa turística. A diferença entre as duas é a seguinte:</p>
           <p>Taxa comercial: É a taxa utilizada para transações comerciais e financeiras, como a compra e venda de bens e serviços. Ela reflete a força econômica do Canado e é determinada pelo mercado financeiro.</p>
           <p>Taxa turística: É a taxa utilizada para viagens e turismo. Ela é mais alta do que a taxa comercial e inclui uma margem adicional para cobrir os custos dos intermediários financeiros, como bancos e casas de câmbio.</p>
@@ -88,7 +89,7 @@ export default function Home(props) {
               margin-bottom: 100px;
             }
             
-            main h2, h3 {
+            main h1, h2, h3 {
               font-family: 'Inter', sans-serif;
               font-size: 22px;
               margin-bottom: 30px;

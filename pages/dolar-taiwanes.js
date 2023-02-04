@@ -68,7 +68,7 @@ export default function Home(props) {
           <Chart30days currency={props.code} last30days={props.bid30days} />
         </div>
         <main>
-          <h2>Cotação do dólar taiwanês hoje</h2>
+          <h1>Cotação do dólar taiwanês hoje</h1>
           <p>A cotação do dólar taiwanês hoje é de R$ {props.cotacao}. Isso significa que por cada dólar taiwanês, você pode trocar por R$ {props.cotacao} reais. Essa cotação pode variar ao longo do dia e é atualizada em tempo real no site.</p>
           <h2>Sobre o dólar taiwanês</h2>
           <p>O dólar taiwanês é a moeda oficial de Taiwan e é conhecido como "NT$" no mercado financeiro. É emitido pelo Banco Central de Taiwan e é usado como meio de pagamento nas transações comerciais e financeiras no país. Taiwan é uma economia desenvolvida e seus negócios internacionais têm uma grande importância para a economia global.</p>
@@ -85,7 +85,7 @@ export default function Home(props) {
               margin-bottom: 100px;
             }
             
-            main h2, h3 {
+            main h1, h2, h3 {
               font-family: 'Inter', sans-serif;
               font-size: 22px;
               margin-bottom: 30px;

@@ -33,8 +33,8 @@ export default function Chart30days(props) {
         data: lastCots,
         fill: true,
         pointRadius: 0,
-        backgroundColor: 'rgb(136,175,229, 0.3)',
-        borderColor: '#1260CC',
+        backgroundColor: 'rgb(56,136 ,103, 0.3)',
+        borderColor: '#388867',
       },
     ],
 }
@@ -54,7 +54,8 @@ const options = {
       </div>
       <style jsx>{`
         .chart_area {
-          max-width: 700px;
+          max-width: 680px;
+          background-color: transparent;
           padding-left: 20px;
           padding-right: 20px;
           margin: auto;

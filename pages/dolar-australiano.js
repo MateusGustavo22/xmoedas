@@ -69,7 +69,7 @@ export default function Home(props) {
           <Chart30days currency={props.code} last30days={props.bid30days} />
         </div>
         <main>
-          <h2>Cotação do dólar australiano hoje</h2>
+          <h1>Cotação do dólar australiano hoje</h1>
           <p>A cotação do dólar australiano hoje é de R$ {props.cotacao} reais. Isso significa que para comprar 1 dólar australiano, é necessário pagar R$ {props.cotacao} reais. A cotação do dólar australiano pode variar diariamente devido a diversos fatores econômicos e políticos.</p>
           <h2>Sobre o dólar australiano</h2>
           <p>O dólar australiano é a moeda oficial da Austrália e é utilizado em todo o território australiano. Ele é emitido e controlado pelo Banco da Austrália e é considerado uma das moedas mais estáveis e fortes do mundo. A economia australiana é altamente dependente das exportações de recursos naturais, o que pode afetar o valor do dólar australiano em relação às outras moedas.</p>
@@ -86,7 +86,7 @@ export default function Home(props) {
               margin-bottom: 100px;
             }
             
-            main h2, h3 {
+            main h1, h2, h3 {
               font-family: 'Inter', sans-serif;
               font-size: 22px;
               margin-bottom: 30px;

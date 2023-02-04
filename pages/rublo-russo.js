@@ -68,7 +68,7 @@ export default function Home(props) {
           <Chart30days currency={props.code} last30days={props.bid30days} />
         </div>
         <main>
-          <h2>Cotação do rublo hoje</h2>
+          <h1>Cotação do rublo russo hoje</h1>
           <p>A cotação atual do rublo russo é de R$ {props.cotacao} reais por unidade. Esta cotação pode variar diariamente e é importante ficar atento às flutuações do mercado para tomar decisões financeiras.</p>
           <h2>Sobre o rublo russo</h2>
           <p>O rublo é a moeda oficial da Rússia e é utilizado em todo o país. Ele é emitido pelo Banco Central da Rússia e é dividido em 100 kopeks. O rublo tem uma história longa e conturbada, tendo passado por várias reformas monetárias ao longo dos anos. A partir de 2000, o Banco Central da Rússia tem mantido uma política cambial flutuante, permitindo que o valor do rublo seja determinado pelo mercado.</p>
@@ -83,7 +83,7 @@ export default function Home(props) {
               margin-bottom: 100px;
             }
             
-            main h2, h3 {
+            main h1, h2, h3 {
               font-family: 'Inter', sans-serif;
               font-size: 22px;
               margin-bottom: 30px;

@@ -2,10 +2,10 @@ import { useState, useEffect } from 'react';
 
 const  Footer = () => {
   
-  const [copyright, setCopyright] = useState(`Copyright ${new Date().getFullYear()} - Dólar Agora`)
+  const [copyright, setCopyright] = useState(`Copyright ${new Date().getFullYear()} - Xmoedas`)
   
   useEffect(() => {
-    setCopyright(` 2022 - ${new Date().getFullYear()} - Dólar Agora`)
+    setCopyright(` 2022 - ${new Date().getFullYear()} - Xmoedas`)
   },[])
   
   return (

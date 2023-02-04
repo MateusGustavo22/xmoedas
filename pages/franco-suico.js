@@ -68,7 +68,7 @@ export default function Home(props) {
           <Chart30days currency={props.code} last30days={props.bid30days} />
         </div>
         <main>
-          <h2>Cotação do franco suíço hoje</h2>
+          <h1>Cotação do franco suíço hoje</h1>
           <p>A cotação do franco suíço hoje no site X-MOEDAS é de R$ {props.cotacao} reais por 1 franco suíço. Isso significa que, para comprar 1 franco suíço, é necessário pagar R$ {props.cotacao} reais.</p>
           <h2>Sobre o franco suíço</h2>
           <p>O franco suíço é a moeda oficial da Suíça e é considerada uma das moedas mais fortes e estáveis do mundo. Ela é emitida pelo Banco Nacional Suíço e é amplamente utilizada em transações internacionais. O franco suíço é dividido em 100 centavos.</p>
@@ -85,7 +85,7 @@ export default function Home(props) {
               margin-bottom: 100px;
             }
             
-            main h2, h3 {
+            main h1, h2, h3 {
               font-family: 'Inter', sans-serif;
               font-size: 22px;
               margin-bottom: 30px;

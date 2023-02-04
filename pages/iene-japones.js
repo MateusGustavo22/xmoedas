@@ -68,7 +68,7 @@ export default function Home(props) {
           <Chart30days currency={props.code} last30days={props.bid30days} />
         </div>
         <main>
-          <h2>Cotação do iene hoje</h2>
+          <h1>Cotação do iene hoje</h1>
           <p>A cotação atual do iene japonês hoje é de R$ {props.cotacao} reais por unidade. Esta cotação pode variar diariamente e é importante ficar atento às flutuações do mercado para tomar decisões financeiras.</p>
           <h2>Sobre o iene japonês</h2>
           <p>O iene japonês é a moeda oficial do Japão e é utilizado em todo o país. Ele é uma das moedas mais fortes e estáveis do mundo, sendo amplamente utilizada em transações internacionais. Sua sigla é JPY e é dividido em 100 sen ou 1000 rin.</p>
@@ -85,7 +85,7 @@ export default function Home(props) {
               margin-bottom: 100px;
             }
             
-            main h2, h3 {
+            main h1, h2, h3 {
               font-family: 'Inter', sans-serif;
               font-size: 22px;
               margin-bottom: 30px;

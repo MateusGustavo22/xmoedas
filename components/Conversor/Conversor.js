@@ -18,16 +18,7 @@ const Conversor = (props) => {
     setInput2Value(e.target.value)
     setInput1Value((e.target.value / cotacao).toFixed(2))
   }
-  
-  function getFormattedDate() {
-    var date = new Date();
-    var day = ("0" + date.getDate()).slice(-2);
-    var month = ("0" + (date.getMonth() + 1)).slice(-2);
-    var year = date.getFullYear();
-    return day + "/" + month + "/" + year;
-  }
-  const [data, setData] = useState(getFormattedDate)
-  
+ 
   const [menuOptions, setOptions] = useState(props.currency);
   
   function selectChange(e) {
@@ -58,9 +49,6 @@ const Conversor = (props) => {
   
   return (
     <article>
-         <div className="h1_principal">
-            <h1>Conversor de moedas</h1>
-         </div>
          <div className="input_area">
            <div className="moedas_input">
              <select id="currency_options" onChange={selectChange} value={props.currency}>
@@ -98,26 +86,9 @@ const Conversor = (props) => {
                     <input id="entrada_2" name={props.br} type="number" value={input2Value} onChange={handleInput2Change} style={{border: '2px solid #a4a4a4', borderLeft: 'none'}}/>
                  </div>
               </div>
-              <div className="data">
-                 <span id="data">{data}</span>
-              </div>
             </div>
           </div>
           <style jsx>{`
-          .h1_principal {
-            max-width: 600px;
-            display: flex;
-            justify-content: center;
-            margin: auto;
-            flex-direction: column;
-          } 
-          
-          h1 {
-            text-align: center;
-            font-weight: bold;
-            font-family: 'Inter', sans-serif;
-            color: #333333;
-          }
           .input_area {
             max-width: 700px;
             margin: auto;
@@ -203,19 +174,6 @@ const Conversor = (props) => {
             border-bottom-right-radius: 8px;
             font-family: 'Inter', sans-serif;
             font-weight: bold;
-          }
-          
-          .data {
-            margin: auto;
-            padding: 3px;
-            display: flex;
-            justify-content: center;
-          }
-          .data span {
-            text-align: center;
-            font-family: 'Inter', sans-serif;
-            font-weight: normal;
-            color: #5c5c61;
           }
         
        `}</style>
