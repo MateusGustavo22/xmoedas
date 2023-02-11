@@ -92,32 +92,6 @@ export default function Home(props) {
           <p>Expectativas de mercado: as expectativas do mercado, especialmente no que diz respeito a decisões políticas e econômicas futuras, também podem influenciar a cotação do dólar.</p>
           <h2>Como posso converter dólar para real?</h2>
           <p>O site X-MOEDAS é uma ferramenta prática e fácil de usar para converter valores em dólar para real. Basta inserir o valor em dólar que deseja converter e o nosso conversor fará o cálculo em tempo real, exibindo o valor em real equivalente. O site também permite que você compare as taxas de câmbio atuais do dólar com o real para que você possa tomar decisões informadas sobre suas transações financeiras. Aproveite a nossa ferramenta confiável e fácil de usar hoje mesmo no X-MOEDAS!</p>
-
-          <style jsx>{`
-            main {
-              max-width: 700px;
-              padding: 20px;
-              margin: auto;
-              margin-bottom: 100px;
-            }
-            
-            main h2, h3 {
-              font-family: 'Inter', sans-serif;
-              font-size: 22px;
-              margin-bottom: 30px;
-              margin-top: 30px;
-              color: #333333;
-            }
-            
-            main p {
-              font-family: 'Inter', sans-serif;
-              font-weight: normal;
-              font-size: 17px;
-              line-height: 1.5;
-              color: #333333;
-            }
-          `}</style>
-          
         </main>
         <Footer/>
       </>

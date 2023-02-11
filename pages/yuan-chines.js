@@ -4,6 +4,7 @@ import Header from 'components/Header/Header';
 import Conversor from 'components/Conversor/Conversor';
 import Chart30days from 'components/Chart/Chart';
 import axios from 'axios';
+import Table from 'components/Table/Table';
 
 //Pegar a cotação da moeda e passa como props
 export async function getStaticProps() {
@@ -60,8 +61,9 @@ export default function Home(props) {
         <Head>
           <meta name="description" content="Cotação atualizada do yuan chinês hoje em relação ao real. Conversor de moedas e gráfico do yuan nos últimos dias."/>
           <meta name="keywords" content="Yuan, Conversor, Cotação, Real, Câmbio, Hoje, Preço" />
-          <title>Yuan Chinês Hoje: Cotação Comercial Atual. Converter para Real e Gráfico - XMOEDAS</title>
-          
+          <title>Yuan Chinês Hoje: Cotação Comercial Atual. Gráfico e Tabela - XMOEDAS</title>
+          <meta property="og:title" content="Yuan Chinês Hoje" />
+
         </Head>
         <Header />
         <div className='container_principal'>
@@ -71,38 +73,13 @@ export default function Home(props) {
         <main>
           <h1>Cotação do yuan chinês hoje</h1>
           <p>A cotação do yuan chinês hoje é de R$ {props.cotacao} para cada real brasileiro. Isso significa que, para comprar 1 yuan chinês, é necessário pagar R$ {props.cotacao} reais. É importante lembrar que as cotações podem variar ao longo do dia e que é sempre recomendado verificar a cotação atual antes de realizar qualquer operação com moedas estrangeiras.</p>
+          <Table cotacao={props.cotacao} moeda={'Yuan'} code={props.code} />
           <h2>Sobre o yuan chinês</h2>
           <p>O yuan chinês é a moeda oficial da China e é usado em todo o país. Ele é dividido em 10 jiao e 100 fen e é emitido pelo Banco Central da China. O símbolo para o yuan chinês é "¥" e a abreviatura é "CNY". O yuan chinês é uma das moedas mais negociadas no mundo e tem uma grande importância na economia global. A China é a segunda maior economia do mundo e o yuan tem um papel importante na estabilidade financeira global.</p>
           <h2>Qual a diferença entre yuan comercial e yuan turismo?</h2>
           <p>O yuan comercial é a moeda oficial da China e é usado para transações comerciais e financeiras no país. Já o yuan turismo é uma taxa de câmbio alternativa que é oferecida aos turistas estrangeiros em alguns estabelecimentos turísticos e destinos de viagem. Em geral, a taxa de câmbio do yuan turismo é ligeiramente desfavorável em relação ao yuan comercial, o que significa que os turistas pagam mais do que os preços reais quando usam esta moeda.</p>
-          <h2>Converter yuan em real</h2>
-          <p>A ferramenta online X-MOEDAS oferece a possibilidade de converter yuan em real. Para usar essa ferramenta, basta digitar o valor em yuan e o site irá exibir o valor correspondente em reais. É uma ótima opção para quem precisa saber quanto dinheiro brasileiro corresponde a uma determinada quantidade de yuan. O resultado pode variar de acordo com a cotação do dia. É importante lembrar que a conversão de moedas estrangeiras pode estar sujeita a taxas de câmbio e impostos, então é sempre importante verificar esses detalhes antes de realizar qualquer transação.</p>
-          
-          <style jsx>{`
-            main {
-              max-width: 700px;
-              padding: 20px;
-              margin: auto;
-              margin-bottom: 100px;
-            }
-            
-            main h1, h2, h3 {
-              font-family: 'Inter', sans-serif;
-              font-size: 22px;
-              margin-bottom: 30px;
-              margin-top: 30px;
-              color: #333333;
-            }
-            
-            main p {
-              font-family: 'Inter', sans-serif;
-              font-weight: normal;
-              font-size: 17px;
-              line-height: 1.5;
-              color: #333333;
-            }
-          `}</style>
-          
+          <h2>Como posso converter yuan em real?</h2>
+          <p>A ferramenta online XMOEDAS oferece a possibilidade de converter yuan em real. Para usar essa ferramenta, basta digitar o valor em yuan e o site irá exibir o valor correspondente em reais. É uma ótima opção para quem precisa saber quanto dinheiro brasileiro corresponde a uma determinada quantidade de yuan. O resultado pode variar de acordo com a cotação do dia. É importante lembrar que a conversão de moedas estrangeiras pode estar sujeita a taxas de câmbio e impostos, então é sempre importante verificar esses detalhes antes de realizar qualquer transação.</p>
         </main>
         <Footer/>
       </>

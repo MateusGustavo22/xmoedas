@@ -1,6 +1,40 @@
 import { Line } from 'react-chartjs-2';
 import chart from 'chart.js/auto';
+import styled from 'styled-components';
 
+
+const ChartArea = styled.section`
+    max-width: 700px;
+    background-color: ${props => props.theme.colors.primary};
+    border-radius: 8px;
+    margin: auto;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: right;
+ `;
+ 
+ const ChartDiv = styled.div`
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 8px;
+    padding-top: 12px;
+    padding-bottom: 8px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+ `;
+  
+  const Span = styled.span`
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: normal;
+    color: ${props => props.theme.colors.fontP};
+    font-size: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  `;
+  
 export default function Chart30days(props) {
   
   const resObj = props.last30days;
@@ -29,12 +63,12 @@ export default function Chart30days(props) {
     labels: lastDates,
     datasets: [
       {
-        label: `${props.currency}/BRL`,
+        label: `${props.currency}/BRL `,
         data: lastCots,
         fill: true,
         pointRadius: 0,
-        backgroundColor: 'rgb(56,136 ,103, 0.3)',
-        borderColor: '#388867',
+        backgroundColor: 'rgb(19, 99, 223, 0.3)',
+        borderColor: '#1363DF',
       },
     ],
 }
@@ -47,40 +81,11 @@ const options = {
 }
   
   return (
-    <section className="chart_area">
-      <div className="chart">
-        <h2>Gráfico ({props.currency}) nos últimos 30 dias</h2>
+    <ChartArea>
+      <ChartDiv>
+        <Span>Gráfico ({props.currency}) nos últimos 30 dias</Span>
         <Line data={data} options={options} height="160" />
-      </div>
-      <style jsx>{`
-        .chart_area {
-          max-width: 680px;
-          background-color: transparent;
-          padding-left: 20px;
-          padding-right: 20px;
-          margin: auto;
-          display: flex;
-          justify-content: center;
-          align-items: right;
-        }
-        .chart {
-          width: 100%;
-          box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px 2px;
-          border-radius: 3px;
-          padding-top: 12px;
-          padding-bottom: 8px;
-        }
-        
-        section h2 {
-          text-align: center;
-          font-family: 'Inter', sans-serif;
-          font-weight: normal;
-          color: #5c5c61;
-          font-size: 15px;
-          margin-top: 0px;
-          margin-bottom: 0px;
-        }
-      `}</style>
-    </section>
+      </ChartDiv>
+    </ChartArea>
   )
 }

@@ -4,6 +4,7 @@ import Header from 'components/Header/Header';
 import Conversor from 'components/Conversor/Conversor';
 import Chart30days from 'components/Chart/Chart';
 import axios from 'axios';
+import Table from 'components/Table/Table';
 
 //Pegar a cotação da moeda e passa como props
 export async function getStaticProps() {
@@ -57,10 +58,11 @@ export default function Home(props) {
   return (
       <>
         <Head>
-          <meta name="description" content="Cotação atualizada do rublo hoje em relação ao real. Conversor de moedas e gráfico do rublo nos últimos dias."/>
+          <meta name="description" content="Cotação atualizada do rublo russo hoje em relação ao real. Conversor de moedas e gráfico do rublo nos últimos dias."/>
           <meta name="keywords" content="Rublo, Russo, Conversor, Cotação, Real, Câmbio, Hoje, Preço" />
-          <title>Rublo Russo Hoje: Cotação Comercial Atual. Converter para Real e Gráfico - XMOEDAS</title>
-        
+          <title>Rublo Russo Hoje: Cotação Comercial Atual. Gráfico e Tabela - XMOEDAS</title>
+          <meta property="og:title" content="Rublo Russo Hoje" />
+
         </Head>
         <Header />
         <div className='container_principal'>
@@ -70,36 +72,11 @@ export default function Home(props) {
         <main>
           <h1>Cotação do rublo russo hoje</h1>
           <p>A cotação atual do rublo russo é de R$ {props.cotacao} reais por unidade. Esta cotação pode variar diariamente e é importante ficar atento às flutuações do mercado para tomar decisões financeiras.</p>
+          <Table cotacao={props.cotacao} moeda={'Rublo'} code={props.code} />
           <h2>Sobre o rublo russo</h2>
           <p>O rublo é a moeda oficial da Rússia e é utilizado em todo o país. Ele é emitido pelo Banco Central da Rússia e é dividido em 100 kopeks. O rublo tem uma história longa e conturbada, tendo passado por várias reformas monetárias ao longo dos anos. A partir de 2000, o Banco Central da Rússia tem mantido uma política cambial flutuante, permitindo que o valor do rublo seja determinado pelo mercado.</p>
-          <h2>Converter rublo para real</h2>
-          <p>O site X-MOEDAS oferece uma ferramenta online para converter rublos em reais. Para usar essa ferramenta, você precisará inserir a quantidade de rublos desejada e a cotação atual será exibida. Isso pode ser útil para quem viaja para a Rússia ou precisa realizar transações comerciais com o país. É importante lembrar que a cotação do rublo pode variar diariamente, então é importante verificar a cotação atual antes de fazer qualquer transação.</p>
-          
-          <style jsx>{`
-            main {
-              max-width: 700px;
-              padding: 20px;
-              margin: auto;
-              margin-bottom: 100px;
-            }
-            
-            main h1, h2, h3 {
-              font-family: 'Inter', sans-serif;
-              font-size: 22px;
-              margin-bottom: 30px;
-              margin-top: 30px;
-              color: #333333;
-            }
-            
-            main p {
-              font-family: 'Inter', sans-serif;
-              font-weight: normal;
-              font-size: 17px;
-              line-height: 1.5;
-              color: #333333;
-            }
-          `}</style>
-          
+          <h2>Como posso converter rublo para real?</h2>
+          <p>O site XMOEDAS oferece uma ferramenta online para converter rublos em reais. Para usar essa ferramenta, você precisará inserir a quantidade de rublos desejada e a cotação atual será exibida. Isso pode ser útil para quem viaja para a Rússia ou precisa realizar transações comerciais com o país. É importante lembrar que a cotação do rublo pode variar diariamente, então é importante verificar a cotação atual antes de fazer qualquer transação.</p>
         </main>
         <Footer/>
       </>

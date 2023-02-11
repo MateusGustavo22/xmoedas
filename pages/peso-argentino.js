@@ -4,6 +4,7 @@ import Header from 'components/Header/Header';
 import Conversor from 'components/Conversor/Conversor';
 import Chart30days from 'components/Chart/Chart';
 import axios from 'axios';
+import Table from 'components/Table/Table';
 
 //Pegar a cotação da moeda e passa como props
 export async function getStaticProps() {
@@ -59,8 +60,9 @@ export default function Home(props) {
         <Head>
           <meta name="description" content="Cotação atualizada do peso argentino hoje em relação ao real. Conversor de moedas e gráfico do peso argentino nos últimos dias."/>
           <meta name="keywords" content="Peso, Argentino, Conversor, Cotação, Real, Câmbio, Hoje, Preço" />
-          <title>Peso Argentino Hoje: Cotação Comercial Atual. Converter para Real e Gráfico - XMOEDAS</title>
-         
+          <title>Peso Argentino Hoje: Cotação Comercial Atual. Gráfico e Tabela - XMOEDAS</title>
+          <meta property="og:title" content="Peso Argentino Hoje" />
+
         </Head>
         <Header />
         <div className='container_principal'>
@@ -69,39 +71,14 @@ export default function Home(props) {
         </div>
         <main>
           <h1>Cotação do peso argentino hoje</h1>
-          <p>A cotação do peso argentino hoje é de R$ {props.cotacao} para cada real. Isso significa que, para comprar um peso argentino, é necessário gastar R$ {props.cotacao}.</p>
+          <p>A cotação do peso argentino hoje é de R$ {props.cotacao} para cada real. Isso significa que, para comprar um peso argentino, é necessário gastar R$ {props.cotacao} reais.</p>
+          <Table cotacao={props.cotacao} moeda={'Peso Argentino'} code={props.code} />
           <h2>Sobre o peso argentino</h2>
           <p>O peso argentino é a moeda oficial da Argentina e foi adotado como tal em 1992, substituindo o austral. Ele é dividido em 100 centavos e é emitido pelo Banco Central da Argentina. O peso argentino é frequentemente afetado pela economia do país, que tem enfrentado problemas econômicos e políticos nos últimos anos.</p>
           <h2>Qual a diferença entre peso argentino comercial e peso argentino turismo?</h2>
           <p>A diferença entre o peso argentino comercial e o peso argentino turismo é que a primeira é usada para transações comerciais e financeiras, enquanto a segunda é aplicada para trocas de moeda por turistas que visitam a Argentina. A taxa comercial é determinada pelo mercado de câmbio e a taxa turismo é ligeiramente diferente, refletindo as flutuações do mercado.</p>
-          <h2>Converter peso argentino para real</h2>
-          <p>Se você deseja converter peso argentino para real, você pode usar a ferramenta online X-MOEDAS. Basta inserir a quantidade de pesos argentinos que você deseja converter e a ferramenta dará o valor equivalente em reais. É importante lembrar de verificar a cotação atual antes de fazer qualquer conversão, pois elas podem variar ao longo do tempo.</p>
-          
-          <style jsx>{`
-            main {
-              max-width: 700px;
-              padding: 20px;
-              margin: auto;
-              margin-bottom: 100px;
-            }
-            
-            main h1, h2, h3 {
-              font-family: 'Inter', sans-serif;
-              font-size: 22px;
-              margin-bottom: 30px;
-              margin-top: 30px;
-              color: #333333;
-            }
-            
-            main p {
-              font-family: 'Inter', sans-serif;
-              font-weight: normal;
-              font-size: 17px;
-              line-height: 1.5;
-              color: #333333;
-            }
-          `}</style>
-          
+          <h2>Como posso converter peso argentino em real?</h2>
+          <p>Se você deseja converter peso argentino para real, você pode usar a ferramenta online XMOEDAS. Basta inserir a quantidade de pesos argentinos que você deseja converter e a ferramenta dará o valor equivalente em reais. É importante lembrar de verificar a cotação atual antes de fazer qualquer conversão, pois elas podem variar ao longo do tempo.</p>
         </main>
         <Footer/>
       </>

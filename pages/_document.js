@@ -1,27 +1,49 @@
-import { Html, Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript } from 'next/document';
+import { ServerStyleSheet } from 'styled-components';
 
-export default function Document() {
-  return (
-    <Html lang="pt-BR">
-      <Head>
-       <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
-       <meta property="og:type" content="website" />
-       <meta property="og:url" content="https://conversor-moedas-two.vercel.app/" />
-       <meta property="og:image" content="https://conversor-moedas-two.vercel.app/icone-midia.jpeg" />
-       <meta property="og:description" content="Veja a Cotação de Hoje das principais Moedas em relação ao Real." />
-       
-       <meta name="twitter:card" content="summary" />
-       <meta name="twitter:site" content="https://conversor-moedas-two.vercel.app/" />
-       <meta name="twitter:title" content="Post title" />
-       <meta name="twitter:description" content="Post description ...">
-       <meta name="twitter:image" content="https://conversor-moedas-two.vercel.app/icone-midia.jpeg" />
-       <meta name="twitter:image:alt" content="Image text description" />
-      
-      </Head>
-      <body>
-        <Main />
-        <NextScript />
-      </body>
-    </Html>
-  )
+export default class MyDocument extends Document {
+  static async getInitialProps(ctx) {
+    const sheet = new ServerStyleSheet();
+    const originalRenderPage = ctx.renderPage;
+
+    try {
+      ctx.renderPage = () =>
+        originalRenderPage({
+          enhanceApp: (App) => (props) =>
+            sheet.collectStyles(<App {...props} />),
+        });
+
+      const initialProps = await Document.getInitialProps(ctx);
+      return {
+        ...initialProps,
+        styles: (
+          <>
+            {initialProps.styles}
+            {sheet.getStyleElement()}
+          </>
+        ),
+      };
+    } finally {
+      sheet.seal();
+    }
+  }
+
+  render() {
+    return (
+      <Html lang="pt-br">
+        <Head>
+         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+         <meta property="og:type" content="website" />
+         <meta property="og:url" content="https://xmoedas.com.br/" />
+         <meta property="og:image" content="https://xmoedas.com.br/icone-midia.jpeg" />
+         <meta property="og:description" content="Veja a Cotação de Hoje das principais Moedas em relação ao Real." />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
 }

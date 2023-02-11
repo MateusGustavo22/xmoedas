@@ -4,6 +4,7 @@ import Header from 'components/Header/Header';
 import Conversor from 'components/Conversor/Conversor';
 import Chart30days from 'components/Chart/Chart';
 import axios from 'axios';
+import Table from 'components/Table/Table';
 
 //Pegar a cotação da moeda e passa como props
 export async function getStaticProps() {
@@ -54,13 +55,13 @@ export async function getStaticProps() {
 }
 
 export default function Home(props) {
-  
+ 
   return (
       <>
         <Head>
           <meta name="description" content="Cotação atualizada do dólar americano hoje em relação ao real. Conversor de moedas e gráfico do dólar nos últimos dias."/>
           <meta name="keywords" content="Dólar, Americano, Conversor, Cotação, Real, Câmbio, Hoje, Preço" />
-          <title>Dólar Hoje: Cotação Comercial Atual. Converter para Real e Gráfico - XMOEDAS</title>
+          <title>Dólar Hoje: Cotação Comercial Atual. Gráfico e Tabela - XMOEDAS</title>
           
         </Head>
         <Header />
@@ -70,7 +71,8 @@ export default function Home(props) {
         </div>
         <main>
           <h1>Cotação do dólar hoje</h1>
-          <p>A cotação do dólar hoje é de R$ 5,10. Isso significa que o preço de compra e venda do dólar americano está em R$ {props.cotacao} no mercado. A cotação do dólar é importante para diversas transações comerciais e a variação pode afetar a economia do país.</p>
+          <p>A cotação do dólar hoje é de R$ {props.cotacao}. Isso significa que o preço de compra e venda do dólar americano está em R$ {props.cotacao} no mercado. A cotação do dólar é importante para diversas transações comerciais e a variação pode afetar a economia do país.</p>
+          <Table cotacao={props.cotacao} moeda={'Dólar'} code={props.code} />
           <h2>Sobre o dólar americano</h2>
           <p>O dólar americano é a moeda oficial dos Estados Unidos e é amplamente utilizado em transações comerciais e financeiras internacionais. É considerada uma das principais moedas do mundo e é utilizada como referência em muitas transações cambiais. O dólar americano é emitido pelo Federal Reserve, o banco central dos Estados Unidos.</p>
           <h2>Qual a diferença entre dólar comercial e dólar turismo?</h2>
@@ -83,34 +85,8 @@ export default function Home(props) {
           <p><strong>Investimentos estrangeiros:</strong> A entrada e saída de investimentos estrangeiros também podem afetar a cotação do dólar, pois quanto maior a oferta de dólares no mercado, menor será a cotação.</p>
           <p><strong>Dados econômicos:</strong> dados econômicos importantes, como o PIB, o desemprego, o índice de preços ao consumidor e o índice de preços ao produtor, também podem influenciar a cotação do dólar.</p>
           <p><strong>Expectativas de mercado:</strong> as expectativas do mercado, especialmente no que diz respeito a decisões políticas e econômicas futuras, também podem influenciar a cotação do dólar.</p>
-          <h2>Como posso converter dólar para real?</h2>
+          <h2>Como posso converter dólar em real?</h2>
           <p>O site XMOEDAS é uma ferramenta prática e fácil de usar para converter valores em dólar para real. Basta inserir o valor em dólar que deseja converter e o nosso conversor fará o cálculo em tempo real, exibindo o valor em real equivalente. O site também permite que você compare as taxas de câmbio atuais do dólar com o real para que você possa tomar decisões informadas sobre suas transações financeiras. Aproveite a nossa ferramenta confiável e fácil de usar hoje mesmo no XMOEDAS!</p>
-
-          <style jsx>{`
-            main {
-              max-width: 700px;
-              padding: 20px;
-              margin: auto;
-              margin-bottom: 100px;
-            }
-            
-            main h1, h2, h3 {
-              font-family: 'Inter', sans-serif;
-              font-size: 22px;
-              margin-bottom: 30px;
-              margin-top: 30px;
-              color: #333333;
-            }
-            
-            main p {
-              font-family: 'Inter', sans-serif;
-              font-weight: normal;
-              font-size: 17px;
-              line-height: 1.5;
-              color: #333333;
-            }
-          `}</style>
-          
         </main>
         <Footer/>
       </>
