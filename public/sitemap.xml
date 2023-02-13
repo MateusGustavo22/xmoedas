@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://www.example.com/</loc>
+    <loc>https://xmoedas.com.br/</loc>
+  </url>
+  <url>
+    <loc>https://xmoedas.com.br/dolar-australiano</loc>
+  </url>
+    <url>
+    <loc>https://xmoedas.com.br/dolar-canadense</loc>
+  </url>
+   <url>
+    <loc>https://xmoedas.com.br/dolar-hongkong</loc>
+  </url>
+  <url>
+    <loc>https://xmoedas.com.br/dolar-taiwanes</loc>
+  </url>
+    <url>
+    <loc>https://xmoedas.com.br/euro</loc>
+  </url>
+  <url>
+    <loc>https://xmoedas.com.br/libra</loc>
+  </url>
+  <url>
+    <loc>https://xmoedas.com.br/franco-suico</loc>
+  </url>
+    <url>
+    <loc>https://xmoedas.com.br/iene-japones</loc>
+  </url>
+   <url>
+    <loc>https://xmoedas.com.br/yuan-chines</loc>
+  </url>
+  <url>
+    <loc>https://xmoedas.com.br/peso-argentino</loc>
+  </url>
+    <url>
+    <loc>https://xmoedas.com.br/peso-mexicano</loc>
+  </url>
+   <url>
+    <loc>https://xmoedas.com.br/rublo-russo</loc>
   </url>
 </urlset>

@@ -1,6 +1,4 @@
 import Head  from 'next/head';
-import Footer from 'components/Footer/Footer';
-import Header from 'components/Header/Header';
 import Conversor from 'components/Conversor/Conversor';
 import Chart30days from 'components/Chart/Chart';
 import axios from 'axios';
@@ -60,16 +58,15 @@ export default function Home(props) {
         <Head>
           <meta name="description" content="Cotação atualizada do dólar taiwanês hoje em relação ao real. Conversor de moedas e gráfico do dólar taiwanês nos últimos dias."/>
           <meta name="keywords" content="Dólar Taiwanês, Conversor, Cotação, Real, Câmbio, Hoje, Preço" />
-          <title>Dólar Taiwanês Hoje: Cotação Comercial Atual. Gráfico e Tabela - XMOEDAS</title>
+          <title>Dólar Taiwanês Hoje: Cotação Comercial, Gráfico e Tabela - Xmoedas</title>
           <meta property="og:title" content="Dólar Taiwanês Hoje" />
 
         </Head>
-        <Header />
         <div className='container_principal'>
           <Conversor cotacao={props.cotacao} currency={props.code} br={'BRL'} flag={'/flags/tw.svg'} />
           <Chart30days currency={props.code} last30days={props.bid30days} />
         </div>
-        <main>
+        <main className='mainContent'>
           <h1>Cotação do dólar taiwanês hoje</h1>
           <p>A cotação do dólar taiwanês hoje é de R$ {props.cotacao}. Isso significa que por cada dólar taiwanês, você pode trocar por R$ {props.cotacao} reais. Essa cotação pode variar ao longo do dia e é atualizada em tempo real no site.</p>
           <Table cotacao={props.cotacao} moeda={'Dólar Taiwanês'} code={props.code} />
@@ -79,8 +76,9 @@ export default function Home(props) {
           <p>A diferença entre o dólar taiwanês comercial e o dólar taiwanês turismo é a mesma que existe entre qualquer outra moeda comercial e turística. O dólar taiwanês comercial é a moeda oficial utilizada para fins comerciais e financeiros na República da China (Taiwan), enquanto o dólar taiwanês turismo é utilizado apenas para fins turísticos, com taxas de câmbio geralmente mais elevadas que o dólar comercial. Em resumo, o dólar taiwanês comercial é usado para negociações e transações financeiras na Taiwan, enquanto o dólar taiwanês turismo é utilizado apenas para fins turísticos.</p>
           <h2>Como posso converter dólar taiwanês em real?</h2>
           <p>Para converter dólar taiwanês para real, você pode usar a ferramenta online do site XMOEDAS. Basta inserir a quantidade de dólar taiwanês que deseja converter e a ferramenta exibirá o valor equivalente em reais. Isso é útil para quem viaja para Taiwan ou realiza transações comerciais com o país. Lembre-se de sempre verificar a cotação atualizada antes de realizar a conversão.</p>
+          <h2>Observação sobre o conversor</h2>
+          <p>Atenção: as cotações de moedas apresentadas neste conversor são meramente informativas e podem não ser 100% precisas. Antes de realizar qualquer transação financeira ou tomar uma decisão com base nas cotações apresentadas, recomenda-se consultar fontes especializadas para obter informações mais atualizadas e precisas.</p>
         </main>
-        <Footer/>
       </>
   )
 }

@@ -6,7 +6,7 @@ import styled from 'styled-components';
 const ChartArea = styled.section`
     max-width: 700px;
     background-color: ${props => props.theme.colors.primary};
-    border-radius: 8px;
+    border-radius: 10px;
     margin: auto;
     margin-bottom: 10px;
     display: flex;
@@ -17,7 +17,7 @@ const ChartArea = styled.section`
  const ChartDiv = styled.div`
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border-radius: 8px;
+    border-radius: 10px;
     padding-top: 12px;
     padding-bottom: 8px;
     display: flex;

@@ -1,8 +1,4 @@
-import react from 'react';
 import Head  from 'next/head';
-import Header from 'components/Header/Header';
-import Footer from 'components/Footer/Footer';
-import {useEffect} from 'react';
 
 export default function sobre() {
 
@@ -12,64 +8,146 @@ export default function sobre() {
       <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
       <title>Política de Privacidade</title>
     </Head>
-    <Header />
-    <main className="conteudo">
-      <div className="sobre">
-        <h1>Política de Privacidade</h1>
-        <p>A privacidade dos nossos usuários é extremamente importante para nós. É política do nosso site respeitar a privacidade de todos os usuários ao utilizarem nossos serviços.</p>
-        
-        <h2>Coleta de informações</h2>
-        <p>Não coletamos nenhuma informação pessoal dos usuários.</p>
-        
-        <h2>Controle de Informações Pessoais</h2>
-        <p>Não armazenamos informações pessoais dos usuários.</p>
-        
-        <h2>Links de Terceiros</h2>
-        <p>Não há links para sites externos em nosso site.</p>
-        
-        <h2>Contato</h2>
-        <p>Se você tiver alguma dúvida sobre nossa política de privacidade, entre em contato conosco por e-mail.</p>
-        
-        <p>Ao utilizar nossos serviços, você concorda com essa política de privacidade.</p>
-
-      </div>
-      <style>{`
-        .conteudo {
-          max-width: 500px;
-          margin: auto;
-          min-height: 100vh;
-          padding: 15px;
-        }
-    
-        .conteudo h1, h2 {
-          font-size: 25px;
-          margin-bottom: 15px;
-        }
-        
-        .conteudo a {
-          font-family: inter;
-          font-size: 22px;
-          margin-bottom: 30px;
-          color: black;
-        }
-        .sobre {
-          max-width: 1366px;
-          margin: auto;
-          border-radius: 3px;
-          margin-top: 30px;
-          padding: 10px;
-        }
-        
-        .sobre p {
-          font-family: inter;
-          line-height: 1.5;
-          font-size: 18px;
-          margin-bottom: 15px;
-        }
-        
-      `}</style>
+    <main className="mainContent">
+      <h2>
+        <span style={{ color: "rgb(68, 68, 68)" }}>Política Privacidade</span>
+      </h2>
+      <p>
+        <span style={{ color: "rgb(68, 68, 68)" }}>
+          A sua privacidade é importante para nós. É política do Xmoedas respeitar a
+          sua privacidade em relação a qualquer informação sua que possamos coletar
+          no site <a href="https://xmoedas.com.br">Xmoedas</a>, e outros sites que
+          possuímos e operamos.
+        </span>
+      </p><br/>
+      <p>
+        <span style={{ color: "rgb(68, 68, 68)" }}>
+          Solicitamos informações pessoais apenas quando realmente precisamos delas
+          para lhe fornecer um serviço. Fazemo-lo por meios justos e legais, com o
+          seu conhecimento e consentimento. Também informamos por que estamos
+          coletando e como será usado.
+        </span>
+      </p><br/>
+      <p>
+        <span style={{ color: "rgb(68, 68, 68)" }}>
+          Apenas retemos as informações coletadas pelo tempo necessário para
+          fornecer o serviço solicitado. Quando armazenamos dados, protegemos dentro
+          de meios comercialmente aceitáveis ​​para evitar perdas e roubos, bem como
+          acesso, divulgação, cópia, uso ou modificação não autorizados.
+        </span>
+      </p><br/>
+      <p>
+        <span style={{ color: "rgb(68, 68, 68)" }}>
+          Não compartilhamos informações de identificação pessoal publicamente ou
+          com terceiros, exceto quando exigido por lei.
+        </span>
+      </p><br/>
+      <p>
+        <span style={{ color: "rgb(68, 68, 68)" }}>
+          O nosso site pode ter links para sites externos que não são operados por
+          nós. Esteja ciente de que não temos controle sobre o conteúdo e práticas
+          desses sites e não podemos aceitar responsabilidade por suas
+          respectivas&nbsp;
+        </span>
+        <a
+          href="https://politicaprivacidade.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+          style={{ backgroundColor: "transparent", color: "rgb(68, 68, 68)" }}
+        >
+          políticas de privacidade
+        </a>
+        <span style={{ color: "rgb(68, 68, 68)" }}>.</span>
+      </p><br/>
+      <p>
+        <span style={{ color: "rgb(68, 68, 68)" }}>
+          Você é livre para recusar a nossa solicitação de informações pessoais,
+          entendendo que talvez não possamos fornecer alguns dos serviços desejados.
+        </span>
+      </p><br/>
+      <p>
+        <span style={{ color: "rgb(68, 68, 68)" }}>
+          O uso continuado de nosso site será considerado como aceitação de nossas
+          práticas em torno de privacidade e informações pessoais. Se você tiver
+          alguma dúvida sobre como lidamos com dados do usuário e informações
+          pessoais, entre em contacto connosco.
+        </span>
+      </p><br/>
+      <p>
+        <span style={{ color: "rgb(68, 68, 68)" }} />
+      </p><br/>
+      <h3>
+        <span style={{ color: "rgb(68, 68, 68)" }}>Compromisso do Usuário</span>
+      </h3>
+      <p>
+        <span style={{ color: "rgb(68, 68, 68)" }}>
+          O usuário se compromete a fazer uso adequado dos conteúdos e da informação
+          que o Xmoedas oferece no site e com caráter enunciativo, mas não
+          limitativo:
+        </span>
+      </p><br/>
+      <ul>
+        <li>
+          <span style={{ color: "rgb(68, 68, 68)" }}>
+            A) Não se envolver em atividades que sejam ilegais ou contrárias à boa
+            fé a à ordem pública;
+          </span>
+        </li><br/>
+        <li>
+          <span style={{ color: "rgb(68, 68, 68)" }}>
+            B) Não difundir propaganda ou conteúdo de natureza racista, xenofóbica,{" "}
+          </span>
+          <span style={{ color: "rgb(33, 37, 41)" }}>
+            <a
+              href="https://apostasonline.guru/bet365-apostas/"
+              style={{
+                color: "inherit !important",
+                textDecoration: "none !important",
+                fontSize: "inherit !important"
+              }}
+            >
+              {" "}
+              pix bet365
+            </a>
+          </span>
+          <span style={{ color: "rgb(68, 68, 68)" }}>
+            {" "}
+            ou azar, qualquer tipo de pornografia ilegal, de apologia ao terrorismo
+            ou contra os direitos humanos;
+          </span>
+        </li><br/>
+        <li>
+          <span style={{ color: "rgb(68, 68, 68)" }}>
+            C) Não causar danos aos sistemas físicos (hardwares) e lógicos
+            (softwares) do Xmoedas, de seus fornecedores ou terceiros, para
+            introduzir ou disseminar vírus informáticos ou quaisquer outros sistemas
+            de hardware ou software que sejam capazes de causar danos anteriormente
+            mencionados.
+          </span>
+        </li><br/>
+      </ul>
+      <h3>
+        <span style={{ color: "rgb(68, 68, 68)" }}>Mais informações</span>
+      </h3>
+      <p>
+        <span style={{ color: "rgb(68, 68, 68)" }}>
+          Esperemos que esteja esclarecido e, como mencionado anteriormente, se
+          houver algo que você não tem certeza se precisa ou não, geralmente é mais
+          seguro deixar os cookies ativados, caso interaja com um dos recursos que
+          você usa em nosso site.
+        </span>
+      </p><br/>
+      <p>
+        <span style={{ color: "rgb(68, 68, 68)" }}>
+          Esta política é efetiva a partir de&nbsp;13 February 2023 01:33
+        </span>
+      </p><br/>
     </main>
-    <Footer />
+    <style jsx>{`
+      li {
+        margin-left: 15px;
+      }
+    `}</style>
     </>
   )
 }

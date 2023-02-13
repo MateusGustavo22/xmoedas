@@ -1,7 +1,8 @@
 import { GlobalStyles } from '/styles/Global';
-import React, { useState, useContext } from 'react';
+import { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import Light from "styles/Themes/Light";
+import Layout from 'components/Layout/Layout';
 
 export default function App({ Component, pageProps }) {
   
@@ -9,7 +10,9 @@ export default function App({ Component, pageProps }) {
     <>
     <ThemeProvider theme={Light}>
       <GlobalStyles />
-      <Component {...pageProps} />
+        <Layout>
+         <Component {...pageProps} />
+        </Layout>
     </ThemeProvider>
     </>
   )

@@ -4,16 +4,24 @@ import { AiFillTwitterCircle } from 'react-icons/ai';
 import { IoLogoWhatsapp } from 'react-icons/io';
 import { useState, useEffect } from 'react';
 
+  const MidiasArea = styled.div`
+     position: absolute;
+     margin: auto;
+     display: flex;
+     top: 55px;
+     right: 0;
+     justify-content: right;
+  `;
+  
 const ShareMidias = styled.div`
+      min-width: 100px;
       background-color: white;
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-      position: absolute;
-      right: 0;
-      z-index: 1;
       display: none;
+      position: relative;
+      z-index: 2;
       flex-direction: column;
-      justify-content: right;
-      padding: 15px;
+      padding: 10px;
   `;
   
   const Midia = styled.div`
@@ -24,7 +32,7 @@ const ShareMidias = styled.div`
   `;
   
   const A = styled.a`
-    margin: 15px 4px 10px 1px;
+    margin: 10px 4px 10px 1px;
     text-decoration: none;
     display: flex;
     flex-direction: inline;
@@ -46,7 +54,8 @@ export default function MidasShare({menuDisplay}) {
   
   
   return (
-    <ShareMidias style={{display: menuDisplay}}>
+      <MidiasArea>
+       <ShareMidias style={{display: menuDisplay}}>
           <A href={`https://wa.me/?text=${path}`} target="_blank" rel="noopener noreferrer">
             <Midia>
               <IoLogoWhatsapp color='#25d366' style={{ fontSize: '30px', marginRight: '5px'}} />
@@ -72,6 +81,7 @@ export default function MidasShare({menuDisplay}) {
               <FaTelegram color="#0088cc" style={{ fontSize: '30px', marginRight: '5px'}} />
             </Midia>
           Telegram</A>
-    </ShareMidias>
+      </ShareMidias>
+    </MidiasArea>
   )
 }

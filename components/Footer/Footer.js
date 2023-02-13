@@ -50,7 +50,7 @@ const Footer = () => {
   return (
     <Footter>
       <Div>
-        <Link href="mailto:contatodolaragora@gmail.com?subject=Dólaragora" rel="noopener">Contato</Link>
+        <Link href="mailto:contatomateuscode@gmail.com?subject=Xmoedas" rel="noopener">Contato</Link>
         <Link href="/sobre" rel="noopener">Sobre</Link>
       </Div>
       <Div>

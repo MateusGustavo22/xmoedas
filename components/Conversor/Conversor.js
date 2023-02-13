@@ -23,7 +23,7 @@ const Select = styled.select`
     margin-bottom: 15px;
     display: flex;
     align-items: center;
-    border-radius: 8px;
+    border-radius: 10px;
     border: ${props => props.theme.colors.border};
     flex-direction: inline;
     background-color: ${props => props.theme.colors.primary};
@@ -51,7 +51,7 @@ const Select = styled.select`
   
   const Input = styled.input`
     width: 100%;
-    height: 68px;
+    height: 60px;
     text-align: right;
     padding-right: 8px;
     font-size: 35px;
@@ -59,8 +59,8 @@ const Select = styled.select`
     outline: none;
     background-color: ${props => props.theme.colors.primary};
     border: none;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 18px;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
   `;

@@ -1,6 +1,4 @@
 import Head  from 'next/head';
-import Header from 'components/Header/Header';
-import Footer from 'components/Footer/Footer';
 
 export default function termos() {
   
@@ -10,9 +8,7 @@ export default function termos() {
       <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
       <title>Termos de Uso</title>
     </Head>
-    <Header />
-    <main className="conteudo">
-      <div className="sobre">
+    <main className="mainContent">
       <h2>1. Termos</h2> 
         <p>Ao acessar ao site <a href="/">Xmoedas.com.br</a> , concorda em cumprir estes termos de serviço, todas as leis e regulamentos aplicáveis e concorda que é responsável pelo cumprimento de todas as leis locais aplicáveis. Se você não concordar com algum desses termos, está proibido de usar ou acessar este site. Os materiais contidos neste site são protegidos pelas leis de direitos autorais e marcas comerciais aplicáveis.</p>
         <h2>2. Uso de Licença</h2>
@@ -41,50 +37,12 @@ export default function termos() {
         <p>O Xmoedas pode revisar estes termos de serviço do site a qualquer momento, sem aviso prévio. Ao usar este site, você concorda em ficar vinculado à versão atual desses termos de serviço.</p>
         <h2>Lei aplicável</h2>
         <p>Estes termos e condições são regidos e interpretados de acordo com as leis do Xmoedas e você se submete irrevogavelmente à jurisdição exclusiva dos tribunais naquele estado ou localidade.</p>
-    
-      </div>
-      
-      <style>{`
-      * {
-        box-sizing: border-box;
-      }
-      .conteudo {
-        max-width: 500px;
-        margin: auto;
-        padding: 15px;
-      }
-      
-      .conteudo a {
-        font-size: 22px;
-        margin-bottom: 30px;
-      }
-      .sobre {
-        max-width: 1366px;
-        margin: auto;
-        margin-top: 30px;
-        padding: 10px;
-      }
-      
-      .sobre p {
-        line-height: 1.5;
-        font-size: 15px;
-      }
-      
-      .sobre a {
-        font-size: 15px;
-      }
-      
-      h2 {
-        margin-bottom: 15px;
-        margin-top: 15px;
-      }
-      
-      li {
-        margin-left: 20px;
-      }
-      `}</style>
     </main>
-    <Footer />
+    <style jsx>{`
+      li {
+        margin-left: 15px;
+      }
+    `}</style>
     </>
   )
 }
