@@ -31,16 +31,18 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="pt-br">
-        <Head>
-         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
-         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
-         <meta property="og:type" content="website" />
-         <meta property="og:url" content="https://xmoedas.com.br/" />
-         <meta property="og:image" content="https://xmoedas.com.br/icone-midia.png" />
-         <meta property="og:description" content="Veja a Cotação de Hoje das principais Moedas em relação ao Real." />
-         <link rel="preconnect" href="https://fonts.googleapis.com"/>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+      <Head>
+       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+       <meta property="og:type" content="website" />
+       <meta property="og:url" content="https://xmoedas.com.br" />
+       <meta property="og:image" content="https://xmoedas.com.br/icone-midia.png" />
+       <meta property="og:description" content="Veja a Cotação de Hoje das principais Moedas em relação ao Real." />
+       <link rel="preconnect" href="https://fonts.googleapis.com"/>
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+       <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+        
+       <link rel="manifest" href="/manifest.json" />
         </Head>
         
         <body>

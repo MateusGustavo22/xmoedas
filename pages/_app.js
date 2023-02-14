@@ -5,7 +5,13 @@ import Light from "styles/Themes/Light";
 import Layout from 'components/Layout/Layout';
 
 export default function App({ Component, pageProps }) {
-  
+  if (Component.noLayout) {
+    return (
+      <>
+      <Component {...pageProps}/>;
+      </>
+    )
+  }
   return (
     <>
     <ThemeProvider theme={Light}>
