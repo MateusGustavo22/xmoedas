@@ -1,18 +1,14 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  compiler: {
-    // Enables the styled-components SWC transform
-    styledComponents: true
-  }
-}
+const withPWA = require("next-pwa")({
+    dest: "public",
+    register: true,
+    skipWaiting: true,
+    disable:process.env.NODE_ENV === 'development'
+});
 
-module.exports = nextConfig
-
-const withPWA = require('next-pwa')({
-  dest: 'public'
-})
-
-module.exports = withPWA({
-  // next.js config
-})
+const nextConfig = withPWA({
+    reactStrictMode: true,
+    compiler: {
+      styledComponents: true
+    },
+});
+module.exports = nextConfig;
