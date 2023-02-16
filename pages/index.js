@@ -60,7 +60,7 @@ export default function Home(props) {
           <meta name="description" content="Cotação atualizada do dólar americano hoje em relação ao real. Conversor de moedas e gráfico do dólar nos últimos dias."/>
           <meta name="keywords" content="Dólar, Americano, Conversor, Cotação, Real, Câmbio, Hoje, Preço" />
           <title>Dólar Hoje: Cotação Comercial, Gráfico e Tabela - Xmoedas</title>
-          
+          <meta name="google-site-verification" content="yOKnx3oxxmpkcnd2KOv9ndtdRhhVU9MliabO_I5YzhU" />
         </Head>
         <div className='container_principal'>
           <Conversor cotacao={props.cotacao} currency={props.code} br={'BRL'} flag={'/flags/us.svg'} />
