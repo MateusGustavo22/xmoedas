@@ -7,7 +7,8 @@ const Select = styled.select`
     outline: none;
     border: none;
     margin-bottom: 8px;
-    font-size: 18px;
+    font-size: 15px;
+    cursor: pointer;
     font-family: 'Inter', sans-serif;
     font-weight: normal;
     color: ${props => props.theme.colors.fontH};
