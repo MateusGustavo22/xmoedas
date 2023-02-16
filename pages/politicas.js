@@ -8,6 +8,7 @@ export default function sobre() {
       <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
       <title>Política de Privacidade</title>
     </Head>
+    <div className='container_principal'>
     <main className="mainContent">
       <h2>
         <span style={{ color: "rgb(68, 68, 68)" }}>Política Privacidade</span>
@@ -143,6 +144,7 @@ export default function sobre() {
         </span>
       </p><br/>
     </main>
+   </div>
     <style jsx>{`
       li {
         margin-left: 15px;

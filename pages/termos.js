@@ -8,6 +8,7 @@ export default function termos() {
       <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
       <title>Termos de Uso</title>
     </Head>
+    <div className="container_principal">
     <main className="mainContent">
       <h2>1. Termos</h2> 
         <p>Ao acessar ao site <a href="/">Xmoedas.com.br</a> , concorda em cumprir estes termos de serviço, todas as leis e regulamentos aplicáveis e concorda que é responsável pelo cumprimento de todas as leis locais aplicáveis. Se você não concordar com algum desses termos, está proibido de usar ou acessar este site. Os materiais contidos neste site são protegidos pelas leis de direitos autorais e marcas comerciais aplicáveis.</p>
@@ -38,6 +39,7 @@ export default function termos() {
         <h2>Lei aplicável</h2>
         <p>Estes termos e condições são regidos e interpretados de acordo com as leis do Xmoedas e você se submete irrevogavelmente à jurisdição exclusiva dos tribunais naquele estado ou localidade.</p>
     </main>
+   </div>
     <style jsx>{`
       li {
         margin-left: 15px;

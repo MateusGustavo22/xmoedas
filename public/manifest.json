@@ -1,12 +1,12 @@
 {
-    "theme_color": "#4a90e2",
-    "background_color": "#ffffff",
-    "display": "browser",
+    "theme_color": "#1363DF",
+    "background_color": "#1363DF",
+    "display": "standalone",
     "scope": "/",
     "start_url": "/",
-    "name": "Xmoedas",
-    "short_name": "Xmooedas",
-    "description": "Conversor de Moedas",
+    "name": "Conversor de moeda",
+    "short_name": "Xmoedas",
+    "description": "Veja a cotação das principais moedas hoje.",
     "icons": [
         {
             "src": "/icons/icon-192x192.png",
