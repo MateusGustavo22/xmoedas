@@ -9,12 +9,9 @@ const Select = styled.select`
     margin-bottom: 8px;
     font-size: 18px;
     font-family: 'Inter', sans-serif;
-    font-weight: bold;
+    font-weight: normal;
     color: ${props => props.theme.colors.fontH};
     background-color: transparent;
-    &:hover {
-       text-decoration: underline
-    }
   `;
   
   const InputArea = styled.div` 
