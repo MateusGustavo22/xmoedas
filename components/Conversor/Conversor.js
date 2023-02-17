@@ -9,10 +9,14 @@ const Select = styled.select`
     margin-bottom: 8px;
     font-size: 15px;
     cursor: pointer;
+    border: 1px solid #adadad;
     font-family: 'Inter', sans-serif;
     font-weight: normal;
-    color: ${props => props.theme.colors.fontH};
+    color: ${props => props.theme.colors.fontP};
     background-color: transparent;
+    &:hover {
+      border: 1px solid #4b4b4e;
+    }
   `;
   
   const InputArea = styled.div` 
