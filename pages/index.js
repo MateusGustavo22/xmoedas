@@ -62,7 +62,7 @@ export default function Home(props) {
           <title>Dólar Hoje: Cotação Comercial, Gráfico e Tabela - Xmoedas</title>
           <meta property="og:title" content="Dólar Hoje" />
           <meta name="google-site-verification" content="yOKnx3oxxmpkcnd2KOv9ndtdRhhVU9MliabO_I5YzhU" />
-        
+          <meta name="msvalidate.01" content="C4F3CA81734FA841E2051A26792AAEDA" />
         </Head>
         <div className='container_principal'>
           <Conversor cotacao={props.cotacao} currency={props.code} br={'BRL'} flag={'/flags/us.svg'} />
