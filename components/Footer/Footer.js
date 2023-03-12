@@ -1,45 +1,6 @@
 import { useState, useEffect } from 'react';
-import styled from 'styled-components';
+import styles from './Footer.module.scss';
 
-const Div = styled.div`
-  flex-direction: inline;
-  margin-top: 15px;
-  margin-bottom: 15px;
-`;
-
-const Footter = styled.footer`
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: ${props => props.theme.colors.footerColor};
-    padding-top: 15px;
-    padding-bottom: 15px;
-    position: relative;
-    bottom: 0;
-    margin: auto;
-  `;
-  
-  const Link = styled.a`
-    font-family: 'Inter', sans-serif;
-    font-weight: normal;
-    text-decoration: none;
-    margin: 16px;
-    color: ${props => props.theme.colors.footerLink};
-    &:hover {
-      text-decoration: underline;
-    }
-  `;
-  
- const Copyright = styled.div`
-  font-family: 'Inter', sans-serif;
-  font-weight: normal;
-  text-decoration: none;
-  margin: 16px;
-  color: ${props => props.theme.colors.footerLink};
- `;
- 
 const Footer = () => {
   const [copyright, setCopyright] = useState(`Copyright ${new Date().getFullYear()} - Xmoedas`)
   
@@ -48,17 +9,17 @@ const Footer = () => {
   },[])
   
   return (
-    <Footter>
-      <Div>
-        <Link href="mailto:contatomateuscode@gmail.com?subject=Xmoedas" rel="noopener">Contato</Link>
-        <Link href="/sobre" rel="noopener">Sobre</Link>
-      </Div>
-      <Div>
-        <Link href="/politicas">Política de privacidade</Link>
-        <Link href="/termos">Termos de uso</Link>
-      </Div>
-      <Copyright align="center">&copy;{copyright}</Copyright>
-    </Footter>
+    <footer className={styles.html_footer}>
+      <div className={styles.html_div}>
+        <a id={styles.html_a} href="mailto:contatomateuscode@gmail.com?subject=Xmoedas" rel="noopener">Contato</a>
+        <a id={styles.html_a} href="/sobre" rel="noopener">Sobre</a>
+      </div>
+      <div className={styles.html_div}>
+        <a id={styles.html_a} href="/politicas">Política de privacidade</a>
+        <a id={styles.html_a} href="/termos">Termos de uso</a>
+      </div>
+      <div className={styles.copyright} align="center">&copy;{copyright}</div>
+    </footer>
   )
 }
 

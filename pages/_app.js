@@ -1,9 +1,7 @@
-import { GlobalStyles } from '/styles/Global';
 import { useState } from 'react';
-import { ThemeProvider } from 'styled-components';
-import Light from "styles/Themes/Light";
 import Layout from 'components/Layout/Layout';
 import Head from 'next/head';
+import '../styles/Global.scss';
 
 export default function App({ Component, pageProps }) {
   if (Component.noLayout) {
@@ -18,12 +16,9 @@ export default function App({ Component, pageProps }) {
     <Head>
       <meta name='viewport' content='minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=yes, viewport-fit=cover'/>
     </Head>
-    <ThemeProvider theme={Light}>
-      <GlobalStyles />
-        <Layout>
-         <Component {...pageProps} />
-        </Layout>
-    </ThemeProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   )
 }

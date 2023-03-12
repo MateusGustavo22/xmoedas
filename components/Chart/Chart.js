@@ -1,40 +1,7 @@
 import { Line } from 'react-chartjs-2';
 import chart from 'chart.js/auto';
-import styled from 'styled-components';
+import styles from './Chart.module.scss';
 
-
-const ChartArea = styled.section`
-    max-width: 700px;
-    background-color: ${props => props.theme.colors.primary};
-    border-radius: 10px;
-    margin: auto;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: right;
- `;
- 
- const ChartDiv = styled.div`
-    width: 100%;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border-radius: 10px;
-    padding-top: 12px;
-    padding-bottom: 8px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
- `;
-  
-  const Span = styled.span`
-    text-align: center;
-    font-family: 'Inter', sans-serif;
-    font-weight: normal;
-    color: ${props => props.theme.colors.fontP};
-    font-size: 15px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-  `;
-  
 export default function Chart30days(props) {
   
   const resObj = props.last30days;
@@ -63,7 +30,7 @@ export default function Chart30days(props) {
     labels: lastDates,
     datasets: [
       {
-        label: `${props.currency}/BRL `,
+        label: `${props.code} Para BRL`,
         data: lastCots,
         fill: true,
         pointRadius: 0,
@@ -81,11 +48,11 @@ const options = {
 }
   
   return (
-    <ChartArea>
-      <ChartDiv>
-        <Span>Gráfico ({props.currency}) nos últimos 30 dias</Span>
-        <Line data={data} options={options} height="160" />
-      </ChartDiv>
-    </ChartArea>
+    <div className={styles.chart_area}>
+      <div className={styles.chart_div}>
+        <span className={styles.chart_span}>Gráfico ({props.code}) nos últimos 30 dias</span>
+        <Line data={data} options={options} width="320" height="200" />
+      </div>
+    </div>
   )
 }

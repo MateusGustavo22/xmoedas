@@ -1,6 +1,5 @@
 import Head  from 'next/head';
 import Conversor from 'components/Conversor/Conversor';
-import Chart30days from 'components/Chart/Chart';
 import axios from 'axios';
 import Table from 'components/Table/Table';
 
@@ -64,8 +63,13 @@ export default function Home(props) {
 
         </Head>
         <div className='container_principal'>
-          <Conversor cotacao={props.cotacao} currency={props.code} br={'BRL'} flag={'/flags/hk.svg'} />
-          <Chart30days currency={props.code} last30days={props.bid30days} />
+          <Conversor 
+          cotacao={props.cotacao} 
+          code={props.code} 
+          last30days={props.bid30days} 
+          moedaName={'Dólar de Hong Kong'}
+          flag={'/flags/hk.svg'} 
+          />
         </div>
         <main className='mainContent'>
           <h1>Cotação do dólar de hong kong hoje</h1>
@@ -74,7 +78,10 @@ export default function Home(props) {
           <h2>Sobre o dólar de hong kong</h2>
           <p>O dólar de Hong Kong é a moeda oficial de Hong Kong, um território da China. Ele é emitido pelo Banco da China de Hong Kong e é aceito em todo o território de Hong Kong. Ele é frequentemente usado para negociações comerciais e investimentos, e é visto como uma moeda estável e confiável. O dólar de Hong Kong também é usado como uma moeda de reserva internacional, com muitos investidores e bancos mantendo grandes quantidades de dólares de Hong Kong em suas reservas devido à sua estabilidade econômica.</p>
           <h2>Qual a diferença entre dólar de Hong kong comercial e turismo?</h2>
-          <p>O dólar de Hong Kong comercial é a moeda oficial utilizada para fins comerciais e financeiros na região administrativa especial de Hong Kong. Já o dólar de Hong Kong turismo é utilizado apenas para fins turísticos, com taxas de câmbio geralmente mais elevadas que o dólar comercial. Em resumo, o dólar de Hong Kong comercial é utilizado para negociações e transações financeiras, enquanto o dólar de Hong Kong turismo é utilizado apenas para fins turísticos.</p>
+          <p>Existem duas principais diferenças entre o dólar de Hong Kong comercial e turismo:</p><br/>
+          <p><strong>Taxas de câmbio:</strong> O dólar de Hong Kong comercial é geralmente usado para transações comerciais, como importação e exportação de bens e serviços. As taxas de câmbio para o dólar de Hong Kong comercial são determinadas pelos bancos e pelo mercado cambial, e geralmente oferecem taxas de câmbio mais favoráveis do que as do dólar de Hong Kong turismo.</p><br/>
+          <p><strong>Finalidade de uso:</strong> O dólar de Hong Kong turismo é usado principalmente por turistas e viajantes internacionais para transações em Hong Kong, como compras e hospedagem em hotéis. Geralmente, o dólar de Hong Kong turismo é comprado com outras moedas estrangeiras em casas de câmbio ou bancos e as taxas de câmbio são geralmente menos favoráveis do que as do dólar de Hong Kong comercial.</p><br />
+          <p>Em resumo, o dólar de Hong Kong comercial é usado para transações comerciais e tem taxas de câmbio mais favoráveis, enquanto o dólar de Hong Kong turismo é usado por viajantes internacionais para transações em Hong Kong, mas com taxas de câmbio menos favoráveis.</p>
           <h2>Como posso converter dólar de hong kong em real?</h2>
           <p>Se você deseja converter dólares de Hong Kong para reais, pode usar a ferramenta online do site XMOEDAS. Basta inserir a quantidade de dólares de Hong Kong que deseja converter e a ferramenta calculará automaticamente a quantidade correspondente em reais. Essa ferramenta é útil para quem viaja para Hong Kong, faz negócios comerciais ou investimentos no território, ou simplesmente gosta de acompanhar as cotações das moedas.</p>
           <h2>Observação sobre o conversor</h2>

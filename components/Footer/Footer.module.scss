@@ -1,0 +1,40 @@
+.html_div {
+  flex-direction: inline;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.html_footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: relative;
+    bottom: 0;
+    margin: auto;
+}
+
+  #html_a {
+    font-family: 'Inter', sans-serif;
+    font-weight: normal;
+    text-decoration: none;
+    margin: 16px;
+    color: white;
+  }
+  
+  #html_a:hover {
+    text-decoration: underline;
+  }
+  
+ .copyright {
+  font-family: 'Inter', sans-serif;
+  font-weight: normal;
+  text-decoration: none;
+  margin: 16px;
+  color: white;
+ }
+ 

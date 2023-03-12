@@ -1,0 +1,30 @@
+@import './styles/variables.scss';
+
+.div_area {
+      max-width: 500px;
+}
+  
+.html_table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.html_tr {
+    &:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+}
+  
+.html_th {
+    padding: 10px;
+    text-align: left;
+    background-color: $icon-color;
+    border: 1px solid $border-color;
+    color: white;
+}
+  
+ .html_td {
+    border: 1px solid $border-color;
+    padding: 10px;
+    color: $fontH-color;
+ }

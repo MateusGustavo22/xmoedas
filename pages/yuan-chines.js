@@ -64,8 +64,13 @@ export default function Home(props) {
 
         </Head>
         <div className='container_principal'>
-          <Conversor cotacao={props.cotacao} currency={props.code} br={'BRL'} flag={'/flags/cn.svg'} />
-          <Chart30days currency={props.code} last30days={props.bid30days} />
+          <Conversor 
+            cotacao={props.cotacao} 
+            code={props.code} 
+            last30days={props.bid30days} 
+            moedaName={'Yuan Chinês'}
+            flag={'/flags/cn.svg'} 
+          />
         </div>
         <main className='mainContent'>
           <h1>Cotação do yuan chinês hoje</h1>

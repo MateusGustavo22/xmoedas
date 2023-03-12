@@ -1,8 +1,6 @@
-import { createGlobalStyle } from 'styled-components';
+@import './variables.scss';
 
-export const GlobalStyles = createGlobalStyle`
-
-  * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,7 +8,7 @@ export const GlobalStyles = createGlobalStyle`
   }
   
   body {
-    background-color: ${props => props.theme.colors.secundary};
+    background-color: $primary-color;
   }
   
   .container_principal {
@@ -18,7 +16,7 @@ export const GlobalStyles = createGlobalStyle`
   }
   
   main {
-    max-width: 700px;
+    max-width: 740px;
     margin: auto;
     padding: 15px;
   }
@@ -32,14 +30,12 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 22px;
     margin-bottom: 30px;
     margin-top: 30px;
-    color: ${props => props.theme.colors.fontH};
+    color: $fontH-color;
   }
  
   p {
     font-weight: normal;
     font-size: 17px;
     line-height: 1.5;
-    color: ${props => props.theme.colors.fontP};
+    color: $fontP-color;
   }
-  
-`;

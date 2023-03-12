@@ -1,0 +1,41 @@
+@import '/styles/variables.scss';
+
+.midias_area {
+     position: absolute;
+     margin: auto;
+     display: flex;
+     top: 55px;
+     right: 0;
+     justify-content: right;
+}
+  
+.share_midias {
+      min-width: 100px;
+      background-color: $primary-color;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      display: none;
+      position: relative;
+      z-index: 2;
+      flex-direction: column;
+      padding: 10px;
+}
+  
+ .midia {
+      background-color: $primary-color;
+      display: flex;
+      flex-direction: inline;
+      align-items: center;
+ }
+  
+.a_link {
+    margin: 10px 4px 10px 1px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: inline;
+    align-items: center;
+    color: $fontH-color;
+}
+
+  .a_link:hover {
+      text-decoration: underline;
+  }

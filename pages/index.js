@@ -65,8 +65,13 @@ export default function Home(props) {
           <meta name="msvalidate.01" content="C4F3CA81734FA841E2051A26792AAEDA" />
         </Head>
         <div className='container_principal'>
-          <Conversor cotacao={props.cotacao} currency={props.code} br={'BRL'} flag={'/flags/us.svg'} />
-          <Chart30days currency={props.code} last30days={props.bid30days} />
+          <Conversor 
+            cotacao={props.cotacao} 
+            code={props.code} 
+            last30days={props.bid30days} 
+            moedaName={'Dólar Americano'}
+            flag={'/flags/us.svg'} 
+          />
         </div>
         <main className='mainContent'>
           <h1>Cotação do dólar hoje</h1>
@@ -77,6 +82,13 @@ export default function Home(props) {
           <h2>Qual a diferença entre dólar comercial e dólar turismo?</h2>
           <p>A diferença entre o dólar comercial e o dólar turismo é o tipo de transação que está sendo feita. O dólar comercial é utilizado para transações comerciais, como compras e vendas de bens e serviços entre empresas, enquanto o dólar turismo é utilizado para transações de viagem, como compras de bens e serviços por turistas.</p><br/>
           <p>A taxa de câmbio do dólar comercial tende a ser mais estável e é influenciada pelas condições econômicas e financeiras do mercado, enquanto a taxa de câmbio do dólar turismo tende a flutuar mais e é influenciada pelas condições do mercado, bem como pela oferta e demanda de dólares para viagens. Em geral, a taxa de câmbio do dólar turismo é geralmente um pouco mais elevada do que a taxa de câmbio do dólar comercial.</p>
+          <h2>Como posso investir em dólar?</h2>
+          <p>Existem diversas formas de investir em dólar. Aqui estão algumas opções:</p><br/>
+          <p><strong>Compra de moeda física:</strong> A maneira mais tradicional de investir em dólar é comprando a moeda física em casas de câmbio. É importante lembrar que essa opção pode envolver taxas de câmbio e de compra, além do risco de perda ou roubo da moeda.</p><br/>
+          <p><strong>Fundos cambiais:</strong> Os fundos cambiais são uma opção mais prática para investir em dólar. Eles funcionam como um fundo de investimento comum, mas ao invés de investir em ações ou títulos de renda fixa, eles investem em moedas estrangeiras, como o dólar. Esses fundos podem ter taxas de administração e de performance, e o investidor pode comprar ou vender suas cotas a qualquer momento.</p><br/>
+          <p><strong>ETFs:</strong> Os ETFs (Exchange Traded Funds) são fundos de investimento que são negociados na bolsa de valores. Existem ETFs que investem em moedas estrangeiras, como o dólar, e permitem ao investidor comprar ou vender suas cotas a qualquer momento.</p><br/>
+          <p><strong>Derivativos cambiais:</strong> Os derivativos cambiais são contratos financeiros que permitem ao investidor apostar na variação do câmbio. Alguns exemplos são os contratos futuros de dólar, que permitem comprar ou vender a moeda a um preço acordado no futuro, e as opções de dólar, que permitem comprar ou vender a moeda a um preço acordado em um período específico.</p><br/>
+          <p>É importante lembrar que investir em dólar envolve riscos e é importante entender bem as características de cada opção de investimento antes de tomar uma decisão. Além disso, é sempre recomendável buscar a ajuda de um profissional qualificado para tomar uma decisão de investimento.</p>
           <h2>Como o preço do dólar é influenciado hoje?</h2>
           <p><strong>Política monetária:</strong> A política monetária do banco central americano (Federal Reserve) pode afetar a oferta de dólares e, consequentemente, a cotação do dólar. Por exemplo, se o Federal Reserve aumenta as taxas de juros, isso pode tornar o dólar mais atraente para os investidores, o que pode aumentar a cotação do dólar.</p><br/>
           <p><strong>Situação econômica:</strong> A situação econômica dos Estados Unidos também pode afetar a cotação do dólar. Se a economia americana estiver se expandindo, isso pode aumentar a demanda por dólares e, consequentemente, aumentar a cotação do dólar.</p><br/>

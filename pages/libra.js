@@ -63,8 +63,13 @@ export default function Home(props) {
 
         </Head>
         <div className='container_principal'>
-          <Conversor cotacao={props.cotacao} currency={props.code} br={'BRL'} flag={'/flags/gb.svg'} />
-          <Chart30days currency={props.code} last30days={props.bid30days} />
+          <Conversor 
+            cotacao={props.cotacao} 
+            code={props.code} 
+            last30days={props.bid30days} 
+            moedaName={'Libra Esterlina'}
+            flag={'/flags/gb.svg'} 
+          />
         </div>
         <main className='mainContent'>
           <h1>Cotação da libra hoje</h1>

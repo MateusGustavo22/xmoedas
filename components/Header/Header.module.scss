@@ -1,0 +1,40 @@
+@import '/styles/variables.scss';
+
+.div_area {
+    width: 100%;
+    position: sticky;
+    background-color: $primary-color;
+    margin: auto;
+    margin-bottom: 10px;
+    top: 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+  
+.header_size {
+    max-width: 1366px;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 55px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: inline;
+}
+  
+  .icone {
+    display: flex;
+    align-self: center;
+    cursor: pointer;
+  }
+  
+  .button_share {
+    border: none;
+    outline: none;
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    color: white;
+  }
