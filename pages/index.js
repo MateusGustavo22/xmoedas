@@ -1,55 +1,53 @@
 import Head  from 'next/head';
 import Conversor from 'components/Conversor/Conversor';
-import Chart30days from 'components/Chart/Chart';
-import axios from 'axios';
 import Table from 'components/Table/Table';
 
 //Pegar a cotação da moeda e passa como props
 export async function getStaticProps() {
- 
-    const code = 'USD'
-    
-    //Pega a cotação da moeda
-    const apiLink = `https://economia.awesomeapi.com.br/json/last/${code}-BRL`
-    let cotacao = 0;
-    await axios.get(apiLink)
-    .then(response => {
-      const resJson = response.data
-      const strForNum = parseFloat(resJson[code+'BRL'].bid)
-      cotacao = strForNum.toFixed(2)
-    })
-    .catch(err => {
-      console.log(err)
-    });
-    
-    //Pega as ultimas cotações da moeda e passa para o componente Chart
-    const last30day = `https://economia.awesomeapi.com.br/json/daily/${code}-BRL/30`
-    
-    let bid30days = {
-      bid: [],
-      timestamp: []
-    };
-    
-    await axios.get(last30day)
-    .then(response => {
-      const res30days = response.data
-      for (let i = 0; i < 30; i++) {
-        bid30days.bid.push(res30days[i].bid)
-        bid30days.timestamp.push(res30days[i].timestamp)
-      }
-    })
-    .catch(err => {
-      console.log(err)
-    });
+
+  const code = 'USD'
+  let cotacao = 0
+
+  const fetFetch1 = async () => {
+    const responseApi = await fetch(`https://economia.awesomeapi.com.br/json/last/${code}-BRL`)
+    if (responseApi.ok) {
+      const apiData = await responseApi.json()
+      cotacao = parseFloat(apiData[code+'BRL'].bid).toFixed(2)
+    }
+  }
+
+  const cot30bids = {
+    bid: [],
+    timestamp: []
+  }
+
+  const fetFetch2 = async () => {
+    const responseApi = await fetch(`https://economia.awesomeapi.com.br/json/daily/${code}-BRL/30`)
+    if (responseApi.ok) {
+      const apiData = await responseApi.json()
+      const responseBid = apiData.map(data => {
+        let value = parseFloat(data.bid)
+        return value < 1 ? value.toFixed(2) : value.toFixed(3)
+      })
+      const responseDate = apiData.map(data => data.timestamp)
+
+      cot30bids.bid = responseBid
+      cot30bids.timestamp = responseDate
+    }
+  }
+  
+  await fetFetch1()
+  await fetFetch2()
 
   return {
     props: {
       cotacao,
       code,
-      bid30days,
+      cot30bids //objeto contendo propriedade bid e timestamp
     },
     revalidate: 3600,
   };
+
 }
 
 export default function Home(props) {
@@ -65,13 +63,13 @@ export default function Home(props) {
           <meta name="msvalidate.01" content="C4F3CA81734FA841E2051A26792AAEDA" />
         </Head>
         <div className='container_principal'>
-          <Conversor 
-            cotacao={props.cotacao} 
-            code={props.code} 
-            last30days={props.bid30days} 
-            moedaName={'Dólar Americano'}
-            flag={'/flags/us.svg'} 
-          />
+        <Conversor 
+          cotacao={props.cotacao} 
+          code={props.code} 
+          last30days={props.cot30bids} 
+          moedaName={'Dólar Americano'}
+          flag={'/flags/us.svg'} 
+        />
         </div>
         <main className='mainContent'>
           <h1>Cotação do dólar hoje</h1>
@@ -102,6 +100,6 @@ export default function Home(props) {
           <h2>Observação sobre o conversor</h2>
           <p>Atenção: as cotações de moedas apresentadas neste conversor são meramente informativas e podem não ser 100% precisas. Antes de realizar qualquer transação financeira ou tomar uma decisão com base nas cotações apresentadas, recomenda-se consultar fontes especializadas para obter informações mais atualizadas e precisas.</p>
         </main>
-      </>
+  </>
   )
 }

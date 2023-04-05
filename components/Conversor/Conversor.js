@@ -1,25 +1,22 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
-import Chart from '../Chart/Chart';
 import Chart30days from 'components/Chart/Chart';
 import style from './Conversor.module.scss';
+
 
 const Conversor = (props) => {
   
   const [input1Value, setInput1Value] = useState(1);
   const [input2Value, setInput2Value] = useState(props.cotacao);
-  
-  const [cotacao, setCotacao] = useState(props.cotacao)
-  
+
   //Atualiza os inputs 
   function handleInput1Change(e) {
     setInput1Value(e.target.value);
-    setInput2Value((e.target.value * cotacao).toFixed(2));
+    setInput2Value((e.target.value * props.cotacao).toFixed(2));
   }
 
   function handleInput2Change(e) {
     setInput2Value(e.target.value);
-    setInput1Value((e.target.value / cotacao).toFixed(2));
+    setInput1Value((e.target.value / props.cotacao).toFixed(2));
   }
  
   const [menuOptions, setOptions] = useState(props.currency);

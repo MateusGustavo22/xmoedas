@@ -28,11 +28,10 @@
     border: none;
     font-size: 14px;
     cursor: pointer;
-    font-family: 'Inter', sans-serif;
-    font-weight: normal;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
     color: #333335;
     background-color: transparent;
-    font-weight: 500;
   }
   
   .input_area {
@@ -94,7 +93,7 @@
     font-family: 'Inter', sans-serif;
   }
   
-  #input_1:hover, #input_2:hover {
+  #input_1:focus, #input_2:focus {
     border: 1.5px solid #1363DF;
   }
   

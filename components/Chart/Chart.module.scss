@@ -2,14 +2,12 @@
 
 .chart_area {
     background-color: $primary-color;
-    margin-bottom: 10px;
     display: flex;
     align-items: right;
 }
  
  .chart_div {
     width: 100%;
-    padding-top: 8px;
     display: flex;
     flex-direction: column;
  }
