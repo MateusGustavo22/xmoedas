@@ -27,7 +27,7 @@ export async function getStaticProps() {
       const apiData = await responseApi.json()
       const responseBid = apiData.map(data => {
         let value = parseFloat(data.bid)
-        return value < 1 ? value.toFixed(2) : value.toFixed(3)
+        return value < 1 ? value.toFixed(3) : value.toFixed(2)
       })
       const responseDate = apiData.map(data => data.timestamp)
 

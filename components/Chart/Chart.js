@@ -43,7 +43,7 @@ export default function Chart30days(props) {
 
     setButtonOn1('#cfcfcf')
     setButtonOn2('#f2f2f2')
-    setButtonOn2('#f2f2f2')
+    setButtonOn3('#f2f2f2')
   }
 
   function select30days() {
@@ -95,7 +95,7 @@ const options = {
           buttonOn2={buttonOn2} 
           buttonOn3={buttonOn3} 
         />
-        <Line key={cotPeriodo} data={data} options={options} width="320" height="200" />
+        <Line data={data} options={options} width="320" height="200" />
       </div>
     </div>
   )
