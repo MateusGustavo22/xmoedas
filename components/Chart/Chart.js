@@ -1,68 +1,69 @@
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+} from 'chart.js';
 import { Line } from 'react-chartjs-2';
-import chart from 'chart.js/auto';
+import 'chart.js/auto';
 import styles from './Chart.module.scss';
 import ChartButtons from '../chartButtons/ChartButtons';
 import { useState } from 'react'
 
 export default function Chart30days(props) {
 
-  const bid30days = props.last30days.bid
-  const datesFormated = props.last30days.timestamp.map(data => new Date(data * 1000).toLocaleDateString("pt-BR", { month: '2-digit', day: '2-digit' }))
-  
-  bid30days.reverse()
-  datesFormated.reverse()
+  const lastCots = props.last30days.cot
 
-  const [cotPeriodo, setCotPeriodo] = useState(bid30days)
-  const [cotDate, setCotDate] = useState(datesFormated)
+  const [cotPeriodo, setCotPeriodo] = useState(lastCots)
+  const [cotDate, setCotDate] = useState(props.last30days.cotDate)
 
-  const [buttonOn1, setButtonOn1] = useState('#f2f2f2')
-  const [buttonOn2, setButtonOn2] = useState('#cfcfcf')
-  const [buttonOn3, setButtonOn3] = useState('#f2f2f2')
+  const [buttonOn1, setButtonOn1] = useState('#222222')
+  const [buttonOn2, setButtonOn2] = useState('#4c4c4c')
+  const [buttonOn3, setButtonOn3] = useState('#222222')
 
-  const fetchData = async (url) => {
-    const response = await fetch(url)
-    const responseData = await response.json()
-
-    const cot = responseData.map(data =>  {
-      let value = parseFloat(data.bid)
-      return value < 1 ? value.toFixed(3) : value.toFixed(2)
-    })
-
-    const cotDate = responseData.map(data => new Date(data.timestamp * 1000).toLocaleDateString("pt-BR", { month: '2-digit', day: '2-digit' }))
-
-    cot.reverse()
-    cotDate.reverse()
-
-    setCotPeriodo(cot)
-    setCotDate(cotDate)
-
-  }
 
   async function select7days() {
-    fetchData(`https://economia.awesomeapi.com.br/json/daily/${props.code}-BRL/7`)
+    setCotPeriodo(props.last7days.cot)
+    setCotDate(props.last7days.cotDate)
 
-    setButtonOn1('#cfcfcf')
-    setButtonOn2('#f2f2f2')
-    setButtonOn3('#f2f2f2')
+    setButtonOn1('#4c4c4c')
+    setButtonOn2('#222222')
+    setButtonOn3('#222222')
   }
 
   function select30days() {
-    setCotPeriodo(bid30days)
-    setCotDate(datesFormated)
+    setCotPeriodo(props.last30days.cot)
+    setCotDate(props.last30days.cotDate)
 
-    setButtonOn1('#f2f2f2')
-    setButtonOn2('#cfcfcf')
-    setButtonOn3('#f2f2f2')
+    setButtonOn1('#222222')
+    setButtonOn2('#4c4c4c')
+    setButtonOn3('#222222')
   }
 
   const select365days = async () => {
-    fetchData(`https://economia.awesomeapi.com.br/json/daily/${props.code}-BRL/365`)
+    setCotPeriodo(props.last365days.cot)
+    setCotDate(props.last365days.cotDate)
 
-    setButtonOn1('#f2f2f2')
-    setButtonOn2('#f2f2f2')
-    setButtonOn3('#cfcfcf')
+    setButtonOn1('#222222')
+    setButtonOn2('#222222')
+    setButtonOn3('#4c4c4c')
   }
  
+
+  ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Title,
+    Tooltip,
+    Legend
+  );
+
 const data = {
     labels: cotDate,
     datasets: [
@@ -71,17 +72,23 @@ const data = {
         data: cotPeriodo,
         fill: true,
         pointRadius: 0,
-        backgroundColor: 'rgb(19, 99, 223, 0.3)',
+        backgroundColor: 'rgb(19, 98, 168, 0.2)',
         borderColor: '#1363DF',
       },
     ],
 }
 
 const options = {
-    interaction: {
-      intersect: false,
+  responsive: true,
+  plugins: {
+    tooltip: {
       mode: 'index',
+      intersect: false,
     },
+    legend: {
+      position: 'top',
+    },
+  },
 }
   
   return (

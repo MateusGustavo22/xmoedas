@@ -1,20 +1,22 @@
 import React, { useState, useContext } from 'react';
 import MidiasLinks from 'components/SocialMidias/MidiasLinks';
-import { menuContext } from 'components/Layout/Layout';
 import styles from './Header.module.scss';
 
 const Header = () => {
   
   const [showMenu, setShowMenu] = useState('none');
   const [onButton, setOnButton] = useState('#1363DF')
+  const [onFont, setOnFont] = useState('#ffff')
  
   
   function menuDisplay() {
     setShowMenu(showMenu === 'none' ? 'flex' : 'none');
     if (showMenu == 'flex') {
       setOnButton('#1363DF');
+      setOnFont("#ffff")
     }else {
-      setOnButton('#0a367a');
+      setOnButton('#589aff');
+      setOnFont("#000000")
     }
   }
  
@@ -26,7 +28,7 @@ const Header = () => {
                 <img src="/icone.svg" width="120" height="50" alt="Ícone do site"/>
               </a>
               </div>
-              <button className={styles.button_share} onClick={menuDisplay} style={{backgroundColor: onButton}}>Compartilhar</button>
+              <button className={styles.button_share} onClick={menuDisplay} style={{backgroundColor: onButton, color: onFont}}>Compartilhar</button>
           <MidiasLinks menuDisplay={showMenu}/>
       </div>
     </div>

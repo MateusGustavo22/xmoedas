@@ -19,15 +19,13 @@ export default function sobre() {
    </div>
    <style jsx>
    {`
-     .container_principal {
-       font-family: inter;
-       font-size: 22px;
-       color: ${props => props.theme.colors.fontP};
-     }
-     
      #html_p {
        font-size: 19px;
        margin-top: 15px;
+     }
+
+     a {
+      color: #ffff;
      }
    `}
    </style>

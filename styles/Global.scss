@@ -16,7 +16,7 @@
   }
   
   main {
-    max-width: 740px;
+    max-width: 800px;
     margin: auto;
     padding: 15px;
   }
@@ -27,7 +27,7 @@
   }
   
   h1, h2, h3 {
-    font-size: 22px;
+    font-size: 1.37rem;
     margin-bottom: 30px;
     margin-top: 30px;
     color: $fontH-color;
@@ -35,7 +35,7 @@
  
   p {
     font-weight: normal;
-    font-size: 17px;
+    font-size: 1.125rem;
     line-height: 1.5;
     color: $fontP-color;
   }

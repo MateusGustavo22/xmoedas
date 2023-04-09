@@ -88,7 +88,11 @@ const Conversor = (props) => {
              <input id={style.input_2} name="BRL" type="number" value={input2Value} onChange={handleInput2Change} />
           </div>
       </div>
-      <Chart30days code={props.code} last30days={props.last30days} />
+      <Chart30days code={props.code} 
+      last30days={props.last30days} 
+      last7days={props.last7days} 
+      last365days={props.last365days} 
+      />
     </div>
   )  
 } 

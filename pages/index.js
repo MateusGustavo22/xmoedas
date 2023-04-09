@@ -2,48 +2,47 @@ import Head  from 'next/head';
 import Conversor from 'components/Conversor/Conversor';
 import Table from 'components/Table/Table';
 
-//Pegar a cotação da moeda e passa como props
 export async function getStaticProps() {
 
   const code = 'USD'
-  let cotacao = 0
 
-  const fetFetch1 = async () => {
-    const responseApi = await fetch(`https://economia.awesomeapi.com.br/json/last/${code}-BRL`)
-    if (responseApi.ok) {
-      const apiData = await responseApi.json()
-      cotacao = parseFloat(apiData[code+'BRL'].bid).toFixed(2)
-    }
+  const fetchData = async (url) => {
+    const response = await fetch(url)
+    const responseData = await response.json()
+    const cotacaoAtual = parseFloat(responseData[code+'BRL'].bid).toFixed(2)
+    
+    return cotacaoAtual
   }
 
-  const cot30bids = {
-    bid: [],
-    timestamp: []
+  const fetchDataChart = async (url) => {
+    const response = await fetch(url)
+    const responseData = await response.json()
+
+    const cot = responseData.map(data =>  {
+      let value = parseFloat(data.bid)
+      return value < 1 ? value.toFixed(3) : value.toFixed(2)
+    })
+
+    const cotDate = responseData.map(data => new Date(data.timestamp * 1000).toLocaleDateString("pt-BR", { month: '2-digit', day: '2-digit' }))
+    cot.reverse()
+    cotDate.reverse()
+    
+    return {cot, cotDate}
+
   }
 
-  const fetFetch2 = async () => {
-    const responseApi = await fetch(`https://economia.awesomeapi.com.br/json/daily/${code}-BRL/30`)
-    if (responseApi.ok) {
-      const apiData = await responseApi.json()
-      const responseBid = apiData.map(data => {
-        let value = parseFloat(data.bid)
-        return value < 1 ? value.toFixed(3) : value.toFixed(2)
-      })
-      const responseDate = apiData.map(data => data.timestamp)
-
-      cot30bids.bid = responseBid
-      cot30bids.timestamp = responseDate
-    }
-  }
-  
-  await fetFetch1()
-  await fetFetch2()
+  const cotacao = await fetchData(`https://economia.awesomeapi.com.br/json/last/${code}-BRL`)
+  const last7days = await fetchDataChart(`https://economia.awesomeapi.com.br/json/daily/${code}-BRL/7`)
+  const last30days = await fetchDataChart(`https://economia.awesomeapi.com.br/json/daily/${code}-BRL/30`)
+  const last365days = await fetchDataChart(`https://economia.awesomeapi.com.br/json/daily/${code}-BRL/365`)
 
   return {
     props: {
       cotacao,
       code,
-      cot30bids //objeto contendo propriedade bid e timestamp
+      last7days,
+      last30days,
+      last365days 
     },
     revalidate: 3600,
   };
@@ -66,7 +65,9 @@ export default function Home(props) {
         <Conversor 
           cotacao={props.cotacao} 
           code={props.code} 
-          last30days={props.cot30bids} 
+          last7days={props.last7days}
+          last30days={props.last30days} 
+          last365days={props.last365days}
           moedaName={'Dólar Americano'}
           flag={'/flags/us.svg'} 
         />

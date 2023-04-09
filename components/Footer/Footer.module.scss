@@ -1,3 +1,5 @@
+@import '/styles/variables.scss';
+
 .html_div {
   flex-direction: inline;
   margin-top: 15px;
@@ -10,7 +12,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: $footer-color;
     padding-top: 15px;
     padding-bottom: 15px;
     position: relative;

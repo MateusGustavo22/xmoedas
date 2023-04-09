@@ -43,6 +43,12 @@ export default function termos() {
     <style jsx>{`
       li {
         margin-left: 15px;
+        color: #cdcdcd;
+        line-height: 1.5;
+      }
+
+      a {
+        color: #ffff;
       }
     `}</style>
     </>

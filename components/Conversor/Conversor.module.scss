@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: inline;
   padding: 8px;
-  background-color: $primary-color;
+  background-color: $secundary-color;
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 10px;
 }
@@ -26,16 +26,16 @@
 #select {
     outline: none;
     border: none;
-    font-size: 14px;
-    cursor: pointer;
+    font-size: 15px;
     font-family: Roboto, sans-serif;
     font-weight: 500;
-    color: #333335;
-    background-color: transparent;
+    line-height: 2;
+    color: $fontH-color;
+    background-color: $secundary-color;
   }
   
   .input_area {
-    max-width: 400px;
+    max-width: 500px;
     height: 45px;
     margin-bottom: 5px;
     display: flex;
@@ -45,7 +45,7 @@
   
   .convert_div {
     padding-bottom: 5px;
-    background-color: white;
+    background-color: $secundary-color;
     margin-right: 12px;
   }
   
@@ -56,25 +56,25 @@
   }
   
   .moeda_nome {
-    color: #666666;
+    color: #a7a7a7;
     font-family: 'Roboto', sans-serif;
-    font-size: 15px;
+    font-size: 0.87rem;
     margin-bottom: 5px;
     font-weight: regular;
   }
   
   .span_brl {
-    color: #333335;
+    color: $fontH-color;
     font-family: 'Roboto', sans-serif;
-    font-size: 14px;
+    font-size: 15px;
     margin-left: 5px;
     font-weight: 500;
   }
   
   .moeda_brl {
-    color: #282827;
+    color: $fontH-color;
     font-family: 'Roboto', sans-serif;
-    font-size: 24px;
+    font-size: 1.3rem;
     font-weight: 500;
   }
   
@@ -83,22 +83,23 @@
     width: 100%;
     height: 45px;
     text-align: right;
-    font-size: 20px;
+    font-size: 1.1rem;
     padding-right: 8px;
     background-color: transparent;
     outline: none;
-    color: #333335;
+    color: $fontH-color;
     border-radius: 4px;
     border: 1.5px solid $border-color;
     font-family: 'Inter', sans-serif;
   }
   
   #input_1:focus, #input_2:focus {
-    border: 1.5px solid #1363DF;
+    border: 2px solid #1363DF;
+    background-color: #212121;
   }
   
   .flag_code {
-    min-width: 190px;
+    min-width: 200px;
     height: 45px;
     display: flex;
     padding-left: 4px;
