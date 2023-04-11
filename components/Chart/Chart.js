@@ -1,12 +1,5 @@
 import {
   Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend,
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
 import 'chart.js/auto';
@@ -55,13 +48,13 @@ export default function Chart(props) {
  
 
   ChartJS.register(
-    CategoryScale,
-    LinearScale,
-    PointElement,
-    LineElement,
-    Title,
-    Tooltip,
-    Legend
+    //CategoryScale,
+    //LinearScale,
+    //PointElement,
+    //LineElement,
+    //Title,
+    //Tooltip,
+    //Legend
   );
 
 const data = {

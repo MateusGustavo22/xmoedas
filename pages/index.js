@@ -89,11 +89,11 @@ export default function Home(props) {
           <h2>Como posso ganhar em dólar?</h2>
           <p>Há várias maneiras de ganhar dinheiro em dólar, aqui estão algumas opções:</p><br/>
           <ul>
-            <li>Trabalhar remotamente para uma empresa estrangeira que pague em dólar. Você pode encontrar empregos remotos em plataformas de trabalho freelancer como Upwork e Freelancer.com.</li><br/>
-            <li>Vender produtos ou serviços online em sites de comércio eletrônico, como Amazon e eBay, e receber pagamento em dólar.</li><br/>
-            <li>Investir em ações, títulos ou fundos negociados em bolsa (ETFs) em empresas internacionais que pagam dividendos em dólar.</li><br/>
-            <li>Realizar trabalhos freelance ou consultoria para clientes internacionais, como tradução de documentos ou desenvolvimento de software.</li><br/>
-            <li>Participar de programas de afiliados e marketing de conteúdo, promovendo produtos de empresas estrangeiras e recebendo comissões em dólar por vendas realizadas.</li><br/>
+            <li>Trabalhar remotamente para uma empresa estrangeira que pague em dólar. Você pode encontrar empregos remotos em plataformas de trabalho freelancer como Upwork e Freelancer.com.</li>
+            <li>Vender produtos ou serviços online em sites de comércio eletrônico, como Amazon e eBay, e receber pagamento em dólar.</li>
+            <li>Investir em ações, títulos ou fundos negociados em bolsa (ETFs) em empresas internacionais que pagam dividendos em dólar.</li>
+            <li>Realizar trabalhos freelance ou consultoria para clientes internacionais, como tradução de documentos ou desenvolvimento de software.</li>
+            <li>Participar de programas de afiliados e marketing de conteúdo, promovendo produtos de empresas estrangeiras e recebendo comissões em dólar por vendas realizadas.</li>
           </ul><br/>
           <p>Lembre-se de que, ao ganhar em dólar, você também precisará considerar questões relacionadas a impostos e câmbio de moeda. É importante pesquisar e entender as implicações fiscais de ganhar em moeda estrangeira em seu país.</p>
           <h2>Como o preço do dólar é influenciado hoje?</h2>
