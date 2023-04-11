@@ -20,7 +20,7 @@
     margin: auto;
 }
 
-  #html_a {
+  #contato, #politicas, #sobre, #termos {
     font-family: 'Inter', sans-serif;
     font-weight: normal;
     text-decoration: none;
@@ -28,7 +28,7 @@
     color: white;
   }
   
-  #html_a:hover {
+  #contato:hover, #politicas:hover, #sobre:hover, #termos:hover {
     text-decoration: underline;
   }
   

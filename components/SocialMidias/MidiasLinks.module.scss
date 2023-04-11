@@ -11,17 +11,17 @@
   
 .share_midias {
       min-width: 100px;
-      background-color: #1a1a1a;
+      background-color: #ffffff;
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       display: none;
       position: relative;
       z-index: 2;
       flex-direction: column;
-      padding: 10px;
+      padding: 4px;
 }
   
  .midia {
-      background-color: $primary-color;
+      background-color: transparent;
       display: flex;
       flex-direction: inline;
       align-items: center;
@@ -33,7 +33,7 @@
     display: flex;
     flex-direction: inline;
     align-items: center;
-    color: $fontH-color;
+    color: #3d3d3d;
 }
 
   .a_link:hover {

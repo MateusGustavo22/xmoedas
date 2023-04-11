@@ -4,46 +4,45 @@ import Table from 'components/Table/Table';
 
 //Pegar a cotação da moeda e passa como props
 export async function getStaticProps() {
- 
   const code = 'HKD'
-  let cotacao = 0
 
-  const fetFetch1 = async () => {
-    const responseApi = await fetch(`https://economia.awesomeapi.com.br/json/last/${code}-BRL`)
-    if (responseApi.ok) {
-      const apiData = await responseApi.json()
-      cotacao = parseFloat(apiData[code+'BRL'].bid).toFixed(2)
-    }
+  const fetchData = async (url) => {
+    const response = await fetch(url)
+    const responseData = await response.json()
+    const cotacaoAtual = parseFloat(responseData[code+'BRL'].bid).toFixed(2)
+    
+    return cotacaoAtual
   }
 
-  const cot30bids = {
-    bid: [],
-    timestamp: []
+  const fetchDataChart = async (url) => {
+    const response = await fetch(url)
+    const responseData = await response.json()
+
+    const cot = responseData.map(data =>  {
+      let value = parseFloat(data.bid)
+      return value < 1 ? value.toFixed(3) : value.toFixed(2)
+    })
+
+    const cotDate = responseData.map(data => new Date(data.timestamp * 1000).toLocaleDateString("pt-BR", { month: '2-digit', day: '2-digit' }))
+    cot.reverse()
+    cotDate.reverse()
+    
+    return {cot, cotDate}
+
   }
 
-  const fetFetch2 = async () => {
-    const responseApi = await fetch(`https://economia.awesomeapi.com.br/json/daily/${code}-BRL/30`)
-    if (responseApi.ok) {
-      const apiData = await responseApi.json()
-      const responseBid = apiData.map(data => {
-        let value = parseFloat(data.bid)
-        return value < 1 ? value.toFixed(2) : value.toFixed(3)
-      })
-      const responseDate = apiData.map(data => data.timestamp)
-
-      cot30bids.bid = responseBid
-      cot30bids.timestamp = responseDate
-    }
-  }
-  
-  await fetFetch1()
-  await fetFetch2()
+  const cotacao = await fetchData(`https://economia.awesomeapi.com.br/json/last/${code}-BRL`)
+  const last7days = await fetchDataChart(`https://economia.awesomeapi.com.br/json/daily/${code}-BRL/7`)
+  const last30days = await fetchDataChart(`https://economia.awesomeapi.com.br/json/daily/${code}-BRL/30`)
+  const last365days = await fetchDataChart(`https://economia.awesomeapi.com.br/json/daily/${code}-BRL/365`)
 
   return {
     props: {
       cotacao,
       code,
-      cot30bids //objeto contendo propriedade bid e timestamp
+      last7days,
+      last30days,
+      last365days 
     },
     revalidate: 3600,
   };
@@ -66,21 +65,27 @@ export default function Home(props) {
           <Conversor 
           cotacao={props.cotacao} 
           code={props.code} 
-          last30days={props.cot30bids} 
+          last7days={props.last7days}
+          last30days={props.last30days} 
+          last365days={props.last365days}
           moedaName={'Dólar de Hong Kong'}
           flag={'/flags/hk.svg'} 
           />
         </div>
         <main className='mainContent'>
           <h1>Cotação do dólar de hong kong hoje</h1>
-          <p>A cotação do dólar de Hong Kong hoje é de R$ {props.cotacao}. Isso significa que por cada dólar de Hong Kong, você pode obter R$ {props.cotacao} reais. É importante notar que as cotações podem mudar diariamente, então é importante verificar regularmente para obter as cotações atuais.</p>
+          <p>Hoje, a cotação do dólar de Hong Kong em relação ao real brasileiro está em cerca de R$ {props.cotacao} reais por 1 HKD. Isso significa que, se você estivesse procurando comprar 1000 HKD, precisaria pagar cerca de R$ {1000 * props.cotacao} reais.</p><br/>
+          <p>Lembre-se de que as taxas de câmbio mudam constantemente, e a cotação de hoje pode não ser a mesma de amanhã. Por isso, é importante ficar atento às variações do mercado financeiro e consultar fontes confiáveis para obter informações atualizadas sobre a cotação do dólar de Hong Kong em relação ao real brasileiro. Dessa forma, você poderá tomar decisões informadas e aproveitar as melhores oportunidades para realizar transações de câmbio.</p>
           <Table cotacao={props.cotacao} moeda={'Dólar De Hong Kong'} code={props.code} />
           <h2>Sobre o dólar de hong kong</h2>
-          <p>O dólar de Hong Kong é a moeda oficial de Hong Kong, um território da China. Ele é emitido pelo Banco da China de Hong Kong e é aceito em todo o território de Hong Kong. Ele é frequentemente usado para negociações comerciais e investimentos, e é visto como uma moeda estável e confiável. O dólar de Hong Kong também é usado como uma moeda de reserva internacional, com muitos investidores e bancos mantendo grandes quantidades de dólares de Hong Kong em suas reservas devido à sua estabilidade econômica.</p>
+          <p>O dólar de Hong Kong é a moeda oficial da Região Administrativa Especial de Hong Kong, que é uma região autônoma da China. Ele foi introduzido em 1863, inicialmente como moeda da colônia britânica de Hong Kong.</p><br/>
+          <p>O dólar de Hong Kong é emitido pelo Hong Kong Monetary Authority, que é a autoridade monetária responsável pela política cambial e monetária da região. Ele é amplamente aceito em Hong Kong, embora outras moedas, como o dólar americano e o yuan chinês, também sejam usadas.</p><br/>
+          <p>A cotação do dólar de Hong Kong em relação a outras moedas pode flutuar bastante, dependendo de vários fatores, como as políticas econômicas da China e dos Estados Unidos, a situação do comércio global e os níveis de inflação. É importante estar ciente dessas flutuações ao fazer transações em dólares de Hong Kong.</p><br/>
+          <p>Além disso, vale ressaltar que a Região Administrativa Especial de Hong Kong tem um sistema financeiro altamente desenvolvido e é um centro financeiro internacional significativo. Isso significa que o dólar de Hong Kong é amplamente negociado nos mercados financeiros globais e pode ser usado para fins de investimento e negociação de câmbio.</p>
           <h2>Qual a diferença entre dólar de Hong kong comercial e turismo?</h2>
           <p>Existem duas principais diferenças entre o dólar de Hong Kong comercial e turismo:</p><br/>
           <p><strong>Taxas de câmbio:</strong> O dólar de Hong Kong comercial é geralmente usado para transações comerciais, como importação e exportação de bens e serviços. As taxas de câmbio para o dólar de Hong Kong comercial são determinadas pelos bancos e pelo mercado cambial, e geralmente oferecem taxas de câmbio mais favoráveis do que as do dólar de Hong Kong turismo.</p><br/>
-          <p><strong>Finalidade de uso:</strong> O dólar de Hong Kong turismo é usado principalmente por turistas e viajantes internacionais para transações em Hong Kong, como compras e hospedagem em hotéis. Geralmente, o dólar de Hong Kong turismo é comprado com outras moedas estrangeiras em casas de câmbio ou bancos e as taxas de câmbio são geralmente menos favoráveis do que as do dólar de Hong Kong comercial.</p><br />
+          <p><strong>Finalidade de uso:</strong> O <strong>dólar de Hong Kong turismo</strong> é usado principalmente por turistas e viajantes internacionais para transações em Hong Kong, como compras e hospedagem em hotéis. Geralmente, o dólar de Hong Kong turismo é comprado com outras moedas estrangeiras em casas de câmbio ou bancos e as taxas de câmbio são geralmente menos favoráveis do que as do dólar de Hong Kong comercial.</p><br />
           <p>Em resumo, o dólar de Hong Kong comercial é usado para transações comerciais e tem taxas de câmbio mais favoráveis, enquanto o dólar de Hong Kong turismo é usado por viajantes internacionais para transações em Hong Kong, mas com taxas de câmbio menos favoráveis.</p>
           <h2>Como posso converter dólar de hong kong em real?</h2>
           <p>Se você deseja converter dólares de Hong Kong para reais, pode usar a ferramenta online do site XMOEDAS. Basta inserir a quantidade de dólares de Hong Kong que deseja converter e a ferramenta calculará automaticamente a quantidade correspondente em reais. Essa ferramenta é útil para quem viaja para Hong Kong, faz negócios comerciais ou investimentos no território, ou simplesmente gosta de acompanhar as cotações das moedas.</p>

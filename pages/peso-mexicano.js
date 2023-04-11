@@ -6,44 +6,44 @@ import Table from 'components/Table/Table';
 export async function getStaticProps() {
  
   const code = 'MXN'
-  let cotacao = 0
 
-  const fetFetch1 = async () => {
-    const responseApi = await fetch(`https://economia.awesomeapi.com.br/json/last/${code}-BRL`)
-    if (responseApi.ok) {
-      const apiData = await responseApi.json()
-      cotacao = parseFloat(apiData[code+'BRL'].bid).toFixed(2)
-    }
+  const fetchData = async (url) => {
+    const response = await fetch(url)
+    const responseData = await response.json()
+    const cotacaoAtual = parseFloat(responseData[code+'BRL'].bid).toFixed(2)
+    
+    return cotacaoAtual
   }
 
-  const cot30bids = {
-    bid: [],
-    timestamp: []
+  const fetchDataChart = async (url) => {
+    const response = await fetch(url)
+    const responseData = await response.json()
+
+    const cot = responseData.map(data =>  {
+      let value = parseFloat(data.bid)
+      return value < 1 ? value.toFixed(3) : value.toFixed(2)
+    })
+
+    const cotDate = responseData.map(data => new Date(data.timestamp * 1000).toLocaleDateString("pt-BR", { month: '2-digit', day: '2-digit' }))
+    cot.reverse()
+    cotDate.reverse()
+    
+    return {cot, cotDate}
+
   }
 
-  const fetFetch2 = async () => {
-    const responseApi = await fetch(`https://economia.awesomeapi.com.br/json/daily/${code}-BRL/30`)
-    if (responseApi.ok) {
-      const apiData = await responseApi.json()
-      const responseBid = apiData.map(data => {
-        let value = parseFloat(data.bid)
-        return value < 1 ? value.toFixed(2) : value.toFixed(3)
-      })
-      const responseDate = apiData.map(data => data.timestamp)
-
-      cot30bids.bid = responseBid
-      cot30bids.timestamp = responseDate
-    }
-  }
-  
-  await fetFetch1()
-  await fetFetch2()
+  const cotacao = await fetchData(`https://economia.awesomeapi.com.br/json/last/${code}-BRL`)
+  const last7days = await fetchDataChart(`https://economia.awesomeapi.com.br/json/daily/${code}-BRL/7`)
+  const last30days = await fetchDataChart(`https://economia.awesomeapi.com.br/json/daily/${code}-BRL/30`)
+  const last365days = await fetchDataChart(`https://economia.awesomeapi.com.br/json/daily/${code}-BRL/365`)
 
   return {
     props: {
       cotacao,
       code,
-      cot30bids //objeto contendo propriedade bid e timestamp
+      last7days,
+      last30days,
+      last365days 
     },
     revalidate: 3600,
   };
@@ -65,19 +65,29 @@ export default function Home(props) {
           <Conversor 
             cotacao={props.cotacao} 
             code={props.code} 
-            last30days={props.cot30bids} 
+            last7days={props.last7days}
+            last30days={props.last30days} 
+            last365days={props.last365days}
             moedaName={'Peso Mexicano'}
             flag={'/flags/mx.svg'} 
           />
         </div>
         <main className='mainContent'>
           <h1>Cotação do peso mexicano hoje</h1>
-          <p>A cotação do peso mexicano hoje é de R$ {props.cotacao} para cada real brasileiro. Isso significa que, para comprar 1 peso mexicano, é necessário pagar R$ {props.cotacao} reais. É importante lembrar que as cotações podem variar ao longo do dia e que é sempre recomendado verificar a cotação atual antes de realizar qualquer operação com moedas estrangeiras.</p>
+          <p>Hoje, a cotação do peso mexicano em relação ao real brasileiro está em R$ {props.cotacao} reais. Essa taxa de câmbio pode ser influenciada por uma série de fatores, incluindo a economia global, a política monetária do México e do Brasil, bem como outros eventos geopolíticos.</p><br/>
+          <p>A cotação do peso mexicano em relação ao real brasileiro pode ter um impacto significativo nas importações e exportações entre os dois países, bem como no turismo e investimentos. Por exemplo, se o peso mexicano se valorizar em relação ao real, as exportações brasileiras para o México podem se tornar mais competitivas, enquanto as importações do México para o Brasil podem se tornar mais caras.</p>
           <Table cotacao={props.cotacao} moeda={'Peso Mexicano'} code={props.code} />
           <h2>Sobre o peso mexicano</h2>
-          <p>O peso mexicano é a moeda oficial do México e é usado em todo o país. Ele é dividido em 100 centavos e é emitido pelo Banco Central do México. O símbolo para o peso mexicano é "$" e a abreviaturão é "MXN". O peso mexicano é uma das moedas emergentes mais negociadas no mundo e é considerado uma moeda de risco devido à volatilidade do país.</p>
-          <h2>Qual a diferença entre peso mexicano comercial e peso mexicano turismo?</h2>
-          <p>O peso mexicano comercial é a moeda oficial utilizada para transações comerciais e financeiras no México. Já o peso mexicano turismo é uma taxa de câmbio alternativa que é oferecida em alguns estabelecimentos turísticos e destinos de viagem, com o objetivo de oferecer preços mais competitivos aos turistas estrangeiros. Em geral, a taxa de câmbio do peso mexicano turismo é ligeiramente desfavorável em relação ao peso comercial, o que significa que os turistas pagam mais do que os preços reais quando usam esta moeda.</p>
+          <p>O peso mexicano (MXN) é a moeda oficial do México, um país localizado na América do Norte. Ele é a oitava moeda mais negociada no mundo e é amplamente utilizado em transações comerciais internacionais, além de ser a moeda de circulação oficial no país.</p><br/>
+          <p>O peso mexicano é subdividido em centavos e as moedas em circulação incluem 5, 10, 20 e 50 centavos, além de moedas de 1, 2, 5, 10 e 20 pesos. As notas em circulação incluem 20, 50, 100, 200, 500 e 1.000 pesos.</p><br/>
+          <p>A taxa de câmbio do peso mexicano é determinada pela oferta e demanda da moeda no mercado internacional de câmbio, e pode ser influenciada por uma série de fatores, como a política econômica do governo mexicano, a situação econômica do país e as condições globais do mercado.</p><br/>
+          <p>Nos últimos anos, o peso mexicano tem sofrido flutuações significativas em sua taxa de câmbio, em grande parte devido às incertezas políticas e econômicas no país e ao impacto de fatores globais, como as políticas econômicas dos Estados Unidos e a pandemia de COVID-19.</p><br/>
+          <p>Para os turistas que visitam o México, é importante lembrar que a taxa de câmbio do peso mexicano pode flutuar significativamente e é recomendado trocar dinheiro em casas de câmbio oficiais ou bancos, em vez de recorrer a cambistas informais, que podem oferecer taxas de câmbio desfavoráveis ou notas falsificadas.</p>
+          <h2>Qual a diferença entre peso mexicano comercial e turismo?</h2>
+          <p>O peso mexicano tem duas taxas de câmbio: a taxa de câmbio comercial e a taxa de câmbio turismo. A principal diferença entre as duas é a finalidade para as quais são utilizadas.</p><br/>
+          <p>A taxa de câmbio <strong>comercial</strong> é usada para transações internacionais entre empresas e governos, como a compra e venda de bens e serviços ou o pagamento de dívidas. Ela é geralmente mais baixa do que a taxa de câmbio turismo, pois não inclui as margens de lucro adicionais cobradas por casas de câmbio e bancos.</p><br/>
+          <p>Já a taxa de câmbio <strong>turismo</strong> é usada por turistas que desejam comprar pesos mexicanos para suas despesas pessoais enquanto viajam no México. Ela é geralmente mais alta do que a taxa de câmbio comercial, pois inclui a margem de lucro das casas de câmbio e bancos, além de taxas adicionais, como o Imposto sobre o Valor Agregado (IVA).</p><br/>
+          <p>No México, é comum que turistas utilizem a taxa de câmbio turismo para comprar pesos mexicanos, já que é mais conveniente para eles. No entanto, é importante pesquisar e comparar as taxas de câmbio oferecidas por diferentes casas de câmbio e bancos para obter a melhor taxa possível e evitar possíveis golpes.</p>
           <h2>Como posso converter peso mexicano em real?</h2>
           <p>Se você deseja converter peso mexicano para real, você pode usar a ferramenta online XMOEDAS. Basta inserir a quantidade de pesos mexicano que você deseja converter e a ferramenta dará o valor equivalente em reais. É importante lembrar de verificar a cotação atual antes de fazer qualquer conversão, pois elas podem variar ao longo do tempo.</p>
           <h2>Observação sobre o conversor</h2>

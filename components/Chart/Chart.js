@@ -14,7 +14,7 @@ import styles from './Chart.module.scss';
 import ChartButtons from '../chartButtons/ChartButtons';
 import { useState } from 'react'
 
-export default function Chart30days(props) {
+export default function Chart(props) {
 
   const lastCots = props.last30days.cot
 

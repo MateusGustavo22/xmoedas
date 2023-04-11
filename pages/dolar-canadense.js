@@ -6,48 +6,47 @@ import Table from 'components/Table/Table';
 export async function getStaticProps() {
  
   const code = 'CAD'
-  let cotacao = 0
 
-  const fetFetch1 = async () => {
-    const responseApi = await fetch(`https://economia.awesomeapi.com.br/json/last/${code}-BRL`)
-    if (responseApi.ok) {
-      const apiData = await responseApi.json()
-      cotacao = parseFloat(apiData[code+'BRL'].bid).toFixed(2)
-    }
+  const fetchData = async (url) => {
+    const response = await fetch(url)
+    const responseData = await response.json()
+    const cotacaoAtual = parseFloat(responseData[code+'BRL'].bid).toFixed(2)
+    
+    return cotacaoAtual
   }
 
-  const cot30bids = {
-    bid: [],
-    timestamp: []
+  const fetchDataChart = async (url) => {
+    const response = await fetch(url)
+    const responseData = await response.json()
+
+    const cot = responseData.map(data =>  {
+      let value = parseFloat(data.bid)
+      return value < 1 ? value.toFixed(3) : value.toFixed(2)
+    })
+
+    const cotDate = responseData.map(data => new Date(data.timestamp * 1000).toLocaleDateString("pt-BR", { month: '2-digit', day: '2-digit' }))
+    cot.reverse()
+    cotDate.reverse()
+    
+    return {cot, cotDate}
+
   }
 
-  const fetFetch2 = async () => {
-    const responseApi = await fetch(`https://economia.awesomeapi.com.br/json/daily/${code}-BRL/30`)
-    if (responseApi.ok) {
-      const apiData = await responseApi.json()
-      const responseBid = apiData.map(data => {
-        let value = parseFloat(data.bid)
-        return value < 1 ? value.toFixed(2) : value.toFixed(3)
-      })
-      const responseDate = apiData.map(data => data.timestamp)
-
-      cot30bids.bid = responseBid
-      cot30bids.timestamp = responseDate
-    }
-  }
-  
-  await fetFetch1()
-  await fetFetch2()
+  const cotacao = await fetchData(`https://economia.awesomeapi.com.br/json/last/${code}-BRL`)
+  const last7days = await fetchDataChart(`https://economia.awesomeapi.com.br/json/daily/${code}-BRL/7`)
+  const last30days = await fetchDataChart(`https://economia.awesomeapi.com.br/json/daily/${code}-BRL/30`)
+  const last365days = await fetchDataChart(`https://economia.awesomeapi.com.br/json/daily/${code}-BRL/365`)
 
   return {
     props: {
       cotacao,
       code,
-      cot30bids //objeto contendo propriedade bid e timestamp
+      last7days,
+      last30days,
+      last365days 
     },
     revalidate: 3600,
   };
-
 }
 
 export default function Home(props) {
@@ -65,7 +64,9 @@ export default function Home(props) {
           <Conversor 
             cotacao={props.cotacao} 
             code={props.code} 
-            last30days={props.cot30bids} 
+            last7days={props.last7days}
+            last30days={props.last30days} 
+            last365days={props.last365days}
             moedaName={'Dólar Canadense'}
             flag={'/flags/ca.svg'} 
           />
@@ -75,11 +76,15 @@ export default function Home(props) {
           <p>A cotação do dólar canadense (CAD) hoje é de R$ {props.cotacao} reais. Isso significa que cada dólar canadense está sendo negociado ao preço de R$ {props.cotacao} reais. A cotação do dólar canadense pode ser influenciada por uma variedade de fatores, incluindo a economia dos Estados Unidos e do Canadá, as taxas de juros, as expectativas de inflação e a demanda por recursos naturais do Canadá. Como investidor ou viajante, é importante estar ciente da cotação do dólar canadense e como ela pode afetar suas decisões.</p>
           <Table cotacao={props.cotacao} moeda={'Dólar Canadense'} code={props.code} />
           <h2>Sobre o dólar canadense</h2>
-          <p>O dólar canadense (CAD) é a moeda oficial do Canadá. Ele é emitido pelo Banco do Canadá e é utilizado em todo o país, incluindo as províncias e territórios. O símbolo usado para representar o dólar canadense é "C$" ou "CAD".<br/><br/> O dólar canadense é uma moeda flutuante, ou seja, seu valor é determinado pelo mercado e pode ser influenciado por diversos fatores, como a taxa de juros, a balança comercial, a política monetária e a situação econômica global.</p>
-          <h2>Qual a diferença entre dólar canadense comercial e dólar canadense turismo?</h2>
-          <p>O dólar canadense é a moeda oficial do Canado e pode ser encontrado em duas taxas diferentes: a taxa comercial e a taxa turística. A diferença entre as duas é a seguinte:</p><br/>
-          <p><strong>Taxa comercial:</strong> É a taxa utilizada para transações comerciais e financeiras, como a compra e venda de bens e serviços. Ela reflete a força econômica do Canado e é determinada pelo mercado financeiro.</p><br/>
-          <p><strong>Taxa turística:</strong> É a taxa utilizada para viagens e turismo. Ela é mais alta do que a taxa comercial e inclui uma margem adicional para cobrir os custos dos intermediários financeiros, como bancos e casas de câmbio.Em resumo, a taxa comercial é mais adequada para transações comerciais, enquanto a taxa turística é mais adequada para viagens e transações turísticas. É importante lembrar que as taxas de câmbio são flutuantes e mudam diariamente.</p>
+          <p>O dólar canadense é a moeda oficial do Canadá, sendo representada pelo símbolo CAD (C$). O Banco do Canadá é o responsável por emitir e controlar a circulação do dólar canadense, assim como definir sua política monetária.</p><br/>
+          <p>O dólar canadense é uma moeda flutuante, ou seja, seu valor em relação a outras moedas é determinado pelo mercado financeiro. A taxa de câmbio do dólar canadense é influenciada por diversos fatores, como a oferta e demanda da moeda no mercado internacional, a balança comercial do país, a política monetária e fiscal do governo canadense, entre outros.</p><br/>
+          <p>Uma característica interessante do dólar canadense é que ele é frequentemente considerado uma moeda de reserva, juntamente com o dólar americano, o euro e o iene japonês. Isso se deve em parte à estabilidade política e econômica do Canadá, bem como à diversidade de sua economia, que é baseada em recursos naturais, manufatura, serviços financeiros e turismo.</p><br/>
+          <p>O dólar canadense é amplamente utilizado no comércio internacional, especialmente com os Estados Unidos, sendo que a maior parte das exportações canadenses têm como destino o mercado americano. Além disso, o dólar canadense é utilizado em transações comerciais em outros países, como a China, o Reino Unido e a União Europeia.</p>
+          <h2>Qual a diferença entre dólar canadense comercial turismo?</h2>
+          <p>O dólar canadense comercial e o dólar canadense turismo são duas cotações diferentes da moeda canadense.</p><br/>
+          <p>O <strong>dólar canadense comercial</strong> é utilizado em transações comerciais entre empresas de diferentes países, como importações e exportações de bens e serviços. Essa cotação é definida pelo mercado financeiro e é influenciada por diversos fatores, como a oferta e demanda de dólares canadenses no mercado internacional, a taxa de juros do Canadá e dos países envolvidos na transação, as políticas econômicas adotadas pelos governos, entre outros.</p><br/>
+          <p>Já o <strong>dólar canadense turismo</strong> é utilizado em transações de pessoas físicas em viagens ao exterior, como compras em lojas estrangeiras, pagamento de serviços turísticos, como hotéis e passeios, e saques em caixas eletrônicos no exterior. A cotação do dólar canadense turismo é geralmente mais alta do que a do dólar canadense comercial, já que inclui outras taxas, como a taxa de câmbio, impostos e tarifas de serviços bancários.</p><br/>
+          <p>Em resumo, enquanto o dólar canadense comercial é usado em transações entre empresas de diferentes países, o dólar canadense turismo é usado em transações de pessoas físicas em viagens internacionais. A cotação do dólar canadense turismo geralmente é mais alta do que a do dólar canadense comercial, devido a taxas adicionais incluídas no preço final.</p>
           <h2>Como posso converter dólar canadense em real?</h2>
           <p>O site XMOEDAS é uma ferramenta prática e fácil de usar para converter valores em dólar para real. Basta inserir o valor em dólar que deseja converter e o nosso conversor fará o cálculo em tempo real, exibindo o valor em real equivalente. O site também permite que você compare as taxas de câmbio atuais do dólar com o real para que você possa tomar decisões informadas sobre suas transações financeiras. Aproveite a nossa ferramenta confiável e fácil de usar hoje mesmo no XMOEDAS!</p>
           <h2>Observação sobre o conversor</h2>

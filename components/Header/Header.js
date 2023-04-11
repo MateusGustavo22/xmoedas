@@ -15,7 +15,7 @@ const Header = () => {
       setOnButton('#1363DF');
       setOnFont("#ffff")
     }else {
-      setOnButton('#589aff');
+      setOnButton('');
       setOnFont("#000000")
     }
   }

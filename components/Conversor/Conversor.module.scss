@@ -58,7 +58,7 @@
   .moeda_nome {
     color: #a7a7a7;
     font-family: 'Roboto', sans-serif;
-    font-size: 0.87rem;
+    font-size: 12px;
     margin-bottom: 5px;
     font-weight: regular;
   }
@@ -74,7 +74,7 @@
   .moeda_brl {
     color: $fontH-color;
     font-family: 'Roboto', sans-serif;
-    font-size: 1.3rem;
+    font-size: 1.125rem;
     font-weight: 500;
   }
   
@@ -83,7 +83,7 @@
     width: 100%;
     height: 45px;
     text-align: right;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     padding-right: 8px;
     background-color: transparent;
     outline: none;
@@ -99,7 +99,7 @@
   }
   
   .flag_code {
-    min-width: 200px;
+    min-width: 180px;
     height: 45px;
     display: flex;
     padding-left: 4px;

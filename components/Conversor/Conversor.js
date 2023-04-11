@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import Chart30days from 'components/Chart/Chart';
+import Chart from 'components/Chart/Chart';
 import style from './Conversor.module.scss';
 
 
@@ -64,7 +64,7 @@ const Conversor = (props) => {
                    <option value="USD">Dólar Americano</option>
                    <option value="CAD">Dólar Canadense</option>
                    <option value="AUD">Dólar Australiano</option>
-                   <option value="HKD">Dólar De Hong Kong</option>
+                   <option value="HKD">Dólar Hong Kong</option>
                    <option value="TWD">Dólar Taiwanês</option>
                    <option value="EUR">Euro</option>
                    <option value="GBP">Libra</option>
@@ -88,7 +88,7 @@ const Conversor = (props) => {
              <input id={style.input_2} name="BRL" type="number" value={input2Value} onChange={handleInput2Change} />
           </div>
       </div>
-      <Chart30days code={props.code} 
+      <Chart code={props.code} 
       last30days={props.last30days} 
       last7days={props.last7days} 
       last365days={props.last365days} 
