@@ -2,41 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://xmoedas.com.br/</loc>
+    <changefreq>hourly</changefreq>
   </url>
   <url>
     <loc>https://xmoedas.com.br/dolar-australiano</loc>
+    <changefreq>hourly</changefreq>
   </url>
     <url>
     <loc>https://xmoedas.com.br/dolar-canadense</loc>
+     <changefreq>hourly</changefreq>
   </url>
    <url>
     <loc>https://xmoedas.com.br/dolar-hongkong</loc>
+     <changefreq>hourly</changefreq>
   </url>
   <url>
     <loc>https://xmoedas.com.br/dolar-taiwanes</loc>
+     <changefreq>hourly</changefreq>
   </url>
     <url>
     <loc>https://xmoedas.com.br/euro</loc>
+     <changefreq>hourly</changefreq>
   </url>
   <url>
     <loc>https://xmoedas.com.br/libra</loc>
+     <changefreq>hourly</changefreq>
   </url>
   <url>
     <loc>https://xmoedas.com.br/franco-suico</loc>
+     <changefreq>hourly</changefreq>
   </url>
     <url>
     <loc>https://xmoedas.com.br/iene-japones</loc>
+     <changefreq>hourly</changefreq>
   </url>
    <url>
     <loc>https://xmoedas.com.br/yuan-chines</loc>
+     <changefreq>hourly</changefreq>
   </url>
   <url>
     <loc>https://xmoedas.com.br/peso-argentino</loc>
+     <changefreq>hourly</changefreq>
   </url>
     <url>
     <loc>https://xmoedas.com.br/peso-mexicano</loc>
+     <changefreq>hourly</changefreq>
   </url>
    <url>
     <loc>https://xmoedas.com.br/rublo-russo</loc>
+     <changefreq>hourly</changefreq>
   </url>
 </urlset>
