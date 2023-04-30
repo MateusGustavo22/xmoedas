@@ -4,7 +4,7 @@ O xmoedas.com.br permiti que você fique atualizado da cotação atual do dólar
 
 tecnologias: React | Next | Sass
 
-![screenshot]url(https://github.com/MateusGustavo22/conversor-moedas/blob/main/public/screenshots/Captura%20de%20tela%20de%202023-04-30%2015-15-45.png)
+![screenshot](https://github.com/MateusGustavo22/conversor-moedas/blob/main/public/screenshots/Captura%20de%20tela%20de%202023-04-30%2015-15-45.png)
 
 
 
