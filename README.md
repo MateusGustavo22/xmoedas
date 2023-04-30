@@ -1,3 +1,13 @@
+## Conversor de moedas
+
+O xmoedas.com.br permiti que você fique atualizado da cotação atual do dólar, euro, libra e ontre outras moedas. Também é possível realizar a converção para o real brasileiro.
+
+tecnologias: React | Next | Sass
+
+![screenshot]url(https://github.com/MateusGustavo22/conversor-moedas/blob/main/public/screenshots/Captura%20de%20tela%20de%202023-04-30%2015-15-45.png)
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
