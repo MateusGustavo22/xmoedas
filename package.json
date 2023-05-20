@@ -1,5 +1,5 @@
 {
-  "name": "Xmoedas",
+  "name": "xmoedas",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -35,5 +35,8 @@
   "bugs": {
     "url": "https://github.com/MateusGustavo22/conversor-moedas/issues"
   },
-  "homepage": "https://github.com/MateusGustavo22/conversor-moedas#readme"
+  "homepage": "https://github.com/MateusGustavo22/conversor-moedas#readme",
+  "devDependencies": {
+    "prettier": "^2.8.8"
+  }
 }

@@ -1,30 +1,30 @@
-@import './styles/variables.scss';
+@import "./styles/variables.scss";
 
 .div_area {
-      max-width: 500px;
+  max-width: 500px;
 }
-  
+
 .html_table {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
 
 .html_tr {
-    &:nth-child(even) {
+  &:nth-child(even) {
     background-color: #1c1c1c;
   }
 }
-  
+
 .html_th {
-    padding: 10px;
-    text-align: left;
-    background-color: $icon-color;
-    border: 1px solid $border-color;
-    color: white;
+  padding: 10px;
+  text-align: left;
+  background-color: $icon-color;
+  border: 1px solid $border-color;
+  color: white;
 }
-  
- .html_td {
-    border: 1px solid #8993a2;
-    padding: 10px;
-    color: $fontH-color;
- }
+
+.html_td {
+  border: 1px solid #8993a2;
+  padding: 10px;
+  color: $fontH-color;
+}

@@ -1,4 +1,4 @@
-@import '/styles/variables.scss';
+@import "/styles/variables.scss";
 
 .html_div {
   flex-direction: inline;
@@ -7,36 +7,41 @@
 }
 
 .html_footer {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: $footer-color;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    position: relative;
-    bottom: 0;
-    margin: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $footer-color;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  position: relative;
+  bottom: 0;
+  margin: auto;
 }
 
-  #contato, #politicas, #sobre, #termos {
-    font-family: 'Inter', sans-serif;
-    font-weight: normal;
-    text-decoration: none;
-    margin: 16px;
-    color: white;
-  }
-  
-  #contato:hover, #politicas:hover, #sobre:hover, #termos:hover {
-    text-decoration: underline;
-  }
-  
- .copyright {
-  font-family: 'Inter', sans-serif;
+#contato,
+#politicas,
+#sobre,
+#termos {
+  font-family: "Inter", sans-serif;
   font-weight: normal;
   text-decoration: none;
   margin: 16px;
   color: white;
- }
- 
+}
+
+#contato:hover,
+#politicas:hover,
+#sobre:hover,
+#termos:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  font-family: "Inter", sans-serif;
+  font-weight: normal;
+  text-decoration: none;
+  margin: 16px;
+  color: white;
+}

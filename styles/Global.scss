@@ -1,50 +1,52 @@
-@import './variables.scss';
+@import "./variables.scss";
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-  }
-  
-  body {
-    background-color: $primary-color;
-  }
-  
-  .container_principal {
-    min-height: 100vh;
-  }
-  
-  main {
-    max-width: 800px;
-    margin: auto;
-    padding: 15px;
-  }
-  
-  .mainContent {
-    margin-bottom: 100px;
-    padding: 0px;
-  }
-  
-  h1, h2, h3 {
-    font-size: 1.37rem;
-    margin-bottom: 30px;
-    margin-top: 30px;
-    color: $fontH-color;
-  }
- 
-  p {
-    font-weight: normal;
-    font-size: 1.125rem;
-    line-height: 1.5;
-    color: $fontP-color;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
 
-  li {
-    font-weight: normal;
-    font-size: 1.125rem;
-    margin-bottom: 10px;
-    margin-left: 18px;
-    line-height: 1.5;
-    color: $fontP-color;
-  }
+body {
+  background-color: $primary-color;
+}
+
+.container_principal {
+  min-height: 100vh;
+}
+
+main {
+  max-width: 800px;
+  margin: auto;
+  padding: 15px;
+}
+
+.mainContent {
+  margin-bottom: 100px;
+  padding: 0px;
+}
+
+h1,
+h2,
+h3 {
+  font-size: 1.37rem;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  color: $fontH-color;
+}
+
+p {
+  font-weight: normal;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: $fontP-color;
+}
+
+li {
+  font-weight: normal;
+  font-size: 1.125rem;
+  margin-bottom: 10px;
+  margin-left: 18px;
+  line-height: 1.5;
+  color: $fontP-color;
+}
