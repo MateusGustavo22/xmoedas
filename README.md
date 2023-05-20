@@ -6,7 +6,7 @@ tecnologias: React | Next | Sass
 
 Acesse o projeto clicando [aqui](https://xmoedas.com.br)
 
-![screenshot](https://github.com/MateusGustavo22/conversor-moedas/blob/main/public/screenshots/Captura%20de%20tela%20de%202023-04-30%2015-15-45.png)
+![screenshot](https://github.com/MateusGustavo22/conversor-moedas/blob/main/public/screenshots/screenshot.png)
 
 ## Rode o projeto em sua máquina
 
