@@ -11,7 +11,7 @@ Acesse o projeto clicando [aqui](https://xmoedas.com.br)
 ## Rode o projeto em sua máquina 
 
 Clone o projeto
->>>>>>> 39665cf46d792f96be66ce3e3cccd1d7142efd21
+
 ```bash
 git clone https://github.com/MateusGustavo22/conversor-moedas.git
 ```
