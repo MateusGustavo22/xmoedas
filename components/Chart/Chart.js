@@ -11,35 +11,35 @@ export default function Chart(props) {
   const [cotPeriodo, setCotPeriodo] = useState(lastCots);
   const [cotDate, setCotDate] = useState(props.last30days.cotDate);
 
-  const [buttonOn1, setButtonOn1] = useState("#222222");
-  const [buttonOn2, setButtonOn2] = useState("#4c4c4c");
-  const [buttonOn3, setButtonOn3] = useState("#222222");
+  const [buttonOn1, setButtonOn1] = useState("#d4d4d4");
+  const [buttonOn2, setButtonOn2] = useState("#9d9d9d");
+  const [buttonOn3, setButtonOn3] = useState("#d4d4d4");
 
   async function select7days() {
     setCotPeriodo(props.last7days.cot);
     setCotDate(props.last7days.cotDate);
 
-    setButtonOn1("#4c4c4c");
-    setButtonOn2("#222222");
-    setButtonOn3("#222222");
+    setButtonOn1("#9d9d9d");
+    setButtonOn2("#d4d4d4");
+    setButtonOn3("#d4d4d4");
   }
 
   function select30days() {
     setCotPeriodo(props.last30days.cot);
     setCotDate(props.last30days.cotDate);
 
-    setButtonOn1("#222222");
-    setButtonOn2("#4c4c4c");
-    setButtonOn3("#222222");
+    setButtonOn1("#d4d4d4");
+    setButtonOn2("#9d9d9d");
+    setButtonOn3("#d4d4d4");
   }
 
   const select365days = async () => {
     setCotPeriodo(props.last365days.cot);
     setCotDate(props.last365days.cotDate);
 
-    setButtonOn1("#222222");
-    setButtonOn2("#222222");
-    setButtonOn3("#4c4c4c");
+    setButtonOn1("#d4d4d4");
+    setButtonOn2("#d4d4d4");
+    setButtonOn3("#9d9d9d");
   };
 
   ChartJS

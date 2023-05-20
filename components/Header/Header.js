@@ -10,11 +10,7 @@ const Header = () => {
   function menuDisplay() {
     setShowMenu(showMenu === "none" ? "flex" : "none");
     if (showMenu == "flex") {
-      setOnButton("#1363DF");
-      setOnFont("#ffff");
     } else {
-      setOnButton("");
-      setOnFont("#000000");
     }
   }
 

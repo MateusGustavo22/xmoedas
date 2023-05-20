@@ -40,7 +40,7 @@ export default function termos() {
             <br />
             <li>
               tentar descompilar ou fazer engenharia reversa de qualquer
-              software contido no site Xmoedas ;{" "}
+              software contido no site Xmoedas;{" "}
             </li>
             <br />
             <li>
@@ -120,12 +120,8 @@ export default function termos() {
       <style jsx>{`
         li {
           margin-left: 15px;
-          color: #cdcdcd;
+          color: #252525;
           line-height: 1.5;
-        }
-
-        a {
-          color: #ffff;
         }
       `}</style>
     </>

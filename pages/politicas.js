@@ -10,10 +10,10 @@ export default function sobre() {
       <div className="container_principal">
         <main className="mainContent">
           <h2>
-            <span style={{ color: "#cdcdcd" }}>Política Privacidade</span>
+            <span style={{ color: "#252525" }}>Política Privacidade</span>
           </h2>
           <p>
-            <span style={{ color: "#cdcdcd" }}>
+            <span style={{ color: "#252525" }}>
               A sua privacidade é importante para nós. É política do Xmoedas
               respeitar a sua privacidade em relação a qualquer informação sua
               que possamos coletar no site{" "}
@@ -23,7 +23,7 @@ export default function sobre() {
           </p>
           <br />
           <p>
-            <span style={{ color: "#cdcdcd" }}>
+            <span style={{ color: "#252525" }}>
               Solicitamos informações pessoais apenas quando realmente
               precisamos delas para lhe fornecer um serviço. Fazemo-lo por meios
               justos e legais, com o seu conhecimento e consentimento. Também
@@ -32,7 +32,7 @@ export default function sobre() {
           </p>
           <br />
           <p>
-            <span style={{ color: "#cdcdcd" }}>
+            <span style={{ color: "#252525" }}>
               Apenas retemos as informações coletadas pelo tempo necessário para
               fornecer o serviço solicitado. Quando armazenamos dados,
               protegemos dentro de meios comercialmente aceitáveis ​​para evitar
@@ -42,14 +42,14 @@ export default function sobre() {
           </p>
           <br />
           <p>
-            <span style={{ color: "#cdcdcd" }}>
+            <span style={{ color: "#252525" }}>
               Não compartilhamos informações de identificação pessoal
               publicamente ou com terceiros, exceto quando exigido por lei.
             </span>
           </p>
           <br />
           <p>
-            <span style={{ color: "#cdcdcd" }}>
+            <span style={{ color: "#252525" }}>
               O nosso site pode ter links para sites externos que não são
               operados por nós. Esteja ciente de que não temos controle sobre o
               conteúdo e práticas desses sites e não podemos aceitar
@@ -59,15 +59,15 @@ export default function sobre() {
               href="https://politicaprivacidade.com/"
               rel="noopener noreferrer"
               target="_blank"
-              style={{ backgroundColor: "transparent", color: "#cdcdcd" }}
+              style={{ backgroundColor: "transparent", color: "#252525" }}
             >
               políticas de privacidade
             </a>
-            <span style={{ color: "#cdcdcd" }}>.</span>
+            <span style={{ color: "#252525" }}>.</span>
           </p>
           <br />
           <p>
-            <span style={{ color: "#cdcdcd" }}>
+            <span style={{ color: "#252525" }}>
               Você é livre para recusar a nossa solicitação de informações
               pessoais, entendendo que talvez não possamos fornecer alguns dos
               serviços desejados.
@@ -75,7 +75,7 @@ export default function sobre() {
           </p>
           <br />
           <p>
-            <span style={{ color: "#cdcdcd" }}>
+            <span style={{ color: "#252525" }}>
               O uso continuado de nosso site será considerado como aceitação de
               nossas práticas em torno de privacidade e informações pessoais. Se
               você tiver alguma dúvida sobre como lidamos com dados do usuário e
@@ -84,14 +84,14 @@ export default function sobre() {
           </p>
           <br />
           <p>
-            <span style={{ color: "#cdcdcd" }} />
+            <span style={{ color: "#252525" }} />
           </p>
           <br />
           <h3>
-            <span style={{ color: "#cdcdcd" }}>Compromisso do Usuário</span>
+            <span style={{ color: "#252525" }}>Compromisso do Usuário</span>
           </h3>
           <p>
-            <span style={{ color: "#cdcdcd" }}>
+            <span style={{ color: "#252525" }}>
               O usuário se compromete a fazer uso adequado dos conteúdos e da
               informação que o Xmoedas oferece no site e com caráter
               enunciativo, mas não limitativo:
@@ -100,14 +100,14 @@ export default function sobre() {
           <br />
           <ul>
             <li>
-              <span style={{ color: "#cdcdcd" }}>
+              <span style={{ color: "#252525" }}>
                 A) Não se envolver em atividades que sejam ilegais ou contrárias
                 à boa fé a à ordem pública;
               </span>
             </li>
             <br />
             <li>
-              <span style={{ color: "#cdcdcd" }}>
+              <span style={{ color: "#252525" }}>
                 B) Não difundir propaganda ou conteúdo de natureza racista,
                 xenofóbica,{" "}
               </span>
@@ -124,7 +124,7 @@ export default function sobre() {
                   pix bet365
                 </a>
               </span>
-              <span style={{ color: "#cdcdcd" }}>
+              <span style={{ color: "#252525" }}>
                 {" "}
                 ou azar, qualquer tipo de pornografia ilegal, de apologia ao
                 terrorismo ou contra os direitos humanos;
@@ -132,7 +132,7 @@ export default function sobre() {
             </li>
             <br />
             <li>
-              <span style={{ color: "#cdcdcd" }}>
+              <span style={{ color: "#252525" }}>
                 C) Não causar danos aos sistemas físicos (hardwares) e lógicos
                 (softwares) do Xmoedas, de seus fornecedores ou terceiros, para
                 introduzir ou disseminar vírus informáticos ou quaisquer outros
@@ -143,10 +143,10 @@ export default function sobre() {
             <br />
           </ul>
           <h3>
-            <span style={{ color: "#cdcdcd" }}>Mais informações</span>
+            <span style={{ color: "#252525" }}>Mais informações</span>
           </h3>
           <p>
-            <span style={{ color: "#cdcdcd" }}>
+            <span style={{ color: "#252525" }}>
               Esperemos que esteja esclarecido e, como mencionado anteriormente,
               se houver algo que você não tem certeza se precisa ou não,
               geralmente é mais seguro deixar os cookies ativados, caso interaja
@@ -155,7 +155,7 @@ export default function sobre() {
           </p>
           <br />
           <p>
-            <span style={{ color: "#cdcdcd" }}>
+            <span style={{ color: "#252525" }}>
               Esta política é efetiva a partir de&nbsp;13 February 2023 01:33
             </span>
           </p>
@@ -165,11 +165,7 @@ export default function sobre() {
       <style jsx>{`
         li {
           margin-left: 15px;
-          color: #ffff;
-        }
-
-        a {
-          color: #ffff;
+          color: #252525;
         }
       `}</style>
     </>

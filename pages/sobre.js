@@ -43,10 +43,6 @@ export default function sobre() {
             font-size: 19px;
             margin-top: 15px;
           }
-
-          a {
-            color: #ffff;
-          }
         `}
       </style>
     </>
