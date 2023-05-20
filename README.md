@@ -4,24 +4,28 @@ O xmoedas.com.br permiti que você fique atualizado da cotação atual do dólar
 
 tecnologias: React | Next | Sass
 
-O site está em produção: https://xmoedas.com.br
+Acesse o projeto clicando [aqui](https://xmoedas.com.br)
 
 ![screenshot](https://github.com/MateusGustavo22/conversor-moedas/blob/main/public/screenshots/Captura%20de%20tela%20de%202023-04-30%2015-15-45.png)
 
+## Rode o projeto em sua máquina 
 
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
+Clone o projeto
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+git clone https://github.com/MateusGustavo22/conversor-moedas.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Instale as depedências
+```bash
+# Com yarn
+yarn install
+# Ou com npm
+npm install
+```
+Execulte o projeto
+```bash
+yarn dev
+# Ou
+npm run dev
+```
+Depois acesse [https://localhost:3000](https://localhost:3000)
