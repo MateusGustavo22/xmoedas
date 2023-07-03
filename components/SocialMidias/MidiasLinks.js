@@ -2,7 +2,7 @@ import { FaFacebook, FaTelegram, FaReddit } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { useState, useEffect } from "react";
-import styles from "./MidiasLinks.module.scss";
+import styles from "./MidiasLinks.module.css";
 
 export default function MidasShare({ menuDisplay }) {
   const [path, setPath] = useState(null);

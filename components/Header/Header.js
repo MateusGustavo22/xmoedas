@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import MidiasLinks from "components/SocialMidias/MidiasLinks";
-import styles from "./Header.module.scss";
+import styles from "./Header.module.css";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState("none");

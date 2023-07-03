@@ -1,9 +1,7 @@
-@import "/styles/variables.scss";
-
 .div_area {
   width: 100%;
   position: sticky;
-  background-color: $secundary-color;
+  background-color: var(--secundary-color);
   margin: auto;
   margin-bottom: 10px;
   top: 0;

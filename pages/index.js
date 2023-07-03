@@ -1,56 +1,28 @@
 import Head from "next/head";
 import Conversor from "components/Conversor/Conversor";
 import Table from "components/Table/Table";
+import { getCurrentQuote } from "@/utils/getCurrentQuote";
+import { fetchDataChart } from "@/utils/getChartData";
 
 export async function getStaticProps() {
-  const code = "USD";
+  const currencyCode = "USD";
 
-  const fetchData = async (url) => {
-    const response = await fetch(url);
-    const responseData = await response.json();
-    const cotacaoAtual = parseFloat(responseData[code + "BRL"].bid).toFixed(2);
-
-    return cotacaoAtual;
-  };
-
-  const fetchDataChart = async (url) => {
-    const response = await fetch(url);
-    const responseData = await response.json();
-
-    const cot = responseData.map((data) => {
-      let value = parseFloat(data.bid);
-      return value < 1 ? value.toFixed(3) : value.toFixed(2);
-    });
-
-    const cotDate = responseData.map((data) =>
-      new Date(data.timestamp * 1000).toLocaleDateString("pt-BR", {
-        month: "2-digit",
-        day: "2-digit",
-      })
-    );
-    cot.reverse();
-    cotDate.reverse();
-
-    return { cot, cotDate };
-  };
-
-  const cotacao = await fetchData(
-    `https://economia.awesomeapi.com.br/json/last/${code}-BRL`
-  );
+  const currentQuote = await getCurrentQuote(currencyCode)
+ 
   const last7days = await fetchDataChart(
-    `https://economia.awesomeapi.com.br/json/daily/${code}-BRL/7`
+    `https://economia.awesomeapi.com.br/json/daily/${currencyCode}-BRL/7`
   );
   const last30days = await fetchDataChart(
-    `https://economia.awesomeapi.com.br/json/daily/${code}-BRL/30`
+    `https://economia.awesomeapi.com.br/json/daily/${currencyCode}-BRL/30`
   );
   const last365days = await fetchDataChart(
-    `https://economia.awesomeapi.com.br/json/daily/${code}-BRL/365`
+    `https://economia.awesomeapi.com.br/json/daily/${currencyCode}-BRL/365`
   );
 
   return {
     props: {
-      cotacao,
-      code,
+      currencyCode,
+      currentQuote,
       last7days,
       last30days,
       last365days,
@@ -81,12 +53,12 @@ export default function Home(props) {
       </Head>
       <div className="container_principal">
         <Conversor
-          cotacao={props.cotacao}
-          code={props.code}
+          currentQuote={props.currentQuote}
+          currencyCode={props.currencyCode}
           last7days={props.last7days}
           last30days={props.last30days}
           last365days={props.last365days}
-          moedaName={"Dólar Americano"}
+          currencyName={"Dólar Americano"}
           flag={"/flags/us.svg"}
         />
       </div>
@@ -100,7 +72,7 @@ export default function Home(props) {
           país. Por isso, é importante estar sempre atento às mudanças na
           cotação do dólar para tomar decisões financeiras informadas.
         </p>
-        <Table cotacao={props.cotacao} moeda={"Dólar"} code={props.code} />
+        {/* <Table cotacao={props.cotacao} moeda={"Dólar"} code={props.code} /> */}
         <h2>Sobre o dólar americano</h2>
         <p>
           O dólar americano é a moeda oficial dos Estados Unidos da América e

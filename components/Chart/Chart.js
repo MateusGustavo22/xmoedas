@@ -1,68 +1,65 @@
-import { Chart as ChartJS } from "chart.js";
-import { Line } from "react-chartjs-2";
-import "chart.js/auto";
-import styles from "./Chart.module.scss";
-import ChartButtons from "../chartButtons/ChartButtons";
-import { useState } from "react";
+import { Line } from 'react-chartjs-2';
+import 'chart.js/auto';
+import ChartButtons from './ChartButtons';
+import { useState } from 'react';
 
-export default function Chart(props) {
-  const lastCots = props.last30days.cot;
+export default function Chart({ currencyCode, last365days, last30days, last7days }) {
+  const [lastCurrencyRates, setLastCurrencyRates] = useState(last30days.lastCurrencyRates);
+  const [lastCurrencyRatesDates, setLastCurrencyRatesDates] = useState(last30days.lastCurrencyRatesDates);
 
-  const [cotPeriodo, setCotPeriodo] = useState(lastCots);
-  const [cotDate, setCotDate] = useState(props.last30days.cotDate);
+  const grayLow = '#dedede';
+  const grayDark = '#c8c6c6';
 
-  const [buttonOn1, setButtonOn1] = useState("#d4d4d4");
-  const [buttonOn2, setButtonOn2] = useState("#9d9d9d");
-  const [buttonOn3, setButtonOn3] = useState("#d4d4d4");
+  const [buttonOn1, setButtonOn1] = useState(grayLow);
+  const [buttonOn2, setButtonOn2] = useState(grayDark);
+  const [buttonOn3, setButtonOn3] = useState(grayLow);
 
   async function select7days() {
-    setCotPeriodo(props.last7days.cot);
-    setCotDate(props.last7days.cotDate);
+    setLastCurrencyRates(last7days.lastCurrencyRates);
+    setLastCurrencyRatesDates(last7days.lastCurrencyRatesDates);
 
-    setButtonOn1("#9d9d9d");
-    setButtonOn2("#d4d4d4");
-    setButtonOn3("#d4d4d4");
+    setButtonOn1(grayDark);
+    setButtonOn2(grayLow);
+    setButtonOn3(grayLow);
   }
 
   function select30days() {
-    setCotPeriodo(props.last30days.cot);
-    setCotDate(props.last30days.cotDate);
+    setLastCurrencyRates(last30days.lastCurrencyRates);
+    setLastCurrencyRatesDates(last30days.lastCurrencyRatesDates);
 
-    setButtonOn1("#d4d4d4");
-    setButtonOn2("#9d9d9d");
-    setButtonOn3("#d4d4d4");
+    setButtonOn1(grayLow);
+    setButtonOn2(grayDark);
+    setButtonOn3(grayLow);
   }
 
   const select365days = async () => {
-    setCotPeriodo(props.last365days.cot);
-    setCotDate(props.last365days.cotDate);
+    setLastCurrencyRates(last365days.lastCurrencyRates);
+    setLastCurrencyRatesDates(last365days.lastCurrencyRatesDates);
 
-    setButtonOn1("#d4d4d4");
-    setButtonOn2("#d4d4d4");
-    setButtonOn3("#9d9d9d");
+    setButtonOn1(grayLow);
+    setButtonOn2(grayLow);
+    setButtonOn3(grayDark);
   };
 
-  ChartJS
-    .register
-    //CategoryScale,
-    //LinearScale,
-    //PointElement,
-    //LineElement,
-    //Title,
-    //Tooltip,
-    //Legend
-    ();
+  const formatTimestampToDate = (timestamp) => {
+    const date = new Date(timestamp * 1000);
+    const day = String(date.getDate()).padStart(2, '0');
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    return `${day}/${month}`;
+  };
+
+  const labels = lastCurrencyRatesDates.map((timestamp) => formatTimestampToDate(timestamp));
 
   const data = {
-    labels: cotDate,
+    labels: labels,
     datasets: [
       {
-        label: `${props.code} Para BRL`,
-        data: cotPeriodo,
+        label: `${currencyCode} Para BRL`,
+        data: lastCurrencyRates,
         fill: true,
         pointRadius: 0,
-        backgroundColor: "rgb(19, 98, 168, 0.2)",
-        borderColor: "#1363DF",
+        backgroundColor: 'rgb(19, 98, 168, 0.2)',
+        borderColor: '#1363DF',
       },
     ],
   };
@@ -71,28 +68,26 @@ export default function Chart(props) {
     responsive: true,
     plugins: {
       tooltip: {
-        mode: "index",
+        mode: 'index',
         intersect: false,
       },
       legend: {
-        position: "top",
+        position: 'top',
       },
     },
   };
 
   return (
-    <div className={styles.chart_area}>
-      <div className={styles.chart_div}>
-        <ChartButtons
-          select7days={select7days}
-          select30days={select30days}
-          select365days={select365days}
-          buttonOn1={buttonOn1}
-          buttonOn2={buttonOn2}
-          buttonOn3={buttonOn3}
-        />
-        <Line data={data} options={options} width="320" height="200" />
-      </div>
+    <div className="bg-transparent">
+      <ChartButtons
+        select7days={select7days}
+        select30days={select30days}
+        select365days={select365days}
+        buttonOn1={buttonOn1}
+        buttonOn2={buttonOn2}
+        buttonOn3={buttonOn3}
+      />
+      <Line data={data} options={options} width="320" height="200" />
     </div>
   );
 }

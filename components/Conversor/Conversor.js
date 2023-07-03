@@ -1,20 +1,18 @@
-import { useState, useEffect } from "react";
-import Chart from "components/Chart/Chart";
-import style from "./Conversor.module.scss";
+import { useState, useEffect } from 'react';
+import Chart from 'components/Chart/Chart';
 
 const Conversor = (props) => {
   const [input1Value, setInput1Value] = useState(1);
-  const [input2Value, setInput2Value] = useState(props.cotacao);
+  const [input2Value, setInput2Value] = useState(props.currentQuote.toFixed(2));
 
-  //Atualiza os inputs
   function handleInput1Change(e) {
     setInput1Value(e.target.value);
-    setInput2Value((e.target.value * props.cotacao).toFixed(2));
+    setInput2Value((e.target.value * props.currentQuote).toFixed(2));
   }
 
   function handleInput2Change(e) {
     setInput2Value(e.target.value);
-    setInput1Value((e.target.value / props.cotacao).toFixed(2));
+    setInput1Value((e.target.value / props.currentQuote).toFixed(2));
   }
 
   const [menuOptions, setOptions] = useState(props.currency);
@@ -24,19 +22,19 @@ const Conversor = (props) => {
   }
 
   const currencyPages = {
-    USD: "/",
-    CAD: "/dolar-canadense",
-    AUD: "/dolar-australiano",
-    HKD: "/dolar-hongkong",
-    TWD: "/dolar-taiwanes",
-    EUR: "/euro",
-    GBP: "/libra",
-    ARS: "/peso-argentino",
-    MXN: "/peso-mexicano",
-    CNY: "/yuan-chines",
-    RUB: "/rublo-russo",
-    CHF: "/franco-suico",
-    JPY: "/iene-japones",
+    USD: '/',
+    CAD: '/dolar-canadense',
+    AUD: '/dolar-australiano',
+    HKD: '/dolar-hongkong',
+    TWD: '/dolar-taiwanes',
+    EUR: '/euro',
+    GBP: '/libra',
+    ARS: '/peso-argentino',
+    MXN: '/peso-mexicano',
+    CNY: '/yuan-chines',
+    RUB: '/rublo-russo',
+    CHF: '/franco-suico',
+    JPY: '/iene-japones',
   };
 
   useEffect(() => {
@@ -46,75 +44,65 @@ const Conversor = (props) => {
   }, [menuOptions]);
 
   return (
-    <div className={style.convert_area}>
-      <div className={style.convert_div}>
-        <div className={style.moeda_valor}>
-          <span className={style.moeda_nome}>1 {props.moedaName} hoje = </span>
-          <span className={style.moeda_brl}>
-            {props.cotacao} Real Brasileiro
-          </span>
+    <div className=" h-max flex flex-row gap-4 shadow-3xl rounded-lg p-2 display1:flex-col ">
+      <div className="max-w-md flex flex-col gap-2">
+        <div className=" w-full flex flex-col">
+          <span className="text-base text-gray-600">1 {props.currencyName} hoje = </span>
+          <span className="font-medium text-gray-800 text-2xl">{props.currentQuote} Real Brasileiro</span>
         </div>
-        <div className={style.input_area}>
-          <div className={style.flag_code}>
-            <div className={style.moeda_icon}>
-              <img
-                src={props.flag}
-                width="32"
-                height="25"
-                alt="Bandeira da moeda"
-              />
+        <div className="w-full flex flex-col gap-1">
+          <div className="gap-1 flex flex-row">
+            <div className="w-44 flex p-1 items-center shrink-0 rounded-[4px] border-[1px] border-gray-400 ">
+              <div>
+                <img src={props.flag} width="32" height="25" alt="Bandeira da moeda" />
+              </div>
+              <select
+                className="text-sm text-gray-800 outline-none bg-transparent"
+                onChange={selectChange}
+                value={props.code}
+              >
+                <option value="USD">Dólar Americano</option>
+                <option value="CAD">Dólar Canadense</option>
+                <option value="AUD">Dólar Australiano</option>
+                <option value="HKD">Dólar Hong Kong</option>
+                <option value="TWD">Dólar Taiwanês</option>
+                <option value="EUR">Euro</option>
+                <option value="GBP">Libra</option>
+                <option value="ARS">Peso Argentino</option>
+                <option value="MXN">Peso Mexicano</option>
+                <option value="CNY">Yuan Chinês</option>
+                <option value="JPY">Iene Japonês</option>
+                <option value="RUB">Rublo Russo</option>
+                <option value="CHF">Franco Suíço</option>
+              </select>
             </div>
-            <select
-              id={style.select}
-              onChange={selectChange}
-              value={props.code}
-            >
-              <option value="USD">Dólar Americano</option>
-              <option value="CAD">Dólar Canadense</option>
-              <option value="AUD">Dólar Australiano</option>
-              <option value="HKD">Dólar Hong Kong</option>
-              <option value="TWD">Dólar Taiwanês</option>
-              <option value="EUR">Euro</option>
-              <option value="GBP">Libra</option>
-              <option value="ARS">Peso Argentino</option>
-              <option value="MXN">Peso Mexicano</option>
-              <option value="CNY">Yuan Chinês</option>
-              <option value="JPY">Iene Japonês</option>
-              <option value="RUB">Rublo Russo</option>
-              <option value="CHF">Franco Suíço</option>
-            </select>
+            <input
+              className="w-full pr-2 h-11 text-right rounded-md border-[1px] bg-transparent border-gray-400 focus:border-blue-500 focus:border-[2px] focus:outline-none"
+              name={props.code}
+              type="number"
+              value={input1Value}
+              onChange={handleInput1Change}
+            />
           </div>
-          <input
-            id={style.input_1}
-            name={props.code}
-            type="number"
-            value={input1Value}
-            onChange={handleInput1Change}
-          />
-        </div>
-        <div className={style.input_area}>
-          <div className={style.flag_code}>
-            <div className={style.moeda_icon}>
-              <img
-                src="/flags/br.svg"
-                width="32"
-                height="32"
-                alt="Bandeira do Brasil"
-              />
+          <div className="flex gap-1">
+            <div className="w-44 h-11 flex p-1 gap-1 items-center shrink-0 rounded-[4px] border-[1px] border-gray-400">
+              <div>
+                <img src="/flags/br.svg" width="32" height="32" alt="Bandeira do Brasil" />
+              </div>
+              <span className="text-sm text-gray-800">Real Brasileiro</span>
             </div>
-            <span className={style.span_brl}>Real Brasileiro</span>
+            <input
+              className="w-full pr-2 h-11 text-right rounded-md border-[1px] bg-transparent border-gray-400 focus:border-blue-500 focus:border-[2px] focus:outline-none"
+              name="BRL"
+              type="number"
+              value={input2Value}
+              onChange={handleInput2Change}
+            />
           </div>
-          <input
-            id={style.input_2}
-            name="BRL"
-            type="number"
-            value={input2Value}
-            onChange={handleInput2Change}
-          />
         </div>
       </div>
       <Chart
-        code={props.code}
+        currencyCode={props.currencyCode}
         last30days={props.last30days}
         last7days={props.last7days}
         last365days={props.last365days}

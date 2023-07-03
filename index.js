@@ -1,26 +1,16 @@
 import Head from "next/head";
 import Footer from "components/Footer/Footer";
 import Header from "components/Header/Header";
+import { getCurrencyRate } from "./utils/getCurrentQuote";
 import Conversor from "components/Conversor/Conversor";
 import Chart30days from "components/Chart/Chart";
 
 //Pegar a cotação da moeda e passa como props
 export async function getStaticProps() {
-  const code = "USD";
+  const currencyCode = "USD";
 
-  //Pega a cotação da moeda
-  const apiLink = `https://economia.awesomeapi.com.br/json/last/${code}-BRL`;
-  let cotacao = 0;
-  await axios
-    .get(apiLink)
-    .then((response) => {
-      const resJson = response.data;
-      const strForNum = parseFloat(resJson[code + "BRL"].bid);
-      cotacao = strForNum.toFixed(2);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
+  const currencyApiUrl = `https://economia.awesomeapi.com.br/json/last/${code}-BRL`;
+  getCurrencyRate(currencyCode, currencyApiUrl)
 
   //Pega as ultimas cotações da moeda e passa para o componente Chart
   const last30day = `https://economia.awesomeapi.com.br/json/daily/${code}-BRL/30`;
@@ -47,8 +37,8 @@ export async function getStaticProps() {
       cotacao,
       code,
       bid30days,
-    },
-    revalidate: 3600,
+    }
+
   };
 }
 
@@ -89,7 +79,7 @@ export default function Home(props) {
         <Chart30days currency={props.code} last30days={props.bid30days} />
       </div>
       <main>
-        <h2>Cotação do dólar hojge</h2>
+        <h2>Cotação do dkkkólar hoje</h2>
         <p>
           A cotação do dólar hoje é de R$ 5,10. Isso significa que o preço de
           compra e venda do dólar americano está em R$ {props.cotacao} no

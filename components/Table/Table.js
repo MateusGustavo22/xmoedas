@@ -1,4 +1,4 @@
-import styles from "./Table.module.scss";
+import styles from "./Table.module.css";
 
 export default function Table({ cotacao, moeda, code }) {
   return (
