@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Conversor from "components/Conversor/Conversor";
+import Conversor from "components/Converter";
 import Table from "components/Table/Table";
 import { getCurrentQuote } from "@/utils/getCurrentQuote";
 import { fetchDataChart } from "@/utils/getChartData";
