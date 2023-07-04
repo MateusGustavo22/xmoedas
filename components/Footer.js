@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import styles from "./Footer.module.css";
 
 const Footer = () => {
   const [copyright, setCopyright] = useState(
@@ -11,28 +10,28 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className={styles.html_footer}>
-      <div className={styles.html_div}>
+    <footer className='w-full flex flex-col p-4 relative justify-center bg-[var(--footer-color)]'>
+      <div className='flex justify-center '>
         <a
-          id={styles.contato}
+          className='no-underline m-4 hover:underline text-white'
           href="mailto:contatomateuscode@gmail.com?subject=Xmoedas"
           rel="noopener"
         >
           Contato
         </a>
-        <a id={styles.sobre} href="/sobre" rel="noopener">
+        <a className='no-underline m-4 hover:underline text-white' href="/sobre" rel="noopener">
           Sobre
         </a>
       </div>
-      <div className={styles.html_div}>
-        <a id={styles.politicas} href="/politicas">
+      <div className='flex justify-center'>
+        <a className='no-underline m-4 hover:underline text-white' href="/politicas">
           Política de privacidade
         </a>
-        <a id={styles.termos} href="/termos">
+        <a className='no-underline m-4 hover:underline text-white' href="/termos">
           Termos de uso
         </a>
       </div>
-      <div className={styles.copyright} align="center">
+      <div className='text-gray-300 mt-4' align="center">
         &copy;{copyright}
       </div>
     </footer>
