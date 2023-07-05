@@ -1,8 +1,8 @@
-const path = require("path");
+const path = require('path');
 
-const withPWA = require("next-pwa")({
-  disable: process.env.NODE_ENV === "development",
-  dest: "public",
+const withPWA = require('next-pwa')({
+  disable: process.env.NODE_ENV === 'development',
+  dest: 'public',
   register: true,
   skipWaiting: true,
 });
@@ -10,7 +10,7 @@ const withPWA = require("next-pwa")({
 module.exports = withPWA({
   reactStrictMode: true,
   sassOptions: {
-    includePaths: [path.join(__dirname, "styles")],
+    includePaths: [path.join(__dirname, 'styles')],
   },
   compiler: {
     styledComponents: true,

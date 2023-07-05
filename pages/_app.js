@@ -1,6 +1,6 @@
-import Layout from "components/Layout/Layout";
-import Head from "next/head";
-import "../styles/Global.css";
+import Layout from 'components/Layout';
+import Head from 'next/head';
+import '../styles/Global.css';
 
 export default function App({ Component, pageProps }) {
   if (Component.noLayout) {

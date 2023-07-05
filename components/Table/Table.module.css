@@ -14,7 +14,7 @@
 .html_th {
   padding: 10px;
   text-align: left;
-  background-color: var(--icon-color);
+  background-color: var(--logo);
   border: 1px solid var(--border-color);
   color: white;
 }

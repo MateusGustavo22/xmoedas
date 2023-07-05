@@ -1,4 +1,4 @@
-import Head from "next/head";
+import Head from 'next/head';
 
 const NotFoundPage = () => {
   return (
@@ -22,13 +22,13 @@ const NotFoundPage = () => {
           h1 {
             font-size: 32px;
             margin: 15px;
-            font-family: "Roboto", san serif;
+            font-family: 'Roboto', san serif;
           }
 
           p {
             font-size: 17px;
             margin: 15px;
-            font-family: "Roboto", san serif;
+            font-family: 'Roboto', san serif;
           }
         `}</style>
       </div>

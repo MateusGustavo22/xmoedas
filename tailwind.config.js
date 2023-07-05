@@ -12,7 +12,7 @@ module.exports = {
     screens: {
       display1: { max: '768px' },
     },
-   
+
     extend: {
       boxShadow: {
         '3xl': '0 0 10px rgba(0,0,0,.24)',

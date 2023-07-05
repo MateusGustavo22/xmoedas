@@ -1,21 +1,23 @@
 import { useState, useEffect } from 'react';
 import Chart from 'components/Chart/Chart';
 
-const Conversor = (props) => {
+const Converter = (props) => {
   const [input1Value, setInput1Value] = useState(1);
-  const [input2Value, setInput2Value] = useState(props.currentQuote.toFixed(2));
+  const [input2Value, setInput2Value] = useState(props.currencyRate.toFixed(2));
 
   function handleInput1Change(e) {
     setInput1Value(e.target.value);
-    setInput2Value((e.target.value * props.currentQuote).toFixed(2));
+    const value = e.target.value * props.currencyRate;
+    setInput2Value(value.toFixed(2));
   }
 
   function handleInput2Change(e) {
     setInput2Value(e.target.value);
-    setInput1Value((e.target.value / props.currentQuote).toFixed(2));
+    const value = e.target.value / props.currencyRate;
+    setInput1Value(value.toFixed(2));
   }
 
-  const [menuOptions, setOptions] = useState(props.currency);
+  const [menuOptions, setOptions] = useState(props.currencyCode);
 
   function selectChange(e) {
     setOptions(e.target.value);
@@ -38,7 +40,7 @@ const Conversor = (props) => {
   };
 
   useEffect(() => {
-    if (menuOptions != props.currency) {
+    if (menuOptions != props.currencyCode) {
       window.location.href = currencyPages[menuOptions];
     }
   }, [menuOptions]);
@@ -48,7 +50,7 @@ const Conversor = (props) => {
       <div className="max-w-md flex flex-col gap-2">
         <div className=" w-full flex flex-col">
           <span className="text-base text-gray-600">1 {props.currencyName} hoje = </span>
-          <span className="font-medium text-gray-800 text-2xl">{props.currentQuote} Real Brasileiro</span>
+          <span className="font-medium text-gray-800 text-2xl">{props.currencyRate.toFixed(2)} Real Brasileiro</span>
         </div>
         <div className="w-full flex flex-col gap-1">
           <div className="gap-1 flex flex-row">
@@ -59,7 +61,7 @@ const Conversor = (props) => {
               <select
                 className="text-sm text-gray-800 outline-none bg-transparent"
                 onChange={selectChange}
-                value={props.code}
+                value={props.currencyCode}
               >
                 <option value="USD">Dólar Americano</option>
                 <option value="CAD">Dólar Canadense</option>
@@ -111,4 +113,4 @@ const Conversor = (props) => {
   );
 };
 
-export default Conversor;
+export default Converter;

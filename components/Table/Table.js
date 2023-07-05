@@ -1,153 +1,153 @@
-import styles from "./Table.module.css";
+import styles from './Table.module.css';
 
-export default function Table({ cotacao, moeda, code }) {
+export default function Table({ currencyRate, currencyName, currencyCode }) {
   return (
     <div className={styles.div_area}>
-      <h2>Tabela de conversão {moeda} / Real</h2>
+      <h2>Tabela de conversão {currencyName} / Real</h2>
       <table className={styles.html_table}>
         <tbody>
           <tr className={styles.html_tr}>
-            <th className={styles.html_th}>{moeda}</th>
-            <th className={styles.html_th}>Real</th>
+            <th className={styles.html_th}>{currencyName}</th>
+            <th className={styles.html_th}>Real Brasileiro</th>
           </tr>
           <tr className={styles.html_tr}>
             <td className={styles.html_td}>
-              {(1).toLocaleString("pt-BR", {
-                style: "currency",
-                currency: code,
+              {(1).toLocaleString('pt-BR', {
+                style: 'currency',
+                currency: currencyCode,
               })}
             </td>
             <td className={styles.html_td}>
-              {(cotacao * 1).toLocaleString("pt-BR", {
-                style: "currency",
-                currency: "BRL",
-              })}
-            </td>
-          </tr>
-          <tr className={styles.html_tr}>
-            <td className={styles.html_td}>
-              {(5).toLocaleString("pt-BR", {
-                style: "currency",
-                currency: code,
-              })}
-            </td>
-            <td className={styles.html_td}>
-              {" "}
-              {(cotacao * 5).toLocaleString("pt-BR", {
-                style: "currency",
-                currency: "BRL",
+              {(currencyRate * 1).toLocaleString('pt-BR', {
+                style: 'currency',
+                currency: 'BRL',
               })}
             </td>
           </tr>
           <tr className={styles.html_tr}>
             <td className={styles.html_td}>
-              {(10).toLocaleString("pt-BR", {
-                style: "currency",
-                currency: code,
+              {(5).toLocaleString('pt-BR', {
+                style: 'currency',
+                currency: currencyCode,
               })}
             </td>
             <td className={styles.html_td}>
-              {(cotacao * 10).toLocaleString("pt-BR", {
-                style: "currency",
-                currency: "BRL",
-              })}
-            </td>
-          </tr>
-          <tr className={styles.html_tr}>
-            <td className={styles.html_td}>
-              {(25).toLocaleString("pt-BR", {
-                style: "currency",
-                currency: code,
-              })}
-            </td>
-            <td className={styles.html_td}>
-              {(cotacao * 25).toLocaleString("pt-BR", {
-                style: "currency",
-                currency: "BRL",
+              {' '}
+              {(currencyRate * 5).toLocaleString('pt-BR', {
+                style: 'currency',
+                currency: 'BRL',
               })}
             </td>
           </tr>
           <tr className={styles.html_tr}>
             <td className={styles.html_td}>
-              {(50).toLocaleString("pt-BR", {
-                style: "currency",
-                currency: code,
+              {(10).toLocaleString('pt-BR', {
+                style: 'currency',
+                currency: currencyCode,
               })}
             </td>
             <td className={styles.html_td}>
-              {(cotacao * 50).toLocaleString("pt-BR", {
-                style: "currency",
-                currency: "BRL",
-              })}
-            </td>
-          </tr>
-          <tr className={styles.html_tr}>
-            <td className={styles.html_td}>
-              {(100).toLocaleString("pt-BR", {
-                style: "currency",
-                currency: code,
-              })}
-            </td>
-            <td className={styles.html_td}>
-              {(cotacao * 100).toLocaleString("pt-BR", {
-                style: "currency",
-                currency: "BRL",
+              {(currencyRate * 10).toLocaleString('pt-BR', {
+                style: 'currency',
+                currency: 'BRL',
               })}
             </td>
           </tr>
           <tr className={styles.html_tr}>
             <td className={styles.html_td}>
-              {(150).toLocaleString("pt-BR", {
-                style: "currency",
-                currency: code,
+              {(25).toLocaleString('pt-BR', {
+                style: 'currency',
+                currency: currencyCode,
               })}
             </td>
             <td className={styles.html_td}>
-              {(cotacao * 150).toLocaleString("pt-BR", {
-                style: "currency",
-                currency: "BRL",
-              })}
-            </td>
-          </tr>
-          <tr className={styles.html_tr}>
-            <td className={styles.html_td}>
-              {(500).toLocaleString("pt-BR", {
-                style: "currency",
-                currency: code,
-              })}
-            </td>
-            <td className={styles.html_td}>
-              {(cotacao * 500).toLocaleString("pt-BR", {
-                style: "currency",
-                currency: "BRL",
+              {(currencyRate * 25).toLocaleString('pt-BR', {
+                style: 'currency',
+                currency: 'BRL',
               })}
             </td>
           </tr>
           <tr className={styles.html_tr}>
             <td className={styles.html_td}>
-              {(1000).toLocaleString("pt-BR", {
-                style: "currency",
-                currency: code,
+              {(50).toLocaleString('pt-BR', {
+                style: 'currency',
+                currency: currencyCode,
               })}
             </td>
             <td className={styles.html_td}>
-              {(cotacao * 1000).toLocaleString("pt-BR", {
-                style: "currency",
-                currency: "BRL",
+              {(currencyRate * 50).toLocaleString('pt-BR', {
+                style: 'currency',
+                currency: 'BRL',
               })}
             </td>
           </tr>
           <tr className={styles.html_tr}>
             <td className={styles.html_td}>
-              {(1500).toLocaleString("pt-BR", {
-                style: "currency",
-                currency: code,
+              {(100).toLocaleString('pt-BR', {
+                style: 'currency',
+                currency: currencyCode,
               })}
             </td>
             <td className={styles.html_td}>
-              {(cotacao * 1500).toLocaleString("pt-BR", {
-                style: "currency",
-                currency: "BRL",
+              {(currencyRate * 100).toLocaleString('pt-BR', {
+                style: 'currency',
+                currency: 'BRL',
+              })}
+            </td>
+          </tr>
+          <tr className={styles.html_tr}>
+            <td className={styles.html_td}>
+              {(150).toLocaleString('pt-BR', {
+                style: 'currency',
+                currency: currencyCode,
+              })}
+            </td>
+            <td className={styles.html_td}>
+              {(currencyRate * 150).toLocaleString('pt-BR', {
+                style: 'currency',
+                currency: 'BRL',
+              })}
+            </td>
+          </tr>
+          <tr className={styles.html_tr}>
+            <td className={styles.html_td}>
+              {(500).toLocaleString('pt-BR', {
+                style: 'currency',
+                currency: currencyCode,
+              })}
+            </td>
+            <td className={styles.html_td}>
+              {(currencyRate * 500).toLocaleString('pt-BR', {
+                style: 'currency',
+                currency: 'BRL',
+              })}
+            </td>
+          </tr>
+          <tr className={styles.html_tr}>
+            <td className={styles.html_td}>
+              {(1000).toLocaleString('pt-BR', {
+                style: 'currency',
+                currency: currencyCode,
+              })}
+            </td>
+            <td className={styles.html_td}>
+              {(currencyRate * 1000).toLocaleString('pt-BR', {
+                style: 'currency',
+                currency: 'BRL',
+              })}
+            </td>
+          </tr>
+          <tr className={styles.html_tr}>
+            <td className={styles.html_td}>
+              {(1500).toLocaleString('pt-BR', {
+                style: 'currency',
+                currency: currencyCode,
+              })}
+            </td>
+            <td className={styles.html_td}>
+              {(currencyRate * 1500).toLocaleString('pt-BR', {
+                style: 'currency',
+                currency: 'BRL',
               })}
             </td>
           </tr>
