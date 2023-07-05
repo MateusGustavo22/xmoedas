@@ -26,18 +26,6 @@ export default class MyDocument extends Document {
           <meta name="msapplication-tap-highlight" content="no" />
           <link rel="manifest" href="/manifest.json" />
 
-          {/*-- Google tag (gtag.js) */}
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-DS763N9YLS');
-          `,
-            }}
-          />
-
           <script
             async
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8159596782031361"
