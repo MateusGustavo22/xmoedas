@@ -36,6 +36,17 @@ export default function Home(props) {
         <meta name="keywords" content="Libra, Conversor, Cotação, Real, Câmbio, Hoje, Preço" />
         <title>Libra Esterlina Hoje: Cotação Comercial, Gráfico e Tabela - Xmoedas</title>
         <meta property="og:title" content="Libra Esterlina Hoje" />
+
+         {/* Google tag (gtag.js) */}
+         <script async src="https://www.googletagmanager.com/gtag/js?id=G-LWHWX85ZP8"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)}
+          gtag('js', new Date());
+
+          gtag('config', 'G-LWHWX85ZP8');
+        </script>
+        
       </Head>
       <div className="container_principal">
         <Converter
