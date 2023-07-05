@@ -39,16 +39,12 @@ export default function Home(props) {
         <meta name="google-site-verification" content="yOKnx3oxxmpkcnd2KOv9ndtdRhhVU9MliabO_I5YzhU" />
         <meta name="msvalidate.01" content="C4F3CA81734FA841E2051A26792AAEDA" />
 
-         {/* Google tag (gtag.js) */}
-         <script async src="https://www.googletagmanager.com/gtag/js?id=G-LWHWX85ZP8"></script>
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-LWHWX85ZP8"></script>
         <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments)}
-          gtag('js', new Date());
-
-          gtag('config', 'G-LWHWX85ZP8');
+          window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments)}
+          gtag('js', new Date()); gtag('config', 'G-LWHWX85ZP8');
         </script>
-        
       </Head>
       <div className="container_principal">
         <Converter

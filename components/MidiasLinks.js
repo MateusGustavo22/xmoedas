@@ -13,12 +13,12 @@ export default function MidasShare({ menuDisplay }) {
 
   return (
     <div
-      className="bg-white p-2 shadow-3xl z-50 rounded-[4px] absolute m-auto flex top-[62px] right-0"
+      className="absolute right-0 top-[62px] z-50 m-auto flex rounded-[4px] bg-white p-2 shadow-3xl"
       style={{ display: menuDisplay }}
     >
-      <div className="min-w-[100px] relative flex flex-col gap-3">
+      <div className="relative flex min-w-[100px] flex-col gap-3">
         <a
-          className="flex items-center p-1 rounded-lg hover:bg-gray-200"
+          className="flex items-center rounded-lg p-1 hover:bg-gray-200"
           href={`https://wa.me/?text=${path}`}
           target="_blank"
           rel="noopener noreferrer"
@@ -35,7 +35,7 @@ export default function MidasShare({ menuDisplay }) {
           Whatsapp
         </a>
         <a
-          className="flex items-center p-1 rounded-lg hover:bg-gray-200"
+          className="flex items-center rounded-lg p-1 hover:bg-gray-200"
           href={`https://www.facebook.com/sharer/sharer.php?u=${path}`}
           target="_blank"
           rel="noopener noreferrer"
@@ -52,7 +52,7 @@ export default function MidasShare({ menuDisplay }) {
           Facebook
         </a>
         <a
-          className="flex items-center p-1 rounded-lg hover:bg-gray-200"
+          className="flex items-center rounded-lg p-1 hover:bg-gray-200"
           href={`https://twitter.com/intent/tweet?url=${path}`}
           target="_blank"
           rel="noopener noreferrer"
@@ -69,7 +69,7 @@ export default function MidasShare({ menuDisplay }) {
           Twitter
         </a>
         <a
-          className="flex items-center p-1 rounded-lg hover:bg-gray-200"
+          className="flex items-center rounded-lg p-1 hover:bg-gray-200"
           href={`https://reddit.com/submit?url=${path}`}
           target="_blank"
           rel="noopener noreferrer"
@@ -86,7 +86,7 @@ export default function MidasShare({ menuDisplay }) {
           Reddit
         </a>
         <a
-          className="flex items-center p-1 rounded-lg hover:bg-gray-200"
+          className="flex items-center rounded-lg p-1 hover:bg-gray-200"
           href={`https://telegram.me/share/url?url=${path}`}
           target="_blank"
           rel="noopener noreferrer"

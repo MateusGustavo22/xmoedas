@@ -12,14 +12,14 @@ const Header = () => {
   }
 
   return (
-    <div className="w-full sticky bg-white shadow-3xl top-0 mb-4">
-      <div className="max-w-[1366px] h-[55px] w-full flex items-center justify-between m-auto relative pl-4 pr-4">
+    <div className="sticky top-0 mb-4 w-full bg-white shadow-3xl">
+      <div className="relative m-auto flex h-[55px] w-full max-w-[1366px] items-center justify-between pl-4 pr-4">
         <div className="flex" href="/">
           <a href="/">
             <img src="/icone.svg" width="120" height="50" alt="Ícone do site" />
           </a>
         </div>
-        <button className="outline-none bg-[var(--logo)] text-white p-2 rounded-md  text-xs" onClick={menuDisplay}>
+        <button className="rounded-md bg-[var(--logo)] p-2 text-xs text-white  outline-none" onClick={menuDisplay}>
           Compartilhar
         </button>
         <MidiasLinks menuDisplay={showMenu} />

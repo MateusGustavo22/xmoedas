@@ -46,20 +46,20 @@ const Converter = (props) => {
   }, [menuOptions]);
 
   return (
-    <div className=" h-max flex flex-row gap-4 shadow-3xl rounded-lg p-2 display1:flex-col ">
-      <div className="max-w-md flex flex-col gap-2">
-        <div className=" w-full flex flex-col">
+    <div className=" flex h-max flex-row gap-4 rounded-lg p-2 shadow-3xl display1:flex-col ">
+      <div className="flex max-w-md flex-col gap-2">
+        <div className=" flex w-full flex-col">
           <span className="text-base text-gray-600">1 {props.currencyName} hoje = </span>
-          <span className="font-medium text-gray-800 text-2xl">{props.currencyRate.toFixed(2)} Real Brasileiro</span>
+          <span className="text-2xl font-medium text-gray-800">{props.currencyRate.toFixed(2)} Real Brasileiro</span>
         </div>
-        <div className="w-full flex flex-col gap-1">
-          <div className="gap-1 flex flex-row">
-            <div className="w-44 flex p-1 items-center shrink-0 rounded-[4px] border-[1px] border-gray-400 ">
+        <div className="flex w-full flex-col gap-1">
+          <div className="flex flex-row gap-1">
+            <div className="flex w-44 shrink-0 items-center rounded-[4px] border-[1px] border-gray-400 p-1 ">
               <div>
                 <img src={props.flag} width="32" height="25" alt="Bandeira da moeda" />
               </div>
               <select
-                className="text-sm text-gray-800 outline-none bg-transparent"
+                className="bg-transparent text-sm text-gray-800 outline-none"
                 onChange={selectChange}
                 value={props.currencyCode}
               >
@@ -79,7 +79,7 @@ const Converter = (props) => {
               </select>
             </div>
             <input
-              className="w-full pr-2 h-11 text-right rounded-md border-[1px] bg-transparent border-gray-400 focus:border-blue-500 focus:border-[2px] focus:outline-none"
+              className="h-11 w-full rounded-md border-[1px] border-gray-400 bg-transparent pr-2 text-right focus:border-[2px] focus:border-blue-500 focus:outline-none"
               name={props.code}
               type="number"
               value={input1Value}
@@ -87,14 +87,14 @@ const Converter = (props) => {
             />
           </div>
           <div className="flex gap-1">
-            <div className="w-44 h-11 flex p-1 gap-1 items-center shrink-0 rounded-[4px] border-[1px] border-gray-400">
+            <div className="flex h-11 w-44 shrink-0 items-center gap-1 rounded-[4px] border-[1px] border-gray-400 p-1">
               <div>
                 <img src="/flags/br.svg" width="32" height="32" alt="Bandeira do Brasil" />
               </div>
               <span className="text-sm text-gray-800">Real Brasileiro</span>
             </div>
             <input
-              className="w-full pr-2 h-11 text-right rounded-md border-[1px] bg-transparent border-gray-400 focus:border-blue-500 focus:border-[2px] focus:outline-none"
+              className="h-11 w-full rounded-md border-[1px] border-gray-400 bg-transparent pr-2 text-right focus:border-[2px] focus:border-blue-500 focus:outline-none"
               name="BRL"
               type="number"
               value={input2Value}

@@ -37,16 +37,12 @@ export default function Home(props) {
         <title>Franco Suíço Hoje: Cotação Comercial, Gráfico e Tabela - Xmoedas</title>
         <meta property="og:title" content="Franco Suíço Hoje" />
 
-         {/* Google tag (gtag.js) */}
-         <script async src="https://www.googletagmanager.com/gtag/js?id=G-LWHWX85ZP8"></script>
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-LWHWX85ZP8"></script>
         <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments)}
-          gtag('js', new Date());
-
-          gtag('config', 'G-LWHWX85ZP8');
+          window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments)}
+          gtag('js', new Date()); gtag('config', 'G-LWHWX85ZP8');
         </script>
-        
       </Head>
       <div className="container_principal">
         <Converter

@@ -8,28 +8,28 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="w-full flex flex-col p-4 relative justify-center bg-[var(--footer-color)]">
+    <footer className="relative flex w-full flex-col justify-center bg-[var(--footer-color)] p-4">
       <div className="flex justify-center ">
         <a
-          className="no-underline m-4 hover:underline text-white"
+          className="m-4 text-white no-underline hover:underline"
           href="mailto:contatomateuscode@gmail.com?subject=Xmoedas"
           rel="noopener"
         >
           Contato
         </a>
-        <a className="no-underline m-4 hover:underline text-white" href="/sobre" rel="noopener">
+        <a className="m-4 text-white no-underline hover:underline" href="/sobre" rel="noopener">
           Sobre
         </a>
       </div>
       <div className="flex justify-center">
-        <a className="no-underline m-4 hover:underline text-white" href="/politicas">
+        <a className="m-4 text-white no-underline hover:underline" href="/politicas">
           Política de privacidade
         </a>
-        <a className="no-underline m-4 hover:underline text-white" href="/termos">
+        <a className="m-4 text-white no-underline hover:underline" href="/termos">
           Termos de uso
         </a>
       </div>
-      <div className="text-gray-300 mt-4" align="center">
+      <div className="mt-4 text-gray-300" align="center">
         &copy;{copyright}
       </div>
     </footer>
