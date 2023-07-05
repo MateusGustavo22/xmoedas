@@ -2,7 +2,7 @@
 
 O xmoedas.com.br permiti que você fique atualizado da cotação atual do dólar, euro, libra e ontre outras moedas. Também é possível realizar a converção para o real brasileiro.
 
-tecnologias: React | Next | Sass
+tecnologias: React | TailwindCss | API REST
 
 Acesse o projeto clicando [aqui](https://xmoedas.com.br)
 
