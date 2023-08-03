@@ -1,26 +1,27 @@
-import { useState, useEffect } from 'react';
-import Chart from 'components/Chart/Chart';
+import { useState, useEffect } from 'react'
+import Chart from 'components/Chart/Chart'
+import Image from 'next/image'
 
 const Converter = (props) => {
-  const [input1Value, setInput1Value] = useState(1);
-  const [input2Value, setInput2Value] = useState(props.currencyRate.toFixed(2));
+  const [input1Value, setInput1Value] = useState(1)
+  const [input2Value, setInput2Value] = useState(props.currencyRate.toFixed(2))
 
   function handleInput1Change(e) {
-    setInput1Value(e.target.value);
-    const value = e.target.value * props.currencyRate;
-    setInput2Value(value.toFixed(2));
+    setInput1Value(e.target.value)
+    const value = e.target.value * props.currencyRate
+    setInput2Value(value.toFixed(2))
   }
 
   function handleInput2Change(e) {
-    setInput2Value(e.target.value);
-    const value = e.target.value / props.currencyRate;
-    setInput1Value(value.toFixed(2));
+    setInput2Value(e.target.value)
+    const value = e.target.value / props.currencyRate
+    setInput1Value(value.toFixed(2))
   }
 
-  const [menuOptions, setOptions] = useState(props.currencyCode);
+  const [menuOptions, setOptions] = useState(props.currencyCode)
 
   function selectChange(e) {
-    setOptions(e.target.value);
+    setOptions(e.target.value)
   }
 
   const currencyPages = {
@@ -37,16 +38,16 @@ const Converter = (props) => {
     RUB: '/rublo-russo',
     CHF: '/franco-suico',
     JPY: '/iene-japones',
-  };
+  }
 
   useEffect(() => {
-    if (menuOptions != props.currencyCode) {
-      window.location.href = currencyPages[menuOptions];
+    if (menuOptions !== props.currencyCode) {
+      window.location.href = currencyPages[menuOptions]
     }
-  }, [menuOptions]);
+  })
 
   return (
-    <div className=" flex h-max flex-row gap-4 rounded-lg p-2 shadow-3xl display1:flex-col ">
+    <div className="  h-max flex-row gap-4 rounded-lg p-2 shadow-3xl flex display1:flex-col ">
       <div className="flex max-w-md flex-col gap-2">
         <div className=" flex w-full flex-col">
           <span className="text-base text-gray-600">1 {props.currencyName} hoje = </span>
@@ -56,7 +57,7 @@ const Converter = (props) => {
           <div className="flex flex-row gap-1">
             <div className="flex w-44 shrink-0 items-center rounded-[4px] border-[1px] border-gray-400 p-1 ">
               <div>
-                <img src={props.flag} width="32" height="25" alt="Bandeira da moeda" />
+                <Image src={props.flag} width="32" height="25" alt="Bandeira da moeda" />
               </div>
               <select
                 className="bg-transparent text-sm text-gray-800 outline-none"
@@ -87,9 +88,9 @@ const Converter = (props) => {
             />
           </div>
           <div className="flex gap-1">
-            <div className="flex h-11 w-44 shrink-0 items-center gap-1 rounded-[4px] border-[1px] border-gray-400 p-1">
+            <div className="h-11 flex  w-44 shrink-0 items-center gap-1 rounded-[4px] border-[1px] border-gray-400 p-1">
               <div>
-                <img src="/flags/br.svg" width="32" height="32" alt="Bandeira do Brasil" />
+                <Image src="/flags/br.svg" width="32" height="32" alt="Bandeira do Brasil" />
               </div>
               <span className="text-sm text-gray-800">Real Brasileiro</span>
             </div>
@@ -110,7 +111,7 @@ const Converter = (props) => {
         last365days={props.last365days}
       />
     </div>
-  );
-};
+  )
+}
 
-export default Converter;
+export default Converter

@@ -1,17 +1,17 @@
-import Head from 'next/head';
-import Converter from 'components/Converter';
-import Table from 'components/Table/Table';
-import { getCurrencyRate } from '@/utils/getCurrencyRate';
-import { fetchDataChart } from '@/utils/getChartData';
+import Head from 'next/head'
+import Converter from 'components/Converter'
+import Table from 'components/Table/Table'
+import { getCurrencyRate } from '@/utils/getCurrencyRate'
+import { fetchDataChart } from '@/utils/getChartData'
 
 export async function getStaticProps() {
-  const currencyCode = 'USD';
+  const currencyCode = 'USD'
 
-  const currencyRate = await getCurrencyRate(currencyCode);
+  const currencyRate = await getCurrencyRate(currencyCode)
 
-  const last7days = await fetchDataChart(`https://economia.awesomeapi.com.br/json/daily/${currencyCode}-BRL/7`);
-  const last30days = await fetchDataChart(`https://economia.awesomeapi.com.br/json/daily/${currencyCode}-BRL/30`);
-  const last365days = await fetchDataChart(`https://economia.awesomeapi.com.br/json/daily/${currencyCode}-BRL/365`);
+  const last7days = await fetchDataChart(`https://economia.awesomeapi.com.br/json/daily/${currencyCode}-BRL/7`)
+  const last30days = await fetchDataChart(`https://economia.awesomeapi.com.br/json/daily/${currencyCode}-BRL/30`)
+  const last365days = await fetchDataChart(`https://economia.awesomeapi.com.br/json/daily/${currencyCode}-BRL/365`)
 
   return {
     props: {
@@ -22,7 +22,7 @@ export async function getStaticProps() {
       last365days,
     },
     revalidate: 3600,
-  };
+  }
 }
 
 export default function Home(props) {
@@ -38,13 +38,6 @@ export default function Home(props) {
         <meta property="og:title" content="Dólar Hoje" />
         <meta name="google-site-verification" content="yOKnx3oxxmpkcnd2KOv9ndtdRhhVU9MliabO_I5YzhU" />
         <meta name="msvalidate.01" content="C4F3CA81734FA841E2051A26792AAEDA" />
-
-        {/* Google tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-LWHWX85ZP8"></script>
-        <script>
-          window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments)}
-          gtag('js', new Date()); gtag('config', 'G-LWHWX85ZP8');
-        </script>
       </Head>
       <div className="container_principal">
         <Converter
@@ -69,7 +62,8 @@ export default function Home(props) {
         <h2>Sobre o dólar americano</h2>
         <p>
           O dólar americano é a moeda oficial dos Estados Unidos da América e também é a moeda de reserva mais
-          amplamente utilizada em todo o mundo. O símbolo da moeda é "$" e o código ISO 4217 é "USD".
+          amplamente utilizada em todo o mundo. O símbolo da moeda é {String.fromCharCode(34)}${String.fromCharCode(34)}{' '}
+          e o código ISO 4217 é {String.fromCharCode(34)}USD{String.fromCharCode(34)}.
         </p>
         <br />
         <p>
@@ -204,5 +198,5 @@ export default function Home(props) {
         </p>
       </main>
     </>
-  );
+  )
 }

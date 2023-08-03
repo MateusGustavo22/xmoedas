@@ -12,8 +12,6 @@
   "dependencies": {
     "@next/font": "13.1.2",
     "chart.js": "^4.2.1",
-    "eslint": "8.31.0",
-    "eslint-config-next": "13.1.2",
     "next": "13.1.2",
     "next-pwa": "^5.6.0",
     "react": "18.2.0",
@@ -36,8 +34,8 @@
   "homepage": "https://github.com/MateusGustavo22/conversor-moedas#readme",
   "devDependencies": {
     "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.24",
-    "prettier": "^2.8.8",
-    "prettier-plugin-tailwindcss": "^0.3.0"
+    "eslint": "^8.44.0",
+    "eslint-config-next": "13.4.8",
+    "postcss": "^8.4.24"
   }
 }

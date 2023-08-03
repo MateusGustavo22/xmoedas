@@ -1,17 +1,17 @@
-import Head from 'next/head';
-import Converter from 'components/Converter';
-import Table from 'components/Table/Table';
-import { getCurrencyRate } from '@/utils/getCurrencyRate';
-import { fetchDataChart } from '@/utils/getChartData';
+import Head from 'next/head'
+import Converter from 'components/Converter'
+import Table from 'components/Table/Table'
+import { getCurrencyRate } from '@/utils/getCurrencyRate'
+import { fetchDataChart } from '@/utils/getChartData'
 
 export async function getStaticProps() {
-  const currencyCode = 'GBP';
+  const currencyCode = 'GBP'
 
-  const currencyRate = await getCurrencyRate(currencyCode);
+  const currencyRate = await getCurrencyRate(currencyCode)
 
-  const last7days = await fetchDataChart(`https://economia.awesomeapi.com.br/json/daily/${currencyCode}-BRL/7`);
-  const last30days = await fetchDataChart(`https://economia.awesomeapi.com.br/json/daily/${currencyCode}-BRL/30`);
-  const last365days = await fetchDataChart(`https://economia.awesomeapi.com.br/json/daily/${currencyCode}-BRL/365`);
+  const last7days = await fetchDataChart(`https://economia.awesomeapi.com.br/json/daily/${currencyCode}-BRL/7`)
+  const last30days = await fetchDataChart(`https://economia.awesomeapi.com.br/json/daily/${currencyCode}-BRL/30`)
+  const last365days = await fetchDataChart(`https://economia.awesomeapi.com.br/json/daily/${currencyCode}-BRL/365`)
 
   return {
     props: {
@@ -22,7 +22,7 @@ export async function getStaticProps() {
       last365days,
     },
     revalidate: 3600,
-  };
+  }
 }
 
 export default function Home(props) {
@@ -36,13 +36,6 @@ export default function Home(props) {
         <meta name="keywords" content="Libra, Conversor, Cotação, Real, Câmbio, Hoje, Preço" />
         <title>Libra Esterlina Hoje: Cotação Comercial, Gráfico e Tabela - Xmoedas</title>
         <meta property="og:title" content="Libra Esterlina Hoje" />
-
-        {/* Google tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-LWHWX85ZP8"></script>
-        <script>
-          window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments)}
-          gtag('js', new Date()); gtag('config', 'G-LWHWX85ZP8');
-        </script>
       </Head>
       <div className="container_principal">
         <Converter
@@ -72,8 +65,9 @@ export default function Home(props) {
         <br />
         <p>
           A libra esterlina é uma das moedas mais antigas do mundo, tendo sido introduzida pela primeira vez pelos
-          saxões no século VIII. O termo "esterlina" tem origem em "Easterlings", que era como os comerciantes alemães
-          que operavam na Inglaterra eram conhecidos.
+          saxões no século VIII. O termo {String.fromCharCode(34)}esterlina{String.fromCharCode(34)} tem origem em{' '}
+          {String.fromCharCode(34)}Easterlings{String.fromCharCode(34)}, que era como os comerciantes alemães que
+          operavam na Inglaterra eram conhecidos.
         </p>
         <br />
         <p>
@@ -129,5 +123,5 @@ export default function Home(props) {
         </p>
       </main>
     </>
-  );
+  )
 }

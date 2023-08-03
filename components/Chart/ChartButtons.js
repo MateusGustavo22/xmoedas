@@ -23,5 +23,5 @@ export default function ChartButtons(props) {
         Ano
       </button>
     </div>
-  );
+  )
 }

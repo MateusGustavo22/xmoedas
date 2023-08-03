@@ -1,15 +1,15 @@
-import { FaFacebook, FaTelegram, FaReddit } from 'react-icons/fa';
-import { AiFillTwitterCircle } from 'react-icons/ai';
-import { IoLogoWhatsapp } from 'react-icons/io';
-import { useState, useEffect } from 'react';
+import { FaFacebook, FaTelegram, FaReddit } from 'react-icons/fa'
+import { AiFillTwitterCircle } from 'react-icons/ai'
+import { IoLogoWhatsapp } from 'react-icons/io'
+import { useState, useEffect } from 'react'
 
 export default function MidasShare({ menuDisplay }) {
-  const [path, setPath] = useState(null);
+  const [path, setPath] = useState(null)
 
   useEffect(() => {
-    const routerPath = window.location.href;
-    setPath(routerPath);
-  }, []);
+    const routerPath = window.location.href
+    setPath(routerPath)
+  }, [])
 
   return (
     <div
@@ -106,5 +106,5 @@ export default function MidasShare({ menuDisplay }) {
         </a>
       </div>
     </div>
-  );
+  )
 }

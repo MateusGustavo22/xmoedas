@@ -1,4 +1,5 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Analytics from '@/components/Analytics'
+import Document, { Html, Head, Main, NextScript } from 'next/document'
 
 export default class MyDocument extends Document {
   render() {
@@ -13,7 +14,7 @@ export default class MyDocument extends Document {
           <meta property="og:description" content="Veja a Cotação de Hoje das principais Moedas em relação ao Real." />
 
           <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
           <link
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
             rel="stylesheet"
@@ -29,8 +30,10 @@ export default class MyDocument extends Document {
           <script
             async
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8159596782031361"
-            crossorigin="anonymous"
+            crossOrigin="anonymous"
           ></script>
+
+          <Analytics />
         </Head>
 
         <body>
@@ -38,6 +41,6 @@ export default class MyDocument extends Document {
           <NextScript />
         </body>
       </Html>
-    );
+    )
   }
 }

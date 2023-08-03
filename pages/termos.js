@@ -1,4 +1,5 @@
-import Head from 'next/head';
+import Head from 'next/head'
+import Link from 'next/link'
 
 export default function termos() {
   return (
@@ -11,8 +12,8 @@ export default function termos() {
         <main className="mainContent">
           <h2>1. Termos</h2>
           <p>
-            Ao acessar ao site <a href="/">Xmoedas.com.br</a> , concorda em cumprir estes termos de serviço, todas as
-            leis e regulamentos aplicáveis e concorda que é responsável pelo cumprimento de todas as leis locais
+            Ao acessar ao site <Link href="/">Xmoedas.com.br</Link> , concorda em cumprir estes termos de serviço, todas
+            as leis e regulamentos aplicáveis e concorda que é responsável pelo cumprimento de todas as leis locais
             aplicáveis. Se você não concordar com algum desses termos, está proibido de usar ou acessar este site. Os
             materiais contidos neste site são protegidos pelas leis de direitos autorais e marcas comerciais aplicáveis.
           </p>
@@ -35,7 +36,10 @@ export default function termos() {
             <br />
             <li>tentar descompilar ou fazer engenharia reversa de qualquer software contido no site Xmoedas; </li>
             <br />
-            <li>transferir os materiais para outra pessoa ou 'espelhe' os materiais em qualquer outro servidor.</li>
+            <li>
+              transferir os materiais para outra pessoa ou {String.fromCharCode(34)}espelhe{String.fromCharCode(34)} os
+              materiais em qualquer outro servidor.
+            </li>
             <br />
           </ol>
           <p>
@@ -46,10 +50,11 @@ export default function termos() {
           <h2>3. Isenção de responsabilidade</h2>
           <ol>
             <li>
-              Os materiais no site da Xmoedas são fornecidos 'como estão'. Xmoedas não oferece garantias, expressas ou
-              implícitas, e, por este meio, isenta e nega todas as outras garantias, incluindo, sem limitação, garantias
-              implícitas ou condições de comercialização, adequação a um fim específico ou não violação de propriedade
-              intelectual ou outra violação de direitos.
+              Os materiais no site da Xmoedas são fornecidos {String.fromCharCode(34)}como estão
+              {String.fromCharCode(34)}. Xmoedas não oferece garantias, expressas ou implícitas, e, por este meio,
+              isenta e nega todas as outras garantias, incluindo, sem limitação, garantias implícitas ou condições de
+              comercialização, adequação a um fim específico ou não violação de propriedade intelectual ou outra
+              violação de direitos.
             </li>
             <br />
             <li>
@@ -101,5 +106,5 @@ export default function termos() {
         }
       `}</style>
     </>
-  );
+  )
 }

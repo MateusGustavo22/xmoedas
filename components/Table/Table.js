@@ -1,4 +1,4 @@
-import styles from './Table.module.css';
+import styles from './Table.module.css'
 
 export default function Table({ currencyRate, currencyName, currencyCode }) {
   return (
@@ -154,5 +154,5 @@ export default function Table({ currencyRate, currencyName, currencyCode }) {
         </tbody>
       </table>
     </div>
-  );
+  )
 }

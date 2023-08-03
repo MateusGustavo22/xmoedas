@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import Head from 'next/head'
 
 export default function sobre() {
   return (
@@ -152,5 +152,5 @@ export default function sobre() {
         }
       `}</style>
     </>
-  );
+  )
 }

@@ -1,54 +1,54 @@
-import { Line } from 'react-chartjs-2';
-import 'chart.js/auto';
-import ChartButtons from './ChartButtons';
-import { useState } from 'react';
+import { Line } from 'react-chartjs-2'
+import 'chart.js/auto'
+import ChartButtons from './ChartButtons'
+import { useState } from 'react'
 
 export default function Chart({ currencyCode, last365days, last30days, last7days }) {
-  const [lastCurrencyRates, setLastCurrencyRates] = useState(last30days.lastCurrencyRates);
-  const [lastCurrencyRatesDates, setLastCurrencyRatesDates] = useState(last30days.lastCurrencyRatesDates);
+  const [lastCurrencyRates, setLastCurrencyRates] = useState(last30days.lastCurrencyRates)
+  const [lastCurrencyRatesDates, setLastCurrencyRatesDates] = useState(last30days.lastCurrencyRatesDates)
 
-  const grayLow = '#dedede';
-  const grayDark = '#c8c6c6';
+  const grayLow = '#dedede'
+  const grayDark = '#c8c6c6'
 
-  const [buttonOn1, setButtonOn1] = useState(grayLow);
-  const [buttonOn2, setButtonOn2] = useState(grayDark);
-  const [buttonOn3, setButtonOn3] = useState(grayLow);
+  const [buttonOn1, setButtonOn1] = useState(grayLow)
+  const [buttonOn2, setButtonOn2] = useState(grayDark)
+  const [buttonOn3, setButtonOn3] = useState(grayLow)
 
   async function select7days() {
-    setLastCurrencyRates(last7days.lastCurrencyRates);
-    setLastCurrencyRatesDates(last7days.lastCurrencyRatesDates);
+    setLastCurrencyRates(last7days.lastCurrencyRates)
+    setLastCurrencyRatesDates(last7days.lastCurrencyRatesDates)
 
-    setButtonOn1(grayDark);
-    setButtonOn2(grayLow);
-    setButtonOn3(grayLow);
+    setButtonOn1(grayDark)
+    setButtonOn2(grayLow)
+    setButtonOn3(grayLow)
   }
 
   function select30days() {
-    setLastCurrencyRates(last30days.lastCurrencyRates);
-    setLastCurrencyRatesDates(last30days.lastCurrencyRatesDates);
+    setLastCurrencyRates(last30days.lastCurrencyRates)
+    setLastCurrencyRatesDates(last30days.lastCurrencyRatesDates)
 
-    setButtonOn1(grayLow);
-    setButtonOn2(grayDark);
-    setButtonOn3(grayLow);
+    setButtonOn1(grayLow)
+    setButtonOn2(grayDark)
+    setButtonOn3(grayLow)
   }
 
   const select365days = async () => {
-    setLastCurrencyRates(last365days.lastCurrencyRates);
-    setLastCurrencyRatesDates(last365days.lastCurrencyRatesDates);
+    setLastCurrencyRates(last365days.lastCurrencyRates)
+    setLastCurrencyRatesDates(last365days.lastCurrencyRatesDates)
 
-    setButtonOn1(grayLow);
-    setButtonOn2(grayLow);
-    setButtonOn3(grayDark);
-  };
+    setButtonOn1(grayLow)
+    setButtonOn2(grayLow)
+    setButtonOn3(grayDark)
+  }
 
   const formatTimestampToDate = (timestamp) => {
-    const date = new Date(timestamp * 1000);
-    const day = String(date.getDate()).padStart(2, '0');
-    const month = String(date.getMonth() + 1).padStart(2, '0');
-    return `${day}/${month}`;
-  };
+    const date = new Date(timestamp * 1000)
+    const day = String(date.getDate()).padStart(2, '0')
+    const month = String(date.getMonth() + 1).padStart(2, '0')
+    return `${day}/${month}`
+  }
 
-  const labels = lastCurrencyRatesDates.map((timestamp) => formatTimestampToDate(timestamp));
+  const labels = lastCurrencyRatesDates.map((timestamp) => formatTimestampToDate(timestamp))
 
   const data = {
     labels: labels,
@@ -62,7 +62,7 @@ export default function Chart({ currencyCode, last365days, last30days, last7days
         borderColor: '#1363DF',
       },
     ],
-  };
+  }
 
   const options = {
     responsive: true,
@@ -75,7 +75,7 @@ export default function Chart({ currencyCode, last365days, last30days, last7days
         position: 'top',
       },
     },
-  };
+  }
 
   return (
     <div className="bg-transparent">
@@ -89,5 +89,5 @@ export default function Chart({ currencyCode, last365days, last30days, last7days
       />
       <Line data={data} options={options} width="320" height="200" />
     </div>
-  );
+  )
 }
