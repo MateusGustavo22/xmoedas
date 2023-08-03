@@ -1,5 +1,5 @@
-import Analytics from '@/components/Analytics'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+import Script from 'next/script'
 
 export default class MyDocument extends Document {
   render() {
@@ -33,9 +33,18 @@ export default class MyDocument extends Document {
             crossOrigin="anonymous"
           ></script>
 
-          <Analytics />
-        </Head>
+          <Script src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID" />
+          <Script id="google-analytics">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
 
+              gtag('config', ´${process.env.NEXT_PUBLIC_ANALYTICS}´);
+            `}
+          </Script>
+
+        </Head>
         <body>
           <Main />
           <NextScript />
