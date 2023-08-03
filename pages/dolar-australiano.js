@@ -36,6 +36,7 @@ export default function Home(props) {
         <meta name="keywords" content="Dólar australiano, Conversor, Cotação, Real, Câmbio, Hoje, Preço" />
         <title>Dólar Australiano Hoje: Cotação Comercial, Gráfico e Tabela - Xmoedas</title>
         <meta property="og:title" content="Dólar Australiano Hoje" />
+       
       </Head>
       <div className="container_principal">
         <Converter
